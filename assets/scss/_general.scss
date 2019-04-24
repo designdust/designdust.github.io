@@ -1,4 +1,5 @@
 // General Style
+
 // RESET
 *,
 *:before,
@@ -68,8 +69,7 @@ body {
   right: 0;
   height: 100%;
   max-width: 515px;
-  width: 40vw;
-  padding: 100px 40px 60px 40px;
+  padding: 120px 90px 70px 90px;
   overflow-y: auto;
   @include transform(translateX(100%));
   @include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
@@ -113,10 +113,6 @@ body {
         }
       }
     }
-  }
-
-  @media (min-width: 667px) {
-    padding: 120px 90px 70px 90px;
   }
 
   ul.menu-ul {

@@ -65,8 +65,7 @@ body.overflow {
   right: 0;
   height: 100%;
   max-width: 515px;
-  width: 40vw;
-  padding: 100px 40px 60px 40px;
+  padding: 120px 90px 70px 90px;
   overflow-y: auto;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
@@ -151,12 +150,6 @@ body.overflow {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-@media (min-width: 667px) {
-  .menu {
-    padding: 120px 90px 70px 90px;
-  }
 }
 
 .menu ul.menu-ul {
