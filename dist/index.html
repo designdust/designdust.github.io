@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
+    <!-- <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-139084988-1"
     ></script>
@@ -14,7 +14,7 @@
       gtag("js", new Date());
 
       gtag("config", "UA-139084988-1");
-    </script>
+    </script> -->
 
     <meta charset="utf-8" />
     <meta
@@ -33,8 +33,9 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- Google fonts -->
     <link
-      href="https://fonts.googleapis.com/css?family=Raleway|Spectral"
+      href="https://fonts.googleapis.com/css?family=Raleway|Spectral|Cormorant+Unicase|Domine"
       rel="stylesheet"
     />
     <!-- Stylesheet -->
@@ -45,6 +46,12 @@
 
   <body>
     <header>
+      <div class="header-logo">
+        <a class="site-logo" href="index.html">
+          <img src="assets/img/logo.png" alt="Homepage" />
+        </a>
+      </div>
+
       <div class="menu-btn">
         <div class="btn-line"></div>
         <div class="btn-line"></div>
@@ -92,19 +99,161 @@
       <div class="overlay"></div>
     </header>
 
-    <main role="main" class="container-fluid mt-4">
-      <div class="jumbotron text-center">
-        <img src="assets/img/logo.png" />
-        <h1>Bootstrap 4 Starter Template Test</h1>
-        <p class="lead">This example is a quick bootstrap starter template.</p>
-        <a
-          class="btn btn-lg btn-primary"
-          href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"
-          role="button"
-          target="_blank"
-          >View Bootstrap 4 Docs&raquo;</a
-        >
-      </div>
+    <main role="main" class="main">
+      <section class="jumbotron hero">
+        <div class="container">
+          <h1>Bootstrap 4 Starter Template Test</h1>
+          <p class="lead">
+            This example is a quick bootstrap starter template.
+          </p>
+          <a
+            class="btn btn-lg btn-primary"
+            href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"
+            role="button"
+            target="_blank"
+            >View Bootstrap 4 Docs&raquo;</a
+          >
+        </div>
+      </section>
+
+      <!-- Start portfolio-area Area -->
+      <section class="portfolio-area section-gap" id="portfolio">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="menu-content col-lg-10">
+              <div class="title text-center">
+                <h1 class="mb-10">This is what we can do for you</h1>
+                <p>Who are in extremely love with eco friendly system..</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="filters">
+            <ul>
+              <li class="active" data-filter="*">All</li>
+              <li data-filter=".corporate">Vector</li>
+              <li data-filter=".personal">Raster</li>
+              <li data-filter=".agency">UI/UX</li>
+              <li data-filter=".portal">Printing</li>
+            </ul>
+          </div>
+
+          <div class="filters-content">
+            <div class="row grid">
+              <div class="single-portfolio col-sm-4 all corporate">
+                <div class="item">
+                  <img src="assets/img/p1.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>3D Helmet Design</h4>
+                    <div class="cat">Corporate</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all personal">
+                <div class="item">
+                  <img src="assets/img/p2.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>2D Vinyl Design</h4>
+                    <div class="cat">Personal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all agency">
+                <div class="item">
+                  <img src="assets/img/p3.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>Creative Poster Design</h4>
+                    <div class="cat">Agency</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all portal">
+                <div class="item">
+                  <img src="assets/img/p4.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>Embosed Logo Design</h4>
+                    <div class="cat">Portal</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single-portfolio col-sm-4 all corporate">
+                <div class="item">
+                  <img src="assets/img/p5.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>3D Helmet Design</h4>
+                    <div class="cat">Corporate</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all personal">
+                <div class="item">
+                  <img src="assets/img/p6.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>2D Vinyl Design</h4>
+                    <div class="cat">Personal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all agency">
+                <div class="item">
+                  <img src="assets/img/p2.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>Creative Poster Design</h4>
+                    <div class="cat">Agency</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all portal">
+                <div class="item">
+                  <img src="assets/img/p3.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>Embosed Logo Design</h4>
+                    <div class="cat">Portal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all corporate">
+                <div class="item">
+                  <img src="assets/img/p4.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>3D Helmet Design</h4>
+                    <div class="cat">Corporate</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all personal">
+                <div class="item">
+                  <img src="assets/img/p3.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>2D Vinyl Design</h4>
+                    <div class="cat">Personal</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all agency">
+                <div class="item">
+                  <img src="assets/img/p2.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>Creative Poster Design</h4>
+                    <div class="cat">Agency</div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-portfolio col-sm-4 all portal">
+                <div class="item">
+                  <img src="assets/img/p1.jpg" alt="Work 1" />
+                  <div class="p-inner">
+                    <h4>Embosed Logo Design</h4>
+                    <div class="cat">Portal</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End portfolio-area Area -->
     </main>
 
     <!-- Bootstrap core JavaScript -->
@@ -112,6 +261,8 @@
     <script src="assets/js/vendor/jquery.slim.min.js"></script>
     <script src="assets/js/vendor/popper.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <!-- Isotope layout JS CDN only -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="assets/js/app.min.js"></script>
 
   </body>
