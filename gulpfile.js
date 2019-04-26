@@ -20,14 +20,14 @@ gulp.task("clean", function() {
   ]);
 });
 
-// Copy third party CSS libraries from node_modules into /css
+// Copy third party CSS libraries from node_modules into assets/css
 gulp.task("vendor:css", function() {
   return gulp
     .src(["./node_modules/bootstrap/dist/css/bootstrap.min.css"])
     .pipe(gulp.dest("./assets/css/vendor"));
 });
 
-// Copy third party libraries from node_modules into /vendor
+// Copy third party libraries from node_modules into assets/vendor
 gulp.task("vendor:js", function() {
   return gulp
     .src([
@@ -39,7 +39,7 @@ gulp.task("vendor:js", function() {
     .pipe(gulp.dest("./assets/js/vendor"));
 });
 
-// Copy font-awesome from node_modules into /fonts
+// Copy font-awesome from node_modules into assets/fonts
 gulp.task("vendor:fonts", function() {
   return gulp
     .src([

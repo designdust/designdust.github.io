@@ -19,21 +19,51 @@ body {
 }
 
 // NAVIGATION
+
+// Logo
+.header-logo {
+  z-index: 501;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 55px;
+  top: 60px;
+
+  a {
+    display: block;
+    padding: 0;
+    outline: 0;
+    border: none;
+    img {
+      width: 200px;
+      height: 38px;
+    }
+  }
+}
+
 // Menu Button
 .menu-btn {
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  right: 35px;
-  top: 35px;
+  right: 55px;
+  top: 55px;
+  padding: 20px;
   cursor: pointer;
   @include easeOut;
+  background: $black;
 
   .btn-line {
     width: 28px;
     height: 3px;
-    margin: 0 0 5px 0;
-    background: set-text-color($white);
+    background: set-text-color($black);
     @include easeOut;
+    &:nth-child(1) {
+      margin: 0 0 5px 0;
+    }
+    &:nth-child(2) {
+      margin: 0 0 5px 0;
+    }
   }
 
   // Rotate Into X With Menu Lines
@@ -209,3 +239,141 @@ body {
     visibility: visible;
   }
 }
+
+// *********************************
+//  JUMBOTRON
+// *********************************
+
+.hero {
+  min-height: 30%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 30vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin: 30px;
+  background: $black;
+  z-index: 100;
+  h1 {
+    font-family: $font_4;
+  }
+}
+
+// *********************************
+//  PORTFOLIO
+// *********************************
+
+.protfolio-wrap {
+  margin: 50px;
+}
+
+@media (max-width: 767px) {
+  .protfolio-wrap {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .protfolio-wrap {
+    margin: 10px;
+  }
+}
+
+.section-gap {
+  padding: 120px 0;
+}
+.section-title {
+  padding-bottom: 30px;
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.portfolio-area {
+  .primary-btn {
+    color: $white;
+    background-color: $primary-color;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.portfolio-area .filters {
+  text-align: center;
+  margin-top: 50px;
+}
+.portfolio-area .filters ul {
+  padding: 0;
+}
+.portfolio-area .filters ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px 30px;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 500;
+  @media (max-width: 736px) {
+    padding: 6px 6px;
+  }
+}
+
+.portfolio-area .filters ul li:after {
+  content: "";
+  display: block;
+  width: calc(0% - 60px);
+  position: absolute;
+  height: 2px;
+  background: #333;
+  transition: width 350ms ease-out;
+}
+.portfolio-area .filters ul li:hover:after {
+  width: calc(100% - 60px);
+  transition: width 350ms ease-out;
+}
+.portfolio-area .filters ul li.active {
+  color: $primary-color;
+}
+.portfolio-area .filters-content {
+  margin-top: 50px;
+}
+.portfolio-area .filters-content .show {
+  opacity: 1;
+  visibility: visible;
+  transition: all 350ms;
+}
+.portfolio-area .filters-content .hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms;
+}
+.portfolio-area .filters-content .item {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.portfolio-area .filters-content .item img {
+  border-radius: 10px;
+}
+
+.portfolio-area .filters-content .item .p-inner {
+  padding: 20px 0px;
+}
+.portfolio-area .filters-content .item .p-inner h5 {
+  font-size: 15px;
+}
+.portfolio-area .filters-content .item .p-inner .cat {
+  font-size: 13px;
+}
+.portfolio-area .filters-content .item img {
+  width: 100%;
+}
+
+//--------- End portfolio Area -------------//

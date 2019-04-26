@@ -1,4 +1,6 @@
 // Variables
+
+$primary-color: #8ab92d;
 $secondary-color: #eece1a;
 $black: #000000;
 $white: #ffffff;
@@ -9,6 +11,8 @@ $gold: #b7ac7f;
 
 $raleway: "Raleway", sans-serif;
 $spectral: "Spectral", serif;
+$font_3: "Cormorant Unicase", serif;
+$font_4: "Domine", serif;
 
 // Set Text Color
 @function set-text-color($color) {

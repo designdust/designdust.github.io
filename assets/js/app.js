@@ -10,6 +10,27 @@ var app = {
 
 $("document").ready(function() {
   app.init();
+
+  $(".filters ul li").click(function() {
+    $(".filters ul li").removeClass("active");
+    $(this).addClass("active");
+
+    var data = $(this).attr("data-filter");
+    $grid.isotope({
+      filter: data
+    });
+  });
+
+  if (document.getElementById("portfolio")) {
+    var $grid = $(".grid").isotope({
+      itemSelector: ".all",
+      percentPosition: true,
+      masonry: {
+        columnWidth: ".all",
+        horizontalOrder: true
+      }
+    });
+  }
 });
 
 // Select DOM Items
@@ -32,7 +53,7 @@ function toggleMenu() {
     menu.classList.add("show");
     menuUl.classList.add("show");
     overlay.classList.add("show");
-    body.classList.add("overflow");
+    // body.classList.add("overflow");
     // navItems.forEach(function(item) {
     //   return item.classList.add("show");
     // });
@@ -44,7 +65,7 @@ function toggleMenu() {
     menu.classList.remove("show");
     menuUl.classList.remove("show");
     overlay.classList.remove("show");
-    body.classList.remove("overflow");
+    // body.classList.remove("overflow");
     // navItems.forEach(function(item) {
     //   return item.classList.remove("show");
     // });
