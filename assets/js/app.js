@@ -26,8 +26,7 @@ $("document").ready(function() {
       itemSelector: ".all",
       percentPosition: true,
       masonry: {
-        columnWidth: ".all",
-        horizontalOrder: true
+        columnWidth: ".all"
       }
     });
   }
@@ -74,3 +73,14 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+var typed = new Typed("#typed", {
+  stringsElement: "#typed-strings",
+
+  typeSpeed: 100,
+  backSpeed: 80,
+  loop: true,
+  loopCount: 3,
+  startDelay: 100,
+  backDelay: 2000
+});
