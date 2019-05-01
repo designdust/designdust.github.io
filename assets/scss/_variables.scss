@@ -4,15 +4,16 @@ $black: #000000;
 $white: #ffffff;
 $gray: #1f1f1f;
 $light_gray: rgb(110, 110, 110);
+
 $gold: #b7ac7f;
-$white_10: rgba(255, 255, 255, 0.1);
+$white_10: rgba(255, 255, 255, 0.3);
 
 // Fonts
 
 $raleway: "Raleway", sans-serif;
-$spectral: "Spectral", serif;
+$font_2: "Playfair Display", serif;
 $font_3: "Cormorant Unicase", serif;
-$font_4: "Dancing Script", serif;
+$font_4: "Lobster", cursive;
 
 // Set Text Color
 @function set-text-color($color) {

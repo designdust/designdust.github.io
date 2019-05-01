@@ -12,6 +12,8 @@ body {
   width: 100%;
   height: 100%;
   color: #1f1f1f;
+  background: #ffffff center/cover no-repeat url("/assets/img/header-bg.jpg");
+  background-attachment: fixed;
 }
 
 body.overflow {
@@ -22,9 +24,13 @@ body.overflow {
   padding: 120px 0;
 }
 
+.heading {
+  line-height: 3rem;
+  font-family: "Playfair Display", serif;
+}
+
 .sub-head {
   font-family: "Raleway", sans-serif;
-  font-weight: 600;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
@@ -37,34 +43,78 @@ body.overflow {
   content: "/ ";
 }
 
-.heading {
-  line-height: 3rem;
-  font-family: "Raleway", sans-serif;
-}
-
 .sub-text {
   font-family: "Raleway", sans-serif;
   line-height: 3rem;
 }
 
+a {
+  transition: all 0.5s ease-in-out;
+}
+
+a.link {
+  position: relative;
+}
+
+a.link:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 11px;
+  background-color: #b7ac7f;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: #b7ac7f;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover:after {
+  width: 50%;
+}
+
+.dark-bg {
+  background-color: #1f1f1f;
+  color: #6e6e6e;
+}
+
+.light-bg {
+  background-color: #ffffff;
+  color: #1f1f1f;
+}
+
 .header-logo {
-  z-index: 501;
+  z-index: 100;
   display: inline-block;
   margin: 0;
   padding: 0;
   position: absolute;
   left: 55px;
-  top: 60px;
+  top: 55px;
 }
 
-.header-logo a {
+.header-logo a.site-logo {
   display: block;
   padding: 0;
   outline: 0;
   border: none;
+  font-family: "Lobster", cursive;
+  font-size: 2em;
+  color: #b7ac7f;
+  letter-spacing: -1px;
+  transition: all 0.5s ease-in-out;
 }
 
-.header-logo a img {
+.header-logo a.site-logo:hover {
+  color: #6e6e6e;
+}
+
+.header-logo a.site-logo img {
   width: 200px;
   height: 38px;
 }
@@ -75,7 +125,7 @@ body.overflow {
   right: 55px;
   top: 55px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
   background: #000000;
   padding: 5px;
 }
@@ -89,7 +139,7 @@ body.overflow {
 .menu-btn .btn-line {
   height: 5px;
   background: #fff;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 .menu-btn .btn-line:nth-child(1) {
@@ -193,23 +243,23 @@ body.overflow {
   transition-delay: 1.35s;
 }
 
-.menu.show .about {
+.menu.show .menu-about {
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
   opacity: 1;
   transition-delay: 0.85s;
 }
 
-.menu.show .about .social-links a {
+.menu.show .menu-about .social-links a {
   color: #ffffff;
   margin-right: 20px;
 }
 
-.menu.show .about .social-links a:hover {
+.menu.show .menu-about .social-links a:hover {
   color: #b7ac7f;
 }
 
-.menu.show .about .social-links a:after {
+.menu.show .menu-about .social-links a:after {
   content: "";
   width: 230px;
   height: 2px;
@@ -257,7 +307,7 @@ body.overflow {
   color: #b7ac7f;
 }
 
-.menu .about {
+.menu .menu-about {
   margin-top: 40px;
   -webkit-transform: translateY(30px);
   transform: translateY(30px);
@@ -265,16 +315,16 @@ body.overflow {
   transition: all 0.4s ease;
 }
 
-.menu .about .social-links a {
+.menu .menu-about .social-links a {
   color: #ffffff;
   margin-right: 20px;
 }
 
-.menu .about .social-links a:hover {
+.menu .menu-about .social-links a:hover {
   color: #b7ac7f;
 }
 
-.menu .about .social-links a:after {
+.menu .menu-about .social-links a:after {
   content: "";
   width: 230px;
   height: 2px;
@@ -284,9 +334,8 @@ body.overflow {
   left: 0;
 }
 
-.menu .about p {
+.menu .menu-about p {
   color: #ffffff;
-  font-family: "Spectral", serif;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
   line-height: 170%;
@@ -327,24 +376,26 @@ body.overflow {
 }
 
 .hero {
-  min-height: calc(100vh - 60px);
+  height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  border-radius: 0%;
   display: flex;
   align-items: center;
   color: #1f1f1f;
-  margin: 30px;
-  background: #000000 center/cover no-repeat url("/assets/img/header-bg.jpg");
   z-index: 100;
-  box-shadow: 0px 2px 5px #6e6e6e;
+  background: transparent;
 }
 
 .hero h1 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 200;
+  letter-spacing: -2px;
   font-size: 6rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
 
 .hero .lead {
-  font-size: 3rem;
+  font-size: 2.6rem;
   padding-left: 120px;
   position: relative;
 }
@@ -352,28 +403,16 @@ body.overflow {
 .hero .lead::before {
   content: "";
   display: block;
-  width: 4rem;
+  width: 5rem;
   height: 1px;
   background-color: #b7ac7f;
   position: absolute;
   left: 6px;
-  top: 2.7rem;
+  top: 2.4rem;
 }
 
-.protfolio-wrap {
-  margin: 50px;
-}
-
-@media (max-width: 767px) {
-  .protfolio-wrap {
-    margin: 30px;
-  }
-}
-
-@media (max-width: 575px) {
-  .protfolio-wrap {
-    margin: 10px;
-  }
+.portfolio-area {
+  border-radius: 0 0 20rem 0;
 }
 
 .portfolio-area .primary-btn {
@@ -450,7 +489,7 @@ body.overflow {
 .portfolio-area .filters-content .item:hover .p-inner,
 .portfolio-area .filters-content .item:hover .img-blur-container {
   opacity: 1;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 .portfolio-area .filters-content .item .img-blur-container {
@@ -461,6 +500,7 @@ body.overflow {
   overflow: hidden;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
+  transition: all 0.5s ease-in-out;
 }
 
 .portfolio-area .filters-content .item .img-blur-container .img-blur {
@@ -486,8 +526,9 @@ body.overflow {
   height: calc(100% - 60px);
   background-color: rgba(255, 255, 255, 0.1);
   background-clip: border-box;
-  border: #ffffff 1px solid;
+  border: rgba(255, 255, 255, 0.3) 1px solid;
   color: #ffffff;
+  transition: all 0.5s ease-in-out;
 }
 
 .portfolio-area .filters-content .item .p-inner h4 {
@@ -502,16 +543,9 @@ body.overflow {
   width: 100%;
 }
 
-@media (max-width: 736px) {
-  .portfolio-area .filters ul li {
-    padding: 6px 6px;
-  }
-}
-
 .contact-area {
+  border-radius: 0 20rem 0 0;
   padding-bottom: 10.2rem;
-  background-color: #1f1f1f;
-  color: #6e6e6e;
   position: relative;
 }
 
@@ -522,11 +556,13 @@ body.overflow {
 }
 
 .contact-area a:hover {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b7ac7f;
+  border-bottom: 1px solid #b7ac7f;
 }
 
 .contact-area a:focus {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #b7ac7f;
+  border-bottom: 1px solid #b7ac7f;
 }
 
 .contact-main {
@@ -552,12 +588,6 @@ body.overflow {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-@media only screen and (max-width: 575.98px) {
-  .contact-email {
-    font-size: 2rem;
-  }
 }
 
 .contact-social {
@@ -606,4 +636,47 @@ body.overflow {
 .copyright span::after {
   content: "|";
   display: inline-block;
+}
+
+@media (max-width: 575.98px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .sub-text {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .contact-email {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-area .filters ul li {
+    padding: 6px 6px;
+  }
+  .hero {
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0%;
+  }
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 400;
+  }
+  .hero .lead {
+    font-size: 1.6rem;
+    padding-left: 60px;
+    position: relative;
+  }
+  .hero .lead::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background-color: #b7ac7f;
+    position: absolute;
+    left: 6px;
+    top: 1.4rem;
+  }
 }

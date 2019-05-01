@@ -1,6 +1,10 @@
+// ****** ****** ****** ******
 // General Style
+// ****** ****** ****** ******
 
+// ****** ****** ****** ******
 // RESET
+// ****** ****** ****** ******
 *,
 *:before,
 *:after {
@@ -13,58 +17,111 @@ body {
   width: 100%;
   height: 100%;
   color: $gray;
+  background: $white center / cover no-repeat url("/assets/img/header-bg.jpg");
+  background-attachment: fixed;
 
   &.overflow {
     overflow: hidden;
   }
 }
 
+// ****** ****** ****** ******
 // GLOBAL STYLE
+// ****** ****** ****** ******
 
 .section-gap {
   padding: 120px 0;
 }
 
 // Display Heading
+
+.heading {
+  line-height: 3rem;
+  font-family: $font_2;
+}
+
 .sub-head {
   font-family: $raleway;
-  font-weight: 600;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: $gold;
   margin-top: 0;
   margin-bottom: 2.1rem;
+
+  &::before {
+    content: "/ ";
+  }
 }
-.sub-head::before {
-  content: "/ ";
-}
-.heading {
-  line-height: 3rem;
-  font-family: $raleway;
-}
+
 .sub-text {
   font-family: $raleway;
   line-height: 3rem;
 }
 
+// Links
+a {
+  @include transition(all 0.5s ease-in-out);
+}
+a.link {
+  position: relative;
+}
+a.link:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 11px;
+  background-color: $gold;
+  @include transition(all 0.5s ease-in-out);
+}
+a:hover,
+a:focus {
+  color: $gold;
+  text-decoration: none;
+  @include transition(all 0.5s ease-in-out);
+}
+a:hover:after {
+  width: 50%;
+}
+
+// Layout
+.dark-bg {
+  background-color: $gray;
+  color: $light_gray;
+}
+.light-bg {
+  background-color: $white;
+  color: $gray;
+}
+// ****** ****** ****** ******
 // NAVIGATION
+// ****** ****** ****** ******
 
 // Logo
 .header-logo {
-  z-index: 501;
+  z-index: 100;
   display: inline-block;
   margin: 0;
   padding: 0;
   position: absolute;
   left: 55px;
-  top: 60px;
+  top: 55px;
 
-  a {
+  a.site-logo {
     display: block;
     padding: 0;
     outline: 0;
     border: none;
+    font-family: $font_4;
+    font-size: 2em;
+    color: $gold;
+    letter-spacing: -1px;
+    @include transition(all 0.5s ease-in-out);
+    &:hover {
+      color: $light_gray;
+    }
     img {
       width: 200px;
       height: 38px;
@@ -80,7 +137,7 @@ body {
   top: 55px;
   cursor: pointer;
 
-  @include transition(all 0.5s ease);
+  @include transition(all 0.5s ease-in-out);
   background: $black;
   padding: 5px;
 
@@ -97,7 +154,7 @@ body {
     height: 5px;
     background: set-text-color($black);
 
-    @include transition(all 0.5s ease);
+    @include transition(all 0.5s ease-in-out);
     &:nth-child(1) {
       width: 28px;
       margin: 0 0 5px 0;
@@ -166,7 +223,7 @@ body {
       }
     }
 
-    .about {
+    .menu-about {
       @include transform(translateY(0px));
       opacity: 1;
       transition-delay: 0.85s;
@@ -224,7 +281,7 @@ body {
       }
     }
   }
-  .about {
+  .menu-about {
     margin-top: 40px;
     @include transform(translateY(30px));
     opacity: 0;
@@ -249,7 +306,6 @@ body {
 
     p {
       color: $white;
-      font-family: $spectral;
       font-size: 1.05rem;
       letter-spacing: 0.5px;
       line-height: 170%;
@@ -284,63 +340,58 @@ body {
   }
 }
 
-// *********************************
+// ****** ****** ****** ******
 //  JUMBOTRON
-// *********************************
+// ****** ****** ****** ******
 
 .hero {
-  min-height: calc(100vh - 60px);
+  // min-height: calc(100vh - 60px);
+  height: 100vh;
+  margin: 0;
+  min-height: 100vh;
+  border-radius: 0%;
   display: flex;
   align-items: center;
   color: $gray;
-  margin: 30px;
-  background: $black center / cover no-repeat url("/assets/img/header-bg.jpg");
   z-index: 100;
-  box-shadow: 0px 2px 5px $light_gray;
+  background: transparent;
+
+  // border-radius: 0.3rem 30rem 0.3rem 0.3rem;
+  // margin: 30px;
+  // background: $white center / cover no-repeat url("/assets/img/header-bg.jpg");
+  // background-attachment: fixed;
+  // box-shadow: 0px 2px 5px #dbdbdb;
 
   h1 {
-    font-family: $raleway;
-    font-weight: 200;
+    letter-spacing: -2px;
     font-size: 6rem;
+    font-family: $font_2;
+    font-weight: 700;
   }
 
   .lead {
-    font-size: 3rem;
+    font-size: 2.6rem;
     padding-left: 120px;
     position: relative;
     &::before {
       content: "";
       display: block;
-      width: 4rem;
+      width: 5rem;
       height: 1px;
       background-color: $gold;
       position: absolute;
       left: 6px;
-      top: 2.7rem;
+      top: 2.4rem;
     }
   }
 }
 
-// *********************************
+// ****** ****** ****** ******
 //  PORTFOLIO
-// *********************************
+// ****** ****** ****** ******
 
-.protfolio-wrap {
-  margin: 50px;
-}
-
-@media (max-width: 767px) {
-  .protfolio-wrap {
-    margin: 30px;
-  }
-}
-
-@media (max-width: 575px) {
-  .protfolio-wrap {
-    margin: 10px;
-  }
-}
 .portfolio-area {
+  border-radius: 0 0 20rem 0;
   .primary-btn {
     color: #ffffff;
     background-color: #b7ac7f;
@@ -404,7 +455,7 @@ body {
       &:hover .p-inner,
       &:hover .img-blur-container {
         opacity: 1;
-        @include transition(all 0.5s ease);
+        @include transition(all 0.5s ease-in-out);
       }
       .img-blur-container {
         position: absolute;
@@ -415,6 +466,7 @@ body {
 
         width: calc(100% - 60px);
         height: calc(100% - 60px);
+        @include transition(all 0.5s ease-in-out);
         .img-blur {
           position: absolute;
 
@@ -441,8 +493,9 @@ body {
         height: calc(100% - 60px);
         background-color: rgba(255, 255, 255, 0.1);
         background-clip: border-box;
-        border: $white 1px solid;
+        border: $white_10 1px solid;
         color: $white;
+        @include transition(all 0.5s ease-in-out);
 
         h4 {
           font-size: 15px;
@@ -458,30 +511,25 @@ body {
   }
 }
 
-@media (max-width: 736px) {
-  .portfolio-area .filters ul li {
-    padding: 6px 6px;
-  }
-}
-
-// *********************************
+// ****** ****** ****** ******
 //  CONTACT AREA
-// *********************************
+// ****** ****** ****** ******
 
 .contact-area {
+  border-radius: 0 20rem 0 0;
   padding-bottom: 10.2rem;
-  background-color: $gray;
-  color: $light_gray;
   position: relative;
   a {
     color: $white;
     border-bottom: 1px solid transparent;
     display: inline-block;
     &:hover {
-      border-bottom: 1px solid $white_10;
+      color: $gold;
+      border-bottom: 1px solid $gold;
     }
     &:focus {
-      border-bottom: 1px solid $white_10;
+      color: $gold;
+      border-bottom: 1px solid $gold;
     }
   }
 }
@@ -506,12 +554,6 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-@media only screen and (max-width: 575.98px) {
-  .contact-email {
-    font-size: 2rem;
-  }
 }
 
 .contact-social {
@@ -552,3 +594,63 @@ body {
     display: inline-block;
   }
 }
+
+// ****** ****** ****** ******
+//  MEDIA QUERIES
+// ****** ****** ****** ******
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+  .sub-text {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .contact-email {
+    font-size: 1.8rem;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .portfolio-area .filters ul li {
+    padding: 6px 6px;
+  }
+  .hero {
+    margin: 0;
+    min-height: 100vh;
+    border-radius: 0%;
+    h1 {
+      font-size: 4rem;
+      font-weight: 400;
+    }
+    .lead {
+      font-size: 1.6rem;
+      padding-left: 60px;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 2rem;
+        height: 1px;
+        background-color: $gold;
+        position: absolute;
+        left: 6px;
+        top: 1.4rem;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
