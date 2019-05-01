@@ -23,29 +23,36 @@
   <meta name="author" content="Ferdinand Tugano" />
   <link rel="icon" href="favicon.ico" />
 
-  <title>Bootstrap Stater</title>
+  <title>Designdust Portfolio</title>
 
   <!-- Icons for this template -->
   <link href="assets/fonts/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" />
   <!-- Google fonts -->
   <link
-    href="https://fonts.googleapis.com/css?family=Raleway:200,400,600|Spectral|Cormorant+Unicase|Domine|Dancing+Script"
+    href="https://fonts.googleapis.com/css?family=Raleway:200,400,600|Playfair+Display|Cormorant+Unicase|Lobster:200,400"
     rel="stylesheet" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/app.min.css">
+
+
+  <!-- ****** VENDOR'S CDN ****** -->
+  <!-- Animate on scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
 <body>
   <header>
     <div class="header-logo">
-      <a class="site-logo" href="index.html">
-        <img src="assets/img/logo.png" alt="Homepage" />
+      <a class="site-logo" data-aos="fade-right" href="index.html">
+        <!-- <img src="assets/img/logo.png" alt="Homepage" /> -->
+        Designdust
       </a>
     </div>
 
-    <div class="menu-btn">
+    <div class="menu-btn" data-aos="fade-left">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -75,7 +82,7 @@
         </li>
       </ul>
 
-      <div class="about mt-5">
+      <div class="menu-about mt-5">
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa.
@@ -93,9 +100,9 @@
   </header>
 
   <main role="main" class="main">
-    <section class="jumbotron hero">
+    <section class="jumbotron hero" data-aos="fade-up">
       <div class="container">
-        <h1>Hello, I'm <span class="font-weight-bold">Flitz</span></h1>
+        <h1>Hello, I'm <span class="name">Flitz</span></h1>
         <div id="typed-strings">
           <p>Web <strong>Designer.</strong></p>
           <p>Web <strong>Developer.</strong></p>
@@ -106,18 +113,18 @@
     </section>
 
     <!-- Start portfolio-area Area -->
-    <section class="portfolio-area section-gap" id="portfolio">
+    <section class="portfolio-area section-gap light-bg" id="portfolio">
       <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="menu-content col-lg-10">
-            <div class="title text-center">
-              <h1 class="mb-10">This is what I can do for you</h1>
-              <p>Who are in extremely love with eco friendly system..</p>
-            </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-head">Featured Projects</h4>
+            <h1 class="display-4 heading">
+              Samples of some of my work and studies.
+            </h1>
           </div>
         </div>
 
-        <div class="filters">
+        <div class="filters" data-aos="fade-up">
           <ul>
             <li class="active" data-filter="*">All</li>
             <li data-filter=".corporate">Vector</li>
@@ -129,8 +136,8 @@
 
         <div class="filters-content">
           <div class="row grid">
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all corporate">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all corporate">
+              <div class="item" data-aos="fade-up">
                 <img src="assets/img/portfolio/1.jpg" alt="Work 1" />
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/1.jpg" alt="Work 1" />
@@ -142,8 +149,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all personal">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all personal">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/2.jpg" alt="Work 1" />
                 </div>
@@ -155,8 +162,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all agency">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all agency">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/3.jpg" alt="Work 1" />
                 </div>
@@ -168,8 +175,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all portal">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all portal">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/4.jpg" alt="Work 1" />
                 </div>
@@ -181,8 +188,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all corporate">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all corporate">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/5.jpg" alt="Work 1" />
                 </div>
@@ -194,8 +201,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all personal">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all personal">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/6.jpg" alt="Work 1" />
                 </div>
@@ -207,8 +214,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all agency">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all agency">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/7.jpg" alt="Work 1" />
                 </div>
@@ -220,8 +227,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all portal">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all portal">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/8.jpg" alt="Work 1" />
                 </div>
@@ -233,8 +240,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all corporate">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all corporate">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/9.jpg" alt="Work 1" />
                 </div>
@@ -246,8 +253,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all personal">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all personal">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/10.jpg" alt="Work 1" />
                 </div>
@@ -259,8 +266,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all agency">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all agency">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/1.jpg" alt="Work 1" />
                 </div>
@@ -272,8 +279,8 @@
               </div>
             </div>
 
-            <div class="single-portfolio col-md-6 col-lg-4 col-sm-12 all portal">
-              <div class="item">
+            <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all portal">
+              <div class="item" data-aos="fade-up">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/2.jpg" alt="Work 1" />
                 </div>
@@ -284,6 +291,7 @@
                 </div>
               </div>
             </div>
+            <!-- End Single Portfolio -->
           </div>
         </div>
       </div>
@@ -291,7 +299,7 @@
     <!-- End portfolio-area Area -->
 
     <!-- Start Contact Area -->
-    <section id="contact" class="contact-area section-gap">
+    <section class="contact-area section-gap dark-bg" id="contact">
       <div class="container">
         <div class="row" data-aos="fade-up">
           <div class="col">
@@ -355,7 +363,7 @@
         </div>
         <!-- end row -->
 
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <div class="col-md-12 copyright">
             <span>
               Copyright &copy;
@@ -378,10 +386,13 @@
   <script src="assets/js/vendor/jquery.slim.min.js"></script>
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
-  <!-- CDN'S -->
+
+  <!-- ****** VENDOR'S CDN ****** -->
   <!-- Isotope layout JS CDN only -->
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   <script src="assets/js/app.min.js"></script>
 
 </body>
