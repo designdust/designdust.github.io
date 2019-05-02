@@ -24,27 +24,31 @@ body.overflow {
   padding: 120px 0;
 }
 
+.section-head {
+  padding: 2rem 0 3rem;
+}
+
 .heading {
   line-height: 3rem;
   font-family: "Playfair Display", serif;
 }
 
-.sub-head {
+.sub-heading {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: #b7ac7f;
   margin-top: 0;
-  margin-bottom: 2.1rem;
 }
 
-.sub-head::before {
+.sub-heading::before {
   content: "/ ";
 }
 
 .sub-text {
   font-family: "Raleway", sans-serif;
+  font-size: 2rem;
   line-height: 3rem;
 }
 
@@ -176,6 +180,7 @@ a:hover:after {
 }
 
 .menu {
+  color: #ffffff;
   background-color: #1f1f1f;
   position: fixed;
   z-index: 9;
@@ -194,11 +199,6 @@ a:hover:after {
 .menu.show {
   -webkit-transform: translateX(0px);
   transform: translateX(0px);
-}
-
-.menu.show ul.menu-ul {
-  list-style: none;
-  padding: 0%;
 }
 
 .menu.show ul.menu-ul li {
@@ -250,23 +250,11 @@ a:hover:after {
   transition-delay: 0.85s;
 }
 
-.menu.show .menu-about .social-links a {
-  color: #ffffff;
-  margin-right: 20px;
-}
-
-.menu.show .menu-about .social-links a:hover {
-  color: #b7ac7f;
-}
-
-.menu.show .menu-about .social-links a:after {
-  content: "";
-  width: 230px;
-  height: 2px;
-  background-color: #b7ac7f;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.menu.show .menu-footer {
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  opacity: 1;
+  transition-delay: 1s;
 }
 
 .menu ul.menu-ul {
@@ -315,16 +303,16 @@ a:hover:after {
   transition: all 0.4s ease;
 }
 
-.menu .menu-about .social-links a {
-  color: #ffffff;
+.menu .menu-about a {
+  color: #6e6e6e;
   margin-right: 20px;
 }
 
-.menu .menu-about .social-links a:hover {
-  color: #b7ac7f;
+.menu .menu-about a:hover {
+  color: #ffffff;
 }
 
-.menu .menu-about .social-links a:after {
+.menu .menu-about a:after {
   content: "";
   width: 230px;
   height: 2px;
@@ -335,10 +323,18 @@ a:hover:after {
 }
 
 .menu .menu-about p {
-  color: #ffffff;
   font-size: 1.05rem;
   letter-spacing: 0.5px;
   line-height: 170%;
+}
+
+.menu .menu-footer {
+  color: #ffffff;
+  margin-top: 40px;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .nav-item:nth-child(4) {
@@ -391,7 +387,6 @@ a:hover:after {
   letter-spacing: -2px;
   font-size: 6rem;
   font-family: "Playfair Display", serif;
-  font-weight: 700;
 }
 
 .hero .lead {
@@ -570,16 +565,7 @@ a:hover:after {
   margin-bottom: 3rem;
 }
 
-.contact-email {
-  display: inline-block;
-  font-size: 3rem;
-  line-height: 1;
-  color: #ffffff;
-  padding-top: 3.6rem;
-  position: relative;
-}
-
-.contact-email::before {
+.contact-main::before {
   content: "";
   display: block;
   height: 2px;
@@ -587,7 +573,25 @@ a:hover:after {
   background-color: #b7ac7f;
   position: absolute;
   top: 0;
-  left: 0;
+}
+
+.contact-main a {
+  color: #6e6e6e;
+}
+
+.contact-main a.contact-email {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+.contact-main a:hover {
+  color: #b7ac7f;
+  border-bottom: 1px solid #b7ac7f;
+}
+
+.contact-main a:focus {
+  color: #b7ac7f;
+  border-bottom: 1px solid #b7ac7f;
 }
 
 .contact-social {
@@ -646,7 +650,7 @@ a:hover:after {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
-  .contact-email {
+  .contact-main a.contact-email {
     font-size: 1.8rem;
   }
 }
@@ -678,5 +682,11 @@ a:hover:after {
     position: absolute;
     left: 6px;
     top: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    width: 500px;
   }
 }

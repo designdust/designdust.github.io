@@ -59,7 +59,7 @@
       <div class="btn-line"></div>
     </div>
 
-    <nav class="menu col-md-6 col-lg-5 col-xl-4">
+    <nav class="menu col-md-6">
       <ul class="menu-ul">
         <li class="nav-item current">
           <a href="index.html" class="nav-link">
@@ -68,25 +68,33 @@
         </li>
         <li class="nav-item">
           <a href="about.html" class="nav-link">
-            About Me
+            About
           </a>
         </li>
         <li class="nav-item">
           <a href="work.html" class="nav-link">
-            My Work
+            Work
           </a>
         </li>
         <li class="nav-item">
           <a href="contact.html" class="nav-link">
-            How To Reach Me
+            Contact
           </a>
         </li>
       </ul>
 
-      <div class="menu-about mt-5">
+      <address class="menu-about mt-5">
         <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa.
+          <strong>Flitz Tugano</strong>
+        </p>
+        <p>
+          Based out of Quezon City, PH. <br>
+
+          <a href="mailto:#0">
+            flitz.tugano@gmail.com
+          </a><br>
+          <a href="tel:+63027539081">+63 (02) 753 9081</a>
+          <!-- If you are a business seeking a web presence or an employer looking to hire, feel free to contact me. -->
         </p>
         <div class="social-links mt-5 pb-5">
           <a href="#"><i class="fab fa-github fa-2x"></i></a>
@@ -94,13 +102,30 @@
           <a href="#"><i class="fab fa-codepen fa-2x"></i></a>
           <a href="#"><i class="fab fa-deviantart fa-2x"></i></a>
         </div>
+      </address>
+
+      <div class="menu-footer">
+        <!-- <p>
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved
+        </p> -->
+        <p>
+          <span class="fa fa-business-time"></span>
+          I am available for freelance projects and full-time employment.
+        </p>
       </div>
+
+
     </nav>
 
     <div class="overlay"></div>
   </header>
 
   <main role="main" class="main">
+    <!-- START jumbotron area -->
     <section class="jumbotron hero" data-aos="fade-up">
       <div class="container">
         <h1>Hello, I'm <span class="name">Flitz</span></h1>
@@ -110,20 +135,76 @@
           <p>Multimedia <strong>Artist.</strong></p>
         </div>
         <p class="lead"><span id="typed"></span> </p>
+        <a href="#portfolio" class="btn btn-outline-dark btn-lg">View Portfolio</a>
       </div>
     </section>
-
-    <!-- Start portfolio-area Area -->
-    <section class="portfolio-area section-gap light-bg" id="portfolio">
+    <!-- END jumbotron area -->
+    <!-- START about area -->
+    <section class="about-area section-gap light-bg" id="about">
       <div class="container">
+        <!-- start heading -->
+        <div class="row section-head" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-heading">About Me</h4>
+            <h1 class="display-4 heading">
+              For the love of design.
+            </h1>
+
+          </div>
+        </div>
+        <!-- end heading -->
         <div class="row" data-aos="fade-up">
           <div class="col">
-            <h4 class="sub-head">Featured Projects</h4>
+            <p class="lead">Learning web design in high school kept me busy and much less angsty. What started as
+              curiosity blossomed
+              into full-on passion for all areas of design.
+              <br>
+              <br> My strongest skillset is designing for the web because I've been practicing for over 3 years. This
+              includes a healthy sense of design & fervent knowledge of development.
+              <br>
+              <br> I've dabbled in print work but also believe the proverb "jack of all trades, master of none".
+              Specialization is more my thing.
+              <br>
+              <br> At the moment I don't have a voluminous portfolio of live work — but I do have a few live samples and
+              Dribbble shots of some of my designs.
+              <br>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END About area -->
+    <!-- START skills area -->
+    <section class="skills-area section-gap light-bg" id="skills">
+      <div class="container">
+        <!-- start heading -->
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-heading">Skills</h4>
             <h1 class="display-4 heading">
               Samples of some of my work and studies.
             </h1>
           </div>
         </div>
+        <!-- end heading -->
+      </div>
+    </section>
+    <!-- END skills area -->
+
+    <!-- START portfolio area -->
+    <section class="portfolio-area section-gap light-bg" id="portfolio">
+      <div class="container">
+        <!-- start heading -->
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-heading">Featured Projects</h4>
+            <h1 class="display-4 heading">
+              Samples of some of my work and studies.
+            </h1>
+          </div>
+        </div>
+        <!-- end heading -->
 
         <div class="filters" data-aos="fade-up">
           <ul>
@@ -297,14 +378,14 @@
         </div>
       </div>
     </section>
-    <!-- End portfolio-area Area -->
+    <!-- END portfolio Area -->
 
-    <!-- Start Contact Area -->
+    <!-- START Contact Area -->
     <section class="contact-area section-gap dark-bg" id="contact">
       <div class="container">
         <div class="row" data-aos="fade-up">
           <div class="col">
-            <h4 class="sub-head">Contact Me</h4>
+            <h4 class="sub-heading">Contact Me</h4>
             <h1 class="display-4 text-light heading">
               Get in touch and let's make something great together. Let's turn
               your idea on an even greater product.
@@ -314,13 +395,12 @@
         <!-- end section-header -->
 
         <div class="row">
-          <div class="col-12 contact-main pt-5" data-aos="fade-up">
-            <p>
-              <a href="mailto:#0" class="contact-email">
-                flitz.tugano@gmail.com
-              </a>
-              <h3 class="contact-number sub-text">+63 (02) 753 9081</h3>
-            </p>
+          <div class="col contact-main pt-5" data-aos="fade-up">
+            <a href="mailto:#0" class="contact-email">
+              flitz.tugano@gmail.com
+            </a><br>
+            <a href="tel:+63027539081" class="contact-number sub-text">+63 (02) 753 9081</a>
+
           </div>
           <!-- end contact-main -->
         </div>
@@ -328,18 +408,18 @@
 
         <div class="row">
           <div class="col-md-6 pt-5" data-aos="fade-up">
-            <h4 class="sub-head">Where To Find Me</h4>
+            <h4 class="sub-heading">Where To Find Me</h4>
 
-            <h3 class="contact-address sub-text">
+            <div class="contact-address sub-text">
               Tower 3 3251 Grass Residences<br />
               Misamis St, Bago Bantay<br />
               Quezon City, MM, Philippines
-            </h3>
+            </div>
           </div>
           <!-- end contact-secondary -->
 
           <div class="col-md-6 pt-5" data-aos="fade-up">
-            <h4 class="sub-head">Follow Me</h4>
+            <h4 class="sub-heading">Follow Me</h4>
 
             <ul class="contact-social">
               <li>
@@ -379,7 +459,7 @@
         </div>
       </div>
     </section>
-    <!-- End Contact Area -->
+    <!-- END Contact Area -->
   </main>
 
   <!-- Bootstrap core JavaScript -->

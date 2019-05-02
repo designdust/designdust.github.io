@@ -34,20 +34,21 @@ body {
 }
 
 // Display Heading
-
+.section-head {
+  padding: 2rem 0 3rem;
+}
 .heading {
   line-height: 3rem;
   font-family: $font_2;
 }
 
-.sub-head {
+.sub-heading {
   font-family: $raleway;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: $gold;
   margin-top: 0;
-  margin-bottom: 2.1rem;
 
   &::before {
     content: "/ ";
@@ -56,6 +57,7 @@ body {
 
 .sub-text {
   font-family: $raleway;
+  font-size: 2rem;
   line-height: 3rem;
 }
 
@@ -194,6 +196,7 @@ a:hover:after {
 
 // Menu
 .menu {
+  color: $white;
   background-color: $gray;
   position: fixed;
   z-index: 9;
@@ -209,8 +212,6 @@ a:hover:after {
     @include transform(translateX(0px));
 
     ul.menu-ul {
-      list-style: none;
-      padding: 0%;
       li {
         @include transform(translateX(0px));
         opacity: 1;
@@ -227,22 +228,11 @@ a:hover:after {
       @include transform(translateY(0px));
       opacity: 1;
       transition-delay: 0.85s;
-      .social-links a {
-        color: $white;
-        margin-right: 20px;
-        &:hover {
-          color: $gold;
-        }
-        &:after {
-          content: "";
-          width: 230px;
-          height: 2px;
-          background-color: $gold;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-        }
-      }
+    }
+    .menu-footer {
+      @include transform(translateY(0px));
+      opacity: 1;
+      transition-delay: 1s;
     }
   }
 
@@ -286,12 +276,11 @@ a:hover:after {
     @include transform(translateY(30px));
     opacity: 0;
     @include transition(all 0.4s ease);
-
-    .social-links a {
-      color: $white;
+    & a {
+      color: $light_gray;
       margin-right: 20px;
       &:hover {
-        color: $gold;
+        color: $white;
       }
       &:after {
         content: "";
@@ -305,11 +294,17 @@ a:hover:after {
     }
 
     p {
-      color: $white;
       font-size: 1.05rem;
       letter-spacing: 0.5px;
       line-height: 170%;
     }
+  }
+  .menu-footer {
+    color: $white;
+    margin-top: 40px;
+    @include transform(translateY(30px));
+    opacity: 0;
+    @include transition(all 0.4s ease);
   }
 }
 
@@ -366,7 +361,6 @@ a:hover:after {
     letter-spacing: -2px;
     font-size: 6rem;
     font-family: $font_2;
-    font-weight: 700;
   }
 
   .lead {
@@ -536,24 +530,30 @@ a:hover:after {
 .contact-main {
   margin-top: 8rem;
   margin-bottom: 3rem;
-}
-.contact-email {
-  display: inline-block;
-  font-size: 3rem;
-  line-height: 1;
-  color: $white;
-  padding-top: 3.6rem;
-  position: relative;
-}
-.contact-email::before {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 230px;
-  background-color: $gold;
-  position: absolute;
-  top: 0;
-  left: 0;
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 230px;
+    background-color: $gold;
+    position: absolute;
+    top: 0;
+  }
+  & a {
+    color: $light_gray;
+    &.contact-email {
+      color: $white;
+      font-size: 3rem;
+    }
+    &:hover {
+      color: $gold;
+      border-bottom: 1px solid $gold;
+    }
+    &:focus {
+      color: $gold;
+      border-bottom: 1px solid $gold;
+    }
+  }
 }
 
 .contact-social {
@@ -596,9 +596,10 @@ a:hover:after {
 }
 
 // ****** ****** ****** ******
-//  MEDIA QUERIES
+//  MEDIA QUERIES BOOTSTRAP ^4
 // ****** ****** ****** ******
 
+// MAX WIDTH
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .heading {
@@ -608,8 +609,10 @@ a:hover:after {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
-  .contact-email {
-    font-size: 1.8rem;
+  .contact-main {
+    a.contact-email {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -654,3 +657,23 @@ a:hover:after {
 
 // Extra large devices (large desktops)
 // No media query since the extra-large breakpoint has no upper bound on its width
+
+// MIN WIDTH
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .menu {
+    width: 500px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
