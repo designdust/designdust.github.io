@@ -20,38 +20,6 @@ body.overflow {
   overflow: hidden;
 }
 
-.section-gap {
-  padding: 120px 0;
-}
-
-.section-head {
-  padding: 2rem 0 3rem;
-}
-
-.heading {
-  line-height: 3rem;
-  font-family: "Playfair Display", serif;
-}
-
-.sub-heading {
-  font-family: "Raleway", sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  color: #b7ac7f;
-  margin-top: 0;
-}
-
-.sub-heading::before {
-  content: "/ ";
-}
-
-.sub-text {
-  font-family: "Raleway", sans-serif;
-  font-size: 2rem;
-  line-height: 3rem;
-}
-
 a {
   transition: all 0.5s ease-in-out;
 }
@@ -92,17 +60,90 @@ a:hover:after {
   color: #1f1f1f;
 }
 
+.section-gap {
+  padding: 120px 0;
+}
+
+.lead-article {
+  padding: 0 4rem;
+}
+
+.section-head {
+  padding: 2rem 0 3rem;
+}
+
+.heading {
+  line-height: 3rem;
+  font-family: "Playfair Display", serif;
+}
+
+.sub-heading {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #b7ac7f;
+  margin-top: 0;
+}
+
+.sub-heading::before {
+  content: "/ ";
+}
+
+.sub-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
 .header-logo {
+  left: 55px;
+  top: 55px;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  transition: -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: 1s;
+}
+
+.header-logo.hide {
+  -webkit-transform: translateY(-300%);
+  transform: translateY(-300%);
+  transition: -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.menu-logo {
+  top: 55px;
+  -webkit-transform: translateY(-300%);
+  transform: translateY(-300%);
+  transition: -webkit-transform 0.55s;
+  transition: transform 0.55s;
+  transition: transform 0.55s, -webkit-transform 0.55s;
+}
+
+.menu-logo.show {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  transition: -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: 1s;
+}
+
+.header-logo,
+.menu-logo {
   z-index: 100;
   display: inline-block;
   margin: 0;
   padding: 0;
   position: absolute;
-  left: 55px;
-  top: 55px;
 }
 
-.header-logo a.site-logo {
+.header-logo a.site-logo,
+.menu-logo a.site-logo {
   display: block;
   padding: 0;
   outline: 0;
@@ -114,11 +155,13 @@ a:hover:after {
   transition: all 0.5s ease-in-out;
 }
 
-.header-logo a.site-logo:hover {
+.header-logo a.site-logo:hover,
+.menu-logo a.site-logo:hover {
   color: #6e6e6e;
 }
 
-.header-logo a.site-logo img {
+.header-logo a.site-logo img,
+.menu-logo a.site-logo img {
   width: 200px;
   height: 38px;
 }
@@ -194,6 +237,7 @@ a:hover:after {
   transition: -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: 0.25s;
 }
 
 .menu.show {
@@ -208,39 +252,39 @@ a:hover:after {
 }
 
 .menu.show ul.menu-ul li:nth-child(1) {
-  transition-delay: 0.15s;
+  transition-delay: 0.25s;
 }
 
 .menu.show ul.menu-ul li:nth-child(2) {
-  transition-delay: 0.3s;
+  transition-delay: 0.5s;
 }
 
 .menu.show ul.menu-ul li:nth-child(3) {
-  transition-delay: 0.45s;
-}
-
-.menu.show ul.menu-ul li:nth-child(4) {
-  transition-delay: 0.6s;
-}
-
-.menu.show ul.menu-ul li:nth-child(5) {
   transition-delay: 0.75s;
 }
 
+.menu.show ul.menu-ul li:nth-child(4) {
+  transition-delay: 1s;
+}
+
+.menu.show ul.menu-ul li:nth-child(5) {
+  transition-delay: 1.25s;
+}
+
 .menu.show ul.menu-ul li:nth-child(6) {
-  transition-delay: 0.9s;
+  transition-delay: 1.5s;
 }
 
 .menu.show ul.menu-ul li:nth-child(7) {
-  transition-delay: 1.05s;
+  transition-delay: 1.75s;
 }
 
 .menu.show ul.menu-ul li:nth-child(8) {
-  transition-delay: 1.2s;
+  transition-delay: 2s;
 }
 
 .menu.show ul.menu-ul li:nth-child(9) {
-  transition-delay: 1.35s;
+  transition-delay: 2.25s;
 }
 
 .menu.show .menu-about {

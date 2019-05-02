@@ -29,38 +29,6 @@ body {
 // GLOBAL STYLE
 // ****** ****** ****** ******
 
-.section-gap {
-  padding: 120px 0;
-}
-
-// Display Heading
-.section-head {
-  padding: 2rem 0 3rem;
-}
-.heading {
-  line-height: 3rem;
-  font-family: $font_2;
-}
-
-.sub-heading {
-  font-family: $raleway;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
-  color: $gold;
-  margin-top: 0;
-
-  &::before {
-    content: "/ ";
-  }
-}
-
-.sub-text {
-  font-family: $raleway;
-  font-size: 2rem;
-  line-height: 3rem;
-}
-
 // Links
 a {
   @include transition(all 0.5s ease-in-out);
@@ -97,20 +65,77 @@ a:hover:after {
   background-color: $white;
   color: $gray;
 }
+
+.section-gap {
+  padding: 120px 0;
+}
+
+.lead-article {
+  padding: 0 4rem;
+}
+// Display Heading
+.section-head {
+  padding: 2rem 0 3rem;
+}
+.heading {
+  line-height: 3rem;
+  font-family: $font_2;
+}
+
+.sub-heading {
+  font-family: $raleway;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: $gold;
+  margin-top: 0;
+
+  &::before {
+    content: "/ ";
+  }
+}
+
+.sub-text {
+  font-family: $raleway;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
 // ****** ****** ****** ******
 // NAVIGATION
 // ****** ****** ****** ******
 
 // Logo
 .header-logo {
+  left: 55px;
+  top: 55px;
+  @include transform(translateY(0%));
+  @include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+  transition-delay: 1s;
+
+  &.hide {
+    @include transform(translateY(-300%));
+    @include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+  }
+}
+.menu-logo {
+  top: 55px;
+  @include transform(translateY(-300%));
+  @include transition(transform 0.55s);
+
+  &.show {
+    @include transform(translateY(0%));
+    @include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+    transition-delay: 1s;
+  }
+}
+.header-logo,
+.menu-logo {
   z-index: 100;
   display: inline-block;
   margin: 0;
   padding: 0;
   position: absolute;
-  left: 55px;
-  top: 55px;
-
   a.site-logo {
     display: block;
     padding: 0;
@@ -207,6 +232,7 @@ a:hover:after {
   overflow-y: auto;
   @include transform(translateX(100%));
   @include transition(transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86));
+  transition-delay: 0.25s;
 
   &.show {
     @include transform(translateX(0px));
@@ -218,7 +244,7 @@ a:hover:after {
 
         @for $i from 1 to 10 {
           &:nth-child(#{$i}) {
-            transition-delay: $i * 0.15s;
+            transition-delay: $i * 0.25s;
           }
         }
       }

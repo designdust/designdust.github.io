@@ -18,6 +18,9 @@ var app = {
     var menuUl = document.querySelector(".menu-ul");
     var overlay = document.querySelector(".overlay");
 
+    var headerLogo = document.getElementById("header-logo");
+    var menuLogo = document.getElementById("menu-logo");
+
     // var navItems = document.querySelectorAll(".nav-item");
     // var body = document.querySelector("body");
 
@@ -33,6 +36,8 @@ var app = {
         menu.classList.add("show");
         menuUl.classList.add("show");
         overlay.classList.add("show");
+        headerLogo.classList.add("hide");
+        menuLogo.classList.add("show");
 
         // * to hide scroll of the body when overflowing
         // body.classList.add("overflow");
@@ -49,6 +54,8 @@ var app = {
         menu.classList.remove("show");
         menuUl.classList.remove("show");
         overlay.classList.remove("show");
+        headerLogo.classList.remove("hide");
+        menuLogo.classList.remove("show");
 
         // * to hide scroll of the body when overflowing
         // body.classList.remove("overflow");
