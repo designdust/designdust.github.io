@@ -6,7 +6,7 @@ var app = {
     app.burgerMenu();
     app.typingHeadline();
     app.isotope();
-    app.aos();
+    app.preLoader();
   },
   // ****** ****** ****** ******
   // START Burger Menu
@@ -81,7 +81,7 @@ var app = {
       backSpeed: 80,
       loop: true,
       loopCount: 3,
-      startDelay: 500,
+      startDelay: 4500,
       backDelay: 2000
     });
   },
@@ -109,16 +109,31 @@ var app = {
     }
   },
   // ****** ****** ****** ******
-  //  START AOS
+  //  START AOS AND PRELOADER
   // ****** ****** ****** ******
-  aos: function() {
-    AOS.init({
-      offset: 200,
-      duration: 600,
-      easing: "ease-in",
-      delay: 300,
-      disable: "mobile"
-    });
+  preLoader: function() {
+    // Simple preLoader
+    var preLoad = document.getElementById("preloader");
+    // var body = document.getElementsByTagName("body")[0];
+
+    function showPage() {
+      preLoad.style.display = "none";
+      AOS.init({
+        offset: 200,
+        duration: 600,
+        easing: "ease-in",
+        delay: 1000,
+        disable: "mobile"
+      });
+    }
+
+    // Activate this for real time loading
+    showPage();
+
+    // If you want to feel the loading screen
+    // body.onload = function() {
+    //   myVar = setTimeout(showPage, 2000);
+    // };
   }
 
   // END Objects

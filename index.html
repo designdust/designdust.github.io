@@ -24,7 +24,9 @@
   <link rel="icon" href="favicon.ico" />
 
   <title>Designdust Portfolio</title>
+  <!-- CSS reset -->
 
+  <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
   <!-- Icons for this template -->
   <link href="assets/fonts/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" />
   <!-- Google fonts -->
@@ -43,8 +45,23 @@
 
 
 </head>
+<!--
+  // Bootstrap scrollspy
+        data-spy="scroll" data-target=".menu" data-offset="50"
+ S
+ -->
 
 <body data-spy="scroll" data-target=".menu" data-offset="50">
+
+
+  <!-- Preloader -->
+
+  <div id="preloader">
+    <div id="loader" class="loader">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
   <header>
     <div class="header-logo" id="header-logo">
       <a class="site-logo" data-aos="fade-down" href="index.html">
@@ -136,7 +153,7 @@
     <!-- START jumbotron area -->
     <section class="jumbotron hero" data-aos="fade-up" id="hero">
       <div class="container">
-        <h1>Hello, I'm <span class="name">Flitz</span></h1>
+        <h1>Hello, I'm <span class="name">Flitz,</span></h1>
         <div id="typed-strings">
           <p>Web <strong>Designer.</strong></p>
           <p>Web <strong>Developer.</strong></p>
