@@ -43,16 +43,16 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".menu" data-offset="50">
   <header>
     <div class="header-logo" id="header-logo">
-      <a class="site-logo" data-aos="fade-right" href="index.html">
+      <a class="site-logo" data-aos="fade-down" href="index.html">
         <!-- <img src="assets/img/logo.png" alt="Homepage" /> -->
         Designdust
       </a>
     </div>
 
-    <div class="menu-btn" data-aos="fade-left">
+    <div class="menu-btn" data-aos="fade-down">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -69,28 +69,28 @@
 
       <ul class="menu-ul">
         <li class="nav-item current">
-          <a href="index.html" class="nav-link">
+          <a href="#hero" class="nav-link">
             Home
           </a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">
+          <a href="#about" class="nav-link">
             About
           </a>
         </li>
         <li class="nav-item">
-          <a href="work.html" class="nav-link">
-            Work
+          <a href="#portfolio" class="nav-link">
+            Portfolio
           </a>
         </li>
         <li class="nav-item">
-          <a href="contact.html" class="nav-link">
+          <a href="#contact" class="nav-link">
             Contact
           </a>
         </li>
       </ul>
 
-      <address class="menu-about mt-5">
+      <address class="menu-about">
         <p>
           <strong>Flitz Tugano</strong>
         </p>
@@ -133,7 +133,7 @@
 
   <main role="main" class="main">
     <!-- START jumbotron area -->
-    <section class="jumbotron hero" data-aos="fade-up">
+    <section class="jumbotron hero" data-aos="fade-up" id="hero">
       <div class="container">
         <h1>Hello, I'm <span class="name">Flitz</span></h1>
         <div id="typed-strings">
@@ -161,7 +161,8 @@
         </div>
         <!-- end heading -->
         <div class="row" data-aos="fade-up">
-          <div class="col">
+
+          <div class="col  mt-5">
             <article class="lead-article">
 
               <p class="lead">Learning web design in high school kept me busy and much less angsty. What started as
@@ -183,25 +184,77 @@
             </article>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- END About area -->
-    <!-- START skills area -->
-    <section class="skills-area section-gap light-bg" id="skills">
-      <div class="container">
+
+
         <!-- start heading -->
         <div class="row" data-aos="fade-up">
-          <div class="col">
+          <div class="col  mt-5">
             <h4 class="sub-heading">Skills</h4>
-            <h1 class="display-4 heading">
-              Samples of some of my work and studies.
-            </h1>
+            <!-- <h1 class="display-4 heading">
+                Samples of some of my work and studies.
+              </h1> -->
           </div>
         </div>
         <!-- end heading -->
+
+
+        <div class="row" data-aos="fade-up">
+          <div class="col mt-5">
+            <h2><i class="fa fa-laptop-code"></i> Front-end Development</h2>
+            <ul class="lead list-group list-group-horizontal-md">
+              <li class="list-group-item">HTML5</li>
+              <li class="list-group-item">CSS3</li>
+              <li class="list-group-item">JS</li>
+              <li class="list-group-item">Jquery</li>
+              <li class="list-group-item">VueJS</li>
+              <li class="list-group-item">Bootstrap</li>
+              <li class="list-group-item">SASS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col mt-5">
+            <h2><i class="fa fa-server"></i> Back-end Development</h2>
+            <ul class="lead list-group list-group-horizontal-md">
+              <li class="list-group-item">PHP</li>
+              <li class="list-group-item">MySQL</li>
+              <li class="list-group-item">NodeJS/NPM</li>
+              <li class="list-group-item">Git</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col mt-5">
+            <h2><i class="fab fa-adobe"></i> Adobe CC</h2>
+            <ul class="lead list-group list-group-horizontal-md">
+              <li class="list-group-item">Ps</li>
+              <li class="list-group-item">Ai</li>
+              <li class="list-group-item">Id</li>
+              <li class="list-group-item">Xd</li>
+              <li class="list-group-item">Pr</li>
+              <li class="list-group-item">Lr</li>
+              <li class="list-group-item">Dw</li>
+              <li class="list-group-item">Mu</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+          <div class="col mt-5">
+            <h2><i class="fa fa-tools"></i> Other Tools and Technologies</h2>
+            <ul class="lead list-group list-group-horizontal-md">
+              <li class="list-group-item">Wordpress</li>
+              <li class="list-group-item">Code Igniter</li>
+              <li class="list-group-item">Laravel</li>
+              <li class="list-group-item">C#</li>
+            </ul>
+          </div>
+        </div>
+
+
+
       </div>
     </section>
-    <!-- END skills area -->
+    <!-- END About area -->
 
     <!-- START portfolio area -->
     <section class="portfolio-area section-gap light-bg" id="portfolio">
@@ -227,14 +280,20 @@
           </ul>
         </div>
 
-        <div class="filters-content">
+        <div class="filters-content mt-5" data-aos="fade-up">
           <div class="row grid">
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all corporate">
-              <div class="item" data-aos="fade-up">
-                <img src="assets/img/portfolio/1.jpg" alt="Work 1" />
+              <div class="item">
+
                 <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
                   <img class="img-blur" src="assets/img/portfolio/1.jpg" alt="Work 1" />
                 </div>
+
+                <a href="#">
+                  <img src="assets/img/portfolio/1.jpg" alt="Work 1" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
                 <div class="p-inner">
                   <h4>3D Helmet Design</h4>
                   <div class="cat">Corporate</div>
@@ -243,7 +302,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all personal">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/2.jpg" alt="Work 1" />
                 </div>
@@ -256,7 +315,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all agency">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/3.jpg" alt="Work 1" />
                 </div>
@@ -269,7 +328,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all portal">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/4.jpg" alt="Work 1" />
                 </div>
@@ -282,7 +341,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all corporate">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/5.jpg" alt="Work 1" />
                 </div>
@@ -295,7 +354,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all personal">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/6.jpg" alt="Work 1" />
                 </div>
@@ -308,7 +367,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all agency">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/7.jpg" alt="Work 1" />
                 </div>
@@ -321,7 +380,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all portal">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/8.jpg" alt="Work 1" />
                 </div>
@@ -334,7 +393,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all corporate">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/9.jpg" alt="Work 1" />
                 </div>
@@ -347,7 +406,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all personal">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/10.jpg" alt="Work 1" />
                 </div>
@@ -360,7 +419,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all agency">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/1.jpg" alt="Work 1" />
                 </div>
@@ -373,7 +432,7 @@
             </div>
 
             <div class="single-portfolio col-md-12 col-lg-6 col-sm-12 all portal">
-              <div class="item" data-aos="fade-up">
+              <div class="item">
                 <div class="img-blur-container">
                   <img class="img-blur" src="assets/img/portfolio/2.jpg" alt="Work 1" />
                 </div>
@@ -454,7 +513,7 @@
           <!-- end contact-secondary -->
         </div>
         <!-- end row -->
-
+        <!-- start copyright  -->
         <div class="row" data-aos="fade-up">
           <div class="col-md-12 copyright">
             <span>
@@ -468,6 +527,15 @@
             </span>
           </div>
         </div>
+        <!-- end copyright -->
+        <!-- start back to top -->
+
+        <div class="to-top">
+          <a title="Back to Top" href="#hero" class="fa fa-arrow-up"> </a>
+        </div>
+        <!-- end back to top -->
+
+
       </div>
     </section>
     <!-- END Contact Area -->
