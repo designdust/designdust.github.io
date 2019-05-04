@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -287,7 +291,7 @@ a:hover:after {
         padding: 10px 0;
         @include transition(all 0.3s ease);
 
-        span {
+        &.active {
           color: $gold;
         }
 
@@ -334,13 +338,6 @@ a:hover:after {
   }
 }
 
-// Delay each nav item slide by 0.1s
-@for $x from 4 through 1 {
-  .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.1s;
-  }
-}
-
 // Menu Overlay
 
 .overlay {
@@ -366,7 +363,6 @@ a:hover:after {
 // ****** ****** ****** ******
 
 .hero {
-  // min-height: calc(100vh - 60px);
   height: 100vh;
   margin: 0;
   min-height: 100vh;
@@ -377,6 +373,7 @@ a:hover:after {
   z-index: 100;
   background: transparent;
 
+  // min-height: calc(100vh - 60px);
   // border-radius: 0.3rem 30rem 0.3rem 0.3rem;
   // margin: 30px;
   // background: $white center / cover no-repeat url("/assets/img/header-bg.jpg");
@@ -452,7 +449,6 @@ a:hover:after {
     }
   }
   .filters-content {
-    margin-top: 50px;
     .show {
       opacity: 1;
       visibility: visible;
@@ -468,14 +464,53 @@ a:hover:after {
       float: left;
       display: block;
 
-      text-align: center;
+      text-align: left;
       cursor: pointer;
       margin-bottom: 30px;
 
+      a {
+        display: block;
+        &::before {
+          content: "";
+          position: absolute;
+          opacity: 0;
+          left: 30px;
+          top: 30px;
+          padding: 20px;
+
+          width: calc(100% - 60px);
+          height: calc(100% - 60px);
+
+          background-color: rgba(255, 255, 255, 0.3);
+          background-clip: border-box;
+          border: $white_10 1px solid;
+          @include transition(all 0.5s ease-in-out);
+        }
+
+        .p-expand {
+          color: $black;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          @include transform(translate(-50%, -50%));
+          opacity: 0;
+          @include transition(all 0.5s ease-in-out);
+          font-size: 0.5rem;
+        }
+      }
+
+      &:hover a::before,
+      &:hover a .p-expand,
       &:hover .p-inner,
       &:hover .img-blur-container {
         opacity: 1;
         @include transition(all 0.5s ease-in-out);
+      }
+      &:hover .p-inner {
+        @include transform(translateY(0));
+      }
+      &:hover a .p-expand {
+        font-size: 1.5rem;
       }
       .img-blur-container {
         position: absolute;
@@ -501,21 +536,22 @@ a:hover:after {
       .p-inner {
         position: absolute;
         opacity: 0;
-        left: 30px;
-        top: 30px;
-        // to center content
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        resize: vertical;
+        left: 50px;
+        bottom: 50px;
+        // padding: 20px;
+        // // to center content
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: flex-end;
+        // resize: vertical;
 
-        width: calc(100% - 60px);
-        height: calc(100% - 60px);
-        background-color: rgba(255, 255, 255, 0.1);
-        background-clip: border-box;
-        border: $white_10 1px solid;
-        color: $white;
+        // width: calc(100% - 60px);
+        // height: calc(100% - 60px);
+        // background-color: rgba(255, 255, 255, 0.3);
+        // background-clip: border-box;
+        // border: $white_10 1px solid;
         @include transition(all 0.5s ease-in-out);
+        @include transform(translateY(-30px));
 
         h4 {
           font-size: 15px;
@@ -615,12 +651,67 @@ a:hover:after {
       display: none;
     }
   }
-  span::after {
+  span:after {
     content: "|";
     display: inline-block;
   }
 }
 
+.to-top {
+  position: absolute;
+  bottom: 10.8rem;
+  right: 55px;
+  &::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    background-color: $light_gray;
+    position: absolute;
+    top: -115px;
+    left: 50%;
+  }
+  &::after {
+    content: "back to top";
+    display: inline-block;
+    width: 120px;
+    font-size: 0.8rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $light_gray;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    position: absolute;
+    left: calc(30px + 15px);
+    top: -165px;
+  }
+  a {
+    text-decoration: none;
+    border: 0 none;
+    display: block;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: $black;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50%;
+    font-size: 1.2em;
+    &:hover {
+      background-color: $gold;
+      color: $black;
+    }
+  }
+}
 // ****** ****** ****** ******
 //  MEDIA QUERIES BOOTSTRAP ^4
 // ****** ****** ****** ******
@@ -628,6 +719,14 @@ a:hover:after {
 // MAX WIDTH
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  .menu {
+    padding: 120px 55px 55px 55px;
+    ul.menu-ul {
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
   .heading {
     font-size: 2.5rem;
   }
@@ -635,6 +734,10 @@ a:hover:after {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
+  .lead-article {
+    padding: 0 1rem;
+  }
+
   .contact-main {
     a.contact-email {
       font-size: 1.8rem;

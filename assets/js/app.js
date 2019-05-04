@@ -70,10 +70,10 @@ var app = {
       }
     }
   },
+  // ****** ****** ****** ******
+  // START Typing Headlines
+  // ****** ****** ****** ******
   typingHeadline: function() {
-    // ****** ****** ****** ******
-    // START Typing Headlines
-    // ****** ****** ****** ******
     var typed = new Typed("#typed", {
       stringsElement: "#typed-strings",
 
@@ -102,21 +102,20 @@ var app = {
     if (document.getElementById("portfolio")) {
       var $grid = $(".grid").isotope({
         itemSelector: ".all",
-        percentPosition: true,
         masonry: {
           columnWidth: ".all"
         }
       });
     }
   },
+  // ****** ****** ****** ******
+  //  START AOS
+  // ****** ****** ****** ******
   aos: function() {
-    // ****** ****** ****** ******
-    //  START AOS
-    // ****** ****** ****** ******
     AOS.init({
       offset: 200,
       duration: 600,
-      easing: "ease-in-sine",
+      easing: "ease-in",
       delay: 300,
       disable: "mobile"
     });
