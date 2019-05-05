@@ -1,12 +1,14 @@
 //JQuery Module Pattern
 
+// ****** ****** ****** ******
+// DOCUMENT LOAD
+// ****** ****** ****** ******
+
 // An object literal
-var app = {
+var appDocument = {
   init: function() {
-    app.burgerMenu();
-    app.typingHeadline();
-    app.isotope();
-    app.preLoader();
+    appDocument.burgerMenu();
+    appDocument.isotope();
   },
   // ****** ****** ****** ******
   // START Burger Menu
@@ -71,21 +73,6 @@ var app = {
     }
   },
   // ****** ****** ****** ******
-  // START Typing Headlines
-  // ****** ****** ****** ******
-  typingHeadline: function() {
-    var typed = new Typed("#typed", {
-      stringsElement: "#typed-strings",
-
-      typeSpeed: 100,
-      backSpeed: 80,
-      loop: true,
-      loopCount: 3,
-      startDelay: 4500,
-      backDelay: 2000
-    });
-  },
-  // ****** ****** ****** ******
   // START Isotope Settings
   // ****** ****** ****** ******
   isotope: function() {
@@ -107,17 +94,50 @@ var app = {
         }
       });
     }
+  }
+
+  // END Objects
+};
+
+$("document").ready(function() {
+  appDocument.init();
+});
+
+// ****** ****** ****** ******
+// WINDOW LOAD
+// ****** ****** ****** ******
+
+// An object literal
+var appWindow = {
+  init: function() {
+    appWindow.preLoader();
+    appWindow.typingHeadline();
+  },
+  // ****** ****** ****** ******
+  // START Typing Headlines
+  // ****** ****** ****** ******
+  typingHeadline: function() {
+    var typed = new Typed("#typed", {
+      stringsElement: "#typed-strings",
+
+      typeSpeed: 60,
+      backSpeed: 80,
+      loop: true,
+      loopCount: 3,
+      startDelay: 5000,
+      backDelay: 2000
+    });
   },
   // ****** ****** ****** ******
   //  START AOS AND PRELOADER
   // ****** ****** ****** ******
   preLoader: function() {
-    // Simple preLoader
+    // Simple preLoader with AOS
     var preLoad = document.getElementById("preloader");
-    // var body = document.getElementsByTagName("body")[0];
 
     function showPage() {
       preLoad.style.display = "none";
+      // AOS Init
       AOS.init({
         offset: 200,
         duration: 600,
@@ -127,18 +147,10 @@ var app = {
       });
     }
 
-    // Activate this for real time loading
-    showPage();
-
-    // If you want to feel the loading screen
-    // body.onload = function() {
-    //   myVar = setTimeout(showPage, 2000);
-    // };
+    setTimeout(showPage, 3000);
   }
-
-  // END Objects
 };
 
-$("document").ready(function() {
-  app.init();
+$(window).on("load", function() {
+  appWindow.init();
 });

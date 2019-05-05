@@ -13,8 +13,9 @@
   }
 }
 
-/*  MIXINS
-========================================== */
+// ****** ****** ****** ******
+// MIXINS
+// ****** ****** ****** ******
 
 @mixin transform($transform) {
   -webkit-transform: $transform;
@@ -36,4 +37,18 @@
   -moz-transition-delay: #{$transition-delay};
   -o-transition-delay: #{$transition-delay};
   transition-delay: #{$transition-delay};
+}
+
+// Applies for all Internet Explorer and Edge versions
+
+@mixin worstBrowsers() {
+  /* all IE versions <= 11 */
+  @media screen and (-ms-high-contrast: none) {
+    @content;
+  }
+
+  /* all edge versions */
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
 }

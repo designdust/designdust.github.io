@@ -1,6 +1,18 @@
-/*  MIXINS
-========================================== */
 /* Preloader */
+.loader {
+  position: absolute;
+  display: block;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  height: 15px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .loader i {
   position: relative;
   display: inline-block;
@@ -8,13 +20,113 @@
   width: 5px;
   height: 15px;
   border-radius: 2px;
-  border: solid #000;
+  border: solid #000000;
   border-width: 0 1px 1px 0;
-  background: #000;
+  background: #000000;
   -webkit-animation: tilt infinite 5s cubic-bezier(0.955, -0.01, 1, 1);
           animation: tilt infinite 5s cubic-bezier(0.955, -0.01, 1, 1);
   -webkit-transform-origin: 100% 100%;
           transform-origin: 100% 100%;
+}
+
+.loader i:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.loader i:nth-child(2)::before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.loader i:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.loader i:nth-child(3)::before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.loader i:nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.loader i:nth-child(4)::before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.loader i:nth-child(5) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.loader i:nth-child(5)::before {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+.loader i:nth-child(6) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.loader i:nth-child(6)::before {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.loader i:nth-child(7) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.loader i:nth-child(7)::before {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+.loader i:nth-child(8) {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.loader i:nth-child(8)::before {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.loader i:nth-child(9) {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.loader i:nth-child(9)::before {
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
+}
+
+.loader i:nth-child(10) {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+
+.loader i:nth-child(10)::before {
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
+}
+
+.loader i:last-of-type {
+  -webkit-animation-name: tilt-last;
+          animation-name: tilt-last;
+}
+
+.loader i:last-of-type::before {
+  -webkit-animation-name: stretch-last;
+          animation-name: stretch-last;
 }
 
 .loader i::before {
@@ -30,42 +142,8 @@
   -webkit-animation: stretch infinite 5s cubic-bezier(0.955, -0.01, 1, 1);
           animation: stretch infinite 5s cubic-bezier(0.955, -0.01, 1, 1);
   opacity: 0;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-}
-
-.loader i:nth-child(2),
-.loader i:nth-child(2)::before {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.loader i:nth-child(3),
-.loader i:nth-child(3)::before {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.loader i:nth-child(4),
-.loader i:nth-child(4)::before {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-
-.loader i:nth-child(5),
-.loader i:nth-child(5)::before {
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
-.loader i:last-of-type {
-  -webkit-animation-name: tilt-last;
-          animation-name: tilt-last;
-}
-
-.loader i:last-of-type::before {
-  -webkit-animation-name: stretch-last;
-          animation-name: stretch-last;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 
 @-webkit-keyframes tilt {
@@ -134,7 +212,7 @@
             transform: rotate(-70deg);
     width: 10px;
     opacity: 1;
-    left: 0px;
+    left: 0;
     bottom: -1px;
   }
   60% {
@@ -157,7 +235,7 @@
             transform: rotate(-70deg);
     width: 10px;
     opacity: 1;
-    left: 0px;
+    left: 0;
     bottom: -1px;
   }
   60% {
@@ -226,20 +304,6 @@
   }
 }
 
-.loader {
-  position: absolute;
-  display: block;
-  margin: auto;
-  padding: 0;
-  width: 100%;
-  height: 15px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
 .loader::before {
   position: absolute;
   content: "Designdust";
@@ -256,7 +320,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #ffffff;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -268,9 +332,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
 }
 
@@ -371,6 +432,7 @@ a:hover:after {
   transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86), -webkit-transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition-delay: 1s;
+  z-index: 120;
 }
 
 .header-logo.hide {
@@ -434,7 +496,7 @@ a:hover:after {
 
 .menu-btn {
   position: fixed;
-  z-index: 10;
+  z-index: 120;
   right: 55px;
   top: 55px;
   cursor: pointer;
@@ -492,7 +554,7 @@ a:hover:after {
   color: #ffffff;
   background-color: #1f1f1f;
   position: fixed;
-  z-index: 9;
+  z-index: 100;
   top: 0;
   right: 0;
   height: 100%;
@@ -651,7 +713,7 @@ a:hover:after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 80;
   width: 100%;
   height: 100%;
   transition: all 0.3s ease-in-out;
@@ -673,7 +735,7 @@ a:hover:after {
   display: flex;
   align-items: center;
   color: #1f1f1f;
-  z-index: 100;
+  z-index: 60;
   background: transparent;
 }
 
@@ -786,7 +848,7 @@ a:hover:after {
   height: calc(100% - 60px);
   background-color: rgba(255, 255, 255, 0.3);
   background-clip: border-box;
-  border: rgba(255, 255, 255, 0.3) 1px solid;
+  border: rgba(255, 255, 255, 0.1) 1px solid;
   transition: all 0.5s ease-in-out;
 }
 
@@ -970,6 +1032,21 @@ a:hover:after {
   position: absolute;
   bottom: 10.8rem;
   right: 55px;
+  scroll-behavior: smooth;
+  /* all IE versions <= 11 */
+  /* all edge versions */
+}
+
+@media screen and (-ms-high-contrast: none) {
+  .to-top {
+    overflow: hidden;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .to-top {
+    overflow: hidden;
+  }
 }
 
 .to-top::before {
