@@ -2,6 +2,21 @@
 // General Style
 // ****** ****** ****** ******
 
+// Custom Scrollbar for chrome
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
 /* Preloader */
 
 .loader {
@@ -220,7 +235,7 @@ body {
   width: 100%;
   height: 100%;
   color: $gray;
-  background: $white center / cover no-repeat url("/assets/img/header-bg.jpg");
+  background: $white center / cover no-repeat url("/assets/img/body.jpg");
   background-attachment: fixed;
 
   &.overflow {
@@ -233,30 +248,37 @@ body {
 // ****** ****** ****** ******
 
 // Links
+
 a {
   @include transition(all 0.5s ease-in-out);
-}
-a.link {
-  position: relative;
-}
-a.link:after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 0;
-  height: 11px;
-  background-color: $gold;
-  @include transition(all 0.5s ease-in-out);
-}
-a:hover,
-a:focus {
-  color: $gold;
-  text-decoration: none;
-  @include transition(all 0.5s ease-in-out);
-}
-a:hover:after {
-  width: 50%;
+
+  .link {
+    position: relative;
+  }
+  .link:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 11px;
+    background-color: $gold;
+    @include transition(all 0.5s ease-in-out);
+  }
+
+  & * {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $gold;
+    text-decoration: none;
+    @include transition(all 0.5s ease-in-out);
+  }
+  &:hover:after {
+    width: 50%;
+  }
 }
 
 // Layout
@@ -571,10 +593,10 @@ a:hover:after {
   align-items: center;
   color: $gray;
   z-index: 60;
-  background: transparent;
+  background: $white;
 
   // min-height: calc(100vh - 60px);
-  // border-radius: 0.3rem 30rem 0.3rem 0.3rem;
+  border-radius: 0 0 25rem 0;
   // margin: 30px;
   // background: $white center / cover no-repeat url("/assets/img/header-bg.jpg");
   // background-attachment: fixed;
@@ -604,6 +626,14 @@ a:hover:after {
 }
 
 // ****** ****** ****** ******
+//  ABOUT
+// ****** ****** ****** ******
+
+.about-area {
+  border-radius: 0 25rem 0 0;
+}
+
+// ****** ****** ****** ******
 //  PORTFOLIO
 // ****** ****** ****** ******
 
@@ -627,7 +657,7 @@ a:hover:after {
         cursor: pointer;
         position: relative;
         text-transform: uppercase;
-        color: #000000;
+        color: $black;
         font-weight: 500;
         &:after {
           content: "";
@@ -643,7 +673,7 @@ a:hover:after {
           transition: width 350ms ease-out;
         }
         &.active {
-          color: #b7ac7f;
+          color: $gold;
         }
       }
     }
@@ -668,7 +698,7 @@ a:hover:after {
       cursor: pointer;
       margin-bottom: 30px;
 
-      a {
+      a.p-show {
         display: block;
         &::before {
           content: "";
@@ -681,7 +711,7 @@ a:hover:after {
           width: calc(100% - 60px);
           height: calc(100% - 60px);
 
-          background-color: rgba(255, 255, 255, 0.3);
+          background-color: $white_10;
           background-clip: border-box;
           border: $white_10 1px solid;
           @include transition(all 0.5s ease-in-out);
@@ -702,16 +732,20 @@ a:hover:after {
       &:hover a::before,
       &:hover a .p-expand,
       &:hover .p-inner,
+      &:hover .p-links,
       &:hover .img-blur-container {
         opacity: 1;
         @include transition(all 0.5s ease-in-out);
       }
-      &:hover .p-inner {
+
+      &:hover .p-inner,
+      &:hover .p-links {
         @include transform(translateY(0));
       }
       &:hover a .p-expand {
         font-size: 1.5rem;
       }
+
       .img-blur-container {
         position: absolute;
         opacity: 0;
@@ -729,7 +763,7 @@ a:hover:after {
           top: -30px;
           width: calc(100% + 60px);
           height: calc(100% + 60px);
-          filter: blur(10px);
+          filter: blur(15px);
         }
       }
 
@@ -760,6 +794,16 @@ a:hover:after {
           font-size: 13px;
         }
       }
+
+      .p-links {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        opacity: 0;
+        @include transition(all 0.5s ease-in-out);
+        @include transform(translateY(30px));
+      }
+
       img {
         width: 100%;
       }

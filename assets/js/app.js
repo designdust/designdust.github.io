@@ -9,6 +9,7 @@ var appDocument = {
   init: function() {
     appDocument.burgerMenu();
     appDocument.isotope();
+    appDocument.bootstrapTooltip();
   },
   // ****** ****** ****** ******
   // START Burger Menu
@@ -94,6 +95,15 @@ var appDocument = {
         }
       });
     }
+  },
+  // ****** ****** ****** ******
+  // START Bootstrap Tooltip
+  // ****** ****** ****** ******
+
+  bootstrapTooltip: function() {
+    $(function() {
+      $('[data-toggle="tooltip"]').tooltip();
+    });
   }
 
   // END Objects
@@ -147,7 +157,8 @@ var appWindow = {
       });
     }
 
-    setTimeout(showPage, 3000);
+    // setTimeout(showPage, 3000);
+    showPage();
   }
 };
 
