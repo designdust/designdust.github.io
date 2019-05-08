@@ -234,9 +234,6 @@
 body {
   width: 100%;
   height: 100%;
-  color: $gray;
-  background: $white center / cover no-repeat url("/assets/img/body.jpg");
-  background-attachment: fixed;
 
   &.overflow {
     overflow: hidden;
@@ -250,6 +247,7 @@ body {
 // Links
 
 a {
+  color: $white;
   @include transition(all 0.5s ease-in-out);
 
   .link {
@@ -266,10 +264,6 @@ a {
     @include transition(all 0.5s ease-in-out);
   }
 
-  & * {
-    color: $white;
-  }
-
   &:hover,
   &:focus {
     color: $gold;
@@ -282,6 +276,19 @@ a {
 }
 
 // Layout
+.parallax {
+  color: $gray;
+  background: $white no-repeat url("/assets/img/body-bg.jpg");
+  background-position: right top 50%;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 150%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
 .dark-bg {
   background-color: $gray;
   color: $light_gray;
@@ -588,7 +595,6 @@ a {
   height: 100vh;
   margin: 0;
   min-height: 100vh;
-  border-radius: 0%;
   display: flex;
   align-items: center;
   color: $gray;
@@ -596,7 +602,7 @@ a {
   background: $white;
 
   // min-height: calc(100vh - 60px);
-  border-radius: 0 0 25rem 0;
+  border-radius: 0 0 35rem 0;
   // margin: 30px;
   // background: $white center / cover no-repeat url("/assets/img/header-bg.jpg");
   // background-attachment: fixed;
@@ -623,6 +629,14 @@ a {
       top: 2.4rem;
     }
   }
+  a.btn-gold {
+    color: $gold;
+    border-color: $gold;
+    &:hover {
+      background: $gold;
+      color: $white;
+    }
+  }
 }
 
 // ****** ****** ****** ******
@@ -630,7 +644,7 @@ a {
 // ****** ****** ****** ******
 
 .about-area {
-  border-radius: 0 25rem 0 0;
+  border-radius: 0 35rem 0 0;
 }
 
 // ****** ****** ****** ******
@@ -1002,7 +1016,6 @@ a {
   .hero {
     margin: 0;
     min-height: 100vh;
-    border-radius: 0%;
     h1 {
       font-size: 4rem;
       font-weight: 400;

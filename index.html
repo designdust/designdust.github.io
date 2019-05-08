@@ -24,9 +24,6 @@
   <link rel="icon" href="favicon.ico" />
 
   <title>Designdust Portfolio</title>
-  <!-- CSS reset -->
-
-  <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
   <!-- Icons for this template -->
   <link href="assets/fonts/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" />
   <!-- Google fonts -->
@@ -54,14 +51,20 @@
 <body data-spy="scroll" data-target=".menu" data-offset="50">
 
 
-  <!-- Preloader -->
+  <!-- START Preloader -->
 
   <div id="preloader">
     <div id="loader" class="loader">
       <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
     </div>
   </div>
+  <!-- END Preloader -->
 
+  <!-- START Parallax -->
+  <div class="parallax"></div>
+  <!-- END Parallax -->
+
+  <!-- START Header -->
   <header>
     <div class="header-logo" id="header-logo">
       <a class="site-logo" data-aos="fade-down" href="index.html">
@@ -147,9 +150,13 @@
     </nav>
 
     <div class="overlay"></div>
-  </header>
 
+  </header>
+  <!-- END Header -->
+
+  <!-- START Main -->
   <main role="main" class="main">
+
     <!-- START jumbotron area -->
     <section class="jumbotron hero" id="hero">
       <div class="container" data-aos="fade-up">
@@ -160,10 +167,11 @@
           <p>Multimedia <strong>Artist.</strong></p>
         </div>
         <p class="lead"><span id="typed"></span> </p>
-        <a href="#portfolio" class="btn btn-outline-dark btn-lg">View Portfolio</a>
+        <a href="#portfolio" class="btn btn-gold btn-lg">View Portfolio</a>
       </div>
     </section>
     <!-- END jumbotron area -->
+
     <!-- START about area -->
     <section class="about-area section-gap light-bg" id="about">
       <div class="container">
@@ -547,7 +555,7 @@
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              All rights reserved | Handcrafted with
+              All rights reserved | Designdust, a portfolio handcrafted with
               <i class="fa fa-heart" aria-hidden="true"></i> by
               <a href="https://designdust.github.io" target="_blank">flitz</a>
             </span>
@@ -566,6 +574,7 @@
     </section>
     <!-- END Contact Area -->
   </main>
+  <!-- END Main -->
 
   <!-- Bootstrap core JavaScript -->
   <!-- Placed at the end of the document so the pages load faster -->

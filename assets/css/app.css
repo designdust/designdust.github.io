@@ -352,9 +352,6 @@
 body {
   width: 100%;
   height: 100%;
-  color: #1f1f1f;
-  background: #ffffff center/cover no-repeat url("/assets/img/body.jpg");
-  background-attachment: fixed;
 }
 
 body.overflow {
@@ -362,6 +359,7 @@ body.overflow {
 }
 
 a {
+  color: #ffffff;
   transition: all 0.5s ease-in-out;
 }
 
@@ -380,10 +378,6 @@ a .link:after {
   transition: all 0.5s ease-in-out;
 }
 
-a * {
-  color: #ffffff;
-}
-
 a:hover, a:focus {
   color: #b7ac7f;
   text-decoration: none;
@@ -392,6 +386,19 @@ a:hover, a:focus {
 
 a:hover:after {
   width: 50%;
+}
+
+.parallax {
+  color: #1f1f1f;
+  background: #ffffff no-repeat url("/assets/img/body-bg.jpg");
+  background-position: right top 50%;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  height: 150%;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
 
 .dark-bg {
@@ -748,13 +755,12 @@ a:hover:after {
   height: 100vh;
   margin: 0;
   min-height: 100vh;
-  border-radius: 0%;
   display: flex;
   align-items: center;
   color: #1f1f1f;
   z-index: 60;
   background: #ffffff;
-  border-radius: 0 0 25rem 0;
+  border-radius: 0 0 35rem 0;
 }
 
 .hero h1 {
@@ -780,8 +786,18 @@ a:hover:after {
   top: 2.4rem;
 }
 
+.hero a.btn-gold {
+  color: #b7ac7f;
+  border-color: #b7ac7f;
+}
+
+.hero a.btn-gold:hover {
+  background: #b7ac7f;
+  color: #ffffff;
+}
+
 .about-area {
-  border-radius: 0 25rem 0 0;
+  border-radius: 0 35rem 0 0;
 }
 
 .portfolio-area {
@@ -1163,7 +1179,6 @@ a:hover:after {
   .hero {
     margin: 0;
     min-height: 100vh;
-    border-radius: 0%;
   }
   .hero h1 {
     font-size: 4rem;

@@ -165,3 +165,15 @@ var appWindow = {
 $(window).on("load", function() {
   appWindow.init();
 });
+
+//PARALLAX FUNCTION
+function parallax() {
+  var winScroll = $(window).scrollTop();
+  $(".parallax").css("top", -(winScroll * 0.05) + "px");
+}
+
+//NOT THE MOST EFFICIENT PARALLAX, BUT SIMPLE
+
+$(window).scroll(function(e) {
+  parallax();
+});
