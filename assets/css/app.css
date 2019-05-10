@@ -352,6 +352,7 @@
 body {
   width: 100%;
   height: 100%;
+  font-family: "Raleway", sans-serif;
 }
 
 body.overflow {
@@ -447,6 +448,10 @@ a:hover:after {
   line-height: 3rem;
 }
 
+.lead {
+  font-weight: 400;
+}
+
 .header-logo {
   left: 55px;
   top: 55px;
@@ -491,7 +496,7 @@ a:hover:after {
   display: inline-block;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
 }
 
 .header-logo a.site-logo,
@@ -576,7 +581,7 @@ a:hover:after {
 
 .menu {
   color: #ffffff;
-  background-color: #1f1f1f;
+  background-color: rgba(0, 0, 0, 0.9);
   position: fixed;
   z-index: 100;
   top: 0;
@@ -747,7 +752,7 @@ a:hover:after {
 }
 
 .overlay.show {
-  opacity: 0.8;
+  opacity: 0.5;
   visibility: visible;
 }
 
@@ -769,13 +774,13 @@ a:hover:after {
   font-family: "Playfair Display", serif;
 }
 
-.hero .lead {
+.hero .hero-subtitle {
   font-size: 2.6rem;
   padding-left: 120px;
   position: relative;
 }
 
-.hero .lead::before {
+.hero .hero-subtitle::before {
   content: "";
   display: block;
   width: 5rem;
@@ -787,21 +792,44 @@ a:hover:after {
 }
 
 .hero a.btn-gold {
-  color: #b7ac7f;
-  border-color: #b7ac7f;
+  color: #ffffff;
+  background: #b7ac7f;
 }
 
 .hero a.btn-gold:hover {
-  background: #b7ac7f;
-  color: #ffffff;
+  border-color: #b7ac7f;
+  background: #ffffff;
+  color: #b7ac7f;
 }
 
 .about-area {
   border-radius: 0 35rem 0 0;
 }
 
-.portfolio-area {
-  border-radius: 0 0 20rem 0;
+.about-area .skill-cat ol li {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+}
+
+.about-area .skill-cat ol li i {
+  position: absolute;
+  color: rgba(110, 110, 110, 0.1);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.about-area .services .services-cat {
+  text-align: center;
+}
+
+.about-area .services .services-cat .glyph-icon:before {
+  font-size: 8rem;
+  color: #000000;
+  margin-left: 0;
 }
 
 .portfolio-area .primary-btn {
@@ -869,6 +897,7 @@ a:hover:after {
   text-align: left;
   cursor: pointer;
   margin-bottom: 30px;
+  color: #ffffff;
 }
 
 .portfolio-area .filters-content .item a.p-show {
@@ -891,7 +920,7 @@ a:hover:after {
 }
 
 .portfolio-area .filters-content .item a.p-show .p-expand {
-  color: #000000;
+  color: #ffffff;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -918,7 +947,7 @@ a:hover:after {
 }
 
 .portfolio-area .filters-content .item:hover a .p-expand {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .portfolio-area .filters-content .item .img-blur-container {
@@ -953,14 +982,15 @@ a:hover:after {
 }
 
 .portfolio-area .filters-content .item .p-inner h4 {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .portfolio-area .filters-content .item .p-inner .cat {
-  font-size: 13px;
+  font-size: 0.8rem;
 }
 
 .portfolio-area .filters-content .item .p-links {
+  color: #ffffff;
   position: absolute;
   top: 50px;
   left: 50px;
@@ -975,7 +1005,7 @@ a:hover:after {
 }
 
 .contact-area {
-  border-radius: 0 20rem 0 0;
+  border-radius: 0 0 30rem 0;
   padding-bottom: 10.2rem;
   position: relative;
 }
@@ -1080,7 +1110,8 @@ a:hover:after {
 
 .to-top {
   position: absolute;
-  bottom: 10.8rem;
+  float: right;
+  bottom: 4rem;
   right: 55px;
   scroll-behavior: smooth;
   /* all IE versions <= 11 */
@@ -1151,6 +1182,9 @@ a:hover:after {
 }
 
 @media (max-width: 575.98px) {
+  .parallax {
+    height: 200%;
+  }
   .menu {
     padding: 120px 55px 55px 55px;
   }
@@ -1173,23 +1207,16 @@ a:hover:after {
 }
 
 @media (max-width: 767.98px) {
-  .portfolio-area .filters ul li {
-    padding: 6px 6px;
-  }
-  .hero {
-    margin: 0;
-    min-height: 100vh;
-  }
   .hero h1 {
     font-size: 4rem;
     font-weight: 400;
   }
-  .hero .lead {
+  .hero .hero-subtitle {
     font-size: 1.6rem;
     padding-left: 60px;
     position: relative;
   }
-  .hero .lead::before {
+  .hero .hero-subtitle::before {
     content: "";
     display: block;
     width: 2rem;
@@ -1199,10 +1226,37 @@ a:hover:after {
     left: 6px;
     top: 1.4rem;
   }
+  .about-area .skill-cat {
+    text-align: center;
+  }
+  .portfolio-area .filters ul li {
+    padding: 6px 6px;
+  }
 }
 
 @media (min-width: 768px) {
   .menu {
     width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 10rem;
+  }
+  .hero .hero-subtitle {
+    font-size: 4rem;
+    padding-left: 120px;
+    position: relative;
+  }
+  .hero .hero-subtitle::before {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 2px;
+    background-color: #b7ac7f;
+    position: absolute;
+    left: 6px;
+    top: 3.2rem;
   }
 }

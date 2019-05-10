@@ -1,6 +1,59 @@
 //JQuery Module Pattern
 
 // ****** ****** ****** ******
+// WINDOW LOAD
+// ****** ****** ****** ******
+
+// An object literal
+var appWindow = {
+  init: function() {
+    appWindow.preLoader();
+    appWindow.typingHeadline();
+  },
+  // ****** ****** ****** ******
+  // START Typing Headlines
+  // ****** ****** ****** ******
+  typingHeadline: function() {
+    var typed = new Typed("#typed", {
+      stringsElement: "#typed-strings",
+
+      typeSpeed: 60,
+      backSpeed: 80,
+      loop: true,
+      loopCount: 3,
+      startDelay: 5000,
+      backDelay: 2000
+    });
+  },
+  // ****** ****** ****** ******
+  //  START AOS AND PRELOADER
+  // ****** ****** ****** ******
+  preLoader: function() {
+    // Simple preLoader with AOS
+    var preLoad = document.getElementById("preloader");
+
+    function showPage() {
+      preLoad.style.display = "none";
+      // AOS Init
+      AOS.init({
+        offset: 50,
+        duration: 500,
+        easing: "ease-in",
+        delay: 500,
+        disable: "mobile"
+      });
+    }
+
+    // setTimeout(showPage, 3000);
+    showPage();
+  }
+};
+
+$(window).on("load", function() {
+  appWindow.init();
+});
+
+// ****** ****** ****** ******
 // DOCUMENT LOAD
 // ****** ****** ****** ******
 
@@ -33,6 +86,34 @@ var appDocument = {
     menuBtn.addEventListener("click", toggleMenu);
     overlay.addEventListener("click", toggleMenu);
 
+    function hideMenu() {
+      menuBtn.classList.remove("clicked");
+      menu.classList.remove("show");
+      menuUl.classList.remove("show");
+      overlay.classList.remove("show");
+      headerLogo.classList.remove("hide");
+      menuLogo.classList.remove("show");
+
+      // * to hide scroll of the body when overflowing
+      // body.classList.remove("overflow");
+
+      // * just a for each reference
+      // navItems.forEach(function(item) {
+      //   return item.classList.remove("show");
+      // });
+
+      // Set Menu State
+      showMenu = false;
+    }
+
+    menu.addEventListener("click", handleMenuClick);
+
+    function handleMenuClick(event) {
+      if (event.target instanceof HTMLAnchorElement) {
+        hideMenu();
+      }
+    }
+
     function toggleMenu() {
       if (!showMenu) {
         menuBtn.classList.add("clicked");
@@ -53,23 +134,7 @@ var appDocument = {
         // Set Menu State
         showMenu = true;
       } else {
-        menuBtn.classList.remove("clicked");
-        menu.classList.remove("show");
-        menuUl.classList.remove("show");
-        overlay.classList.remove("show");
-        headerLogo.classList.remove("hide");
-        menuLogo.classList.remove("show");
-
-        // * to hide scroll of the body when overflowing
-        // body.classList.remove("overflow");
-
-        // * just a for each reference
-        // navItems.forEach(function(item) {
-        //   return item.classList.remove("show");
-        // });
-
-        // Set Menu State
-        showMenu = false;
+        hideMenu();
       }
     }
   },
@@ -114,57 +179,8 @@ $("document").ready(function() {
 });
 
 // ****** ****** ****** ******
-// WINDOW LOAD
+// WINDOW SCROLL
 // ****** ****** ****** ******
-
-// An object literal
-var appWindow = {
-  init: function() {
-    appWindow.preLoader();
-    appWindow.typingHeadline();
-  },
-  // ****** ****** ****** ******
-  // START Typing Headlines
-  // ****** ****** ****** ******
-  typingHeadline: function() {
-    var typed = new Typed("#typed", {
-      stringsElement: "#typed-strings",
-
-      typeSpeed: 60,
-      backSpeed: 80,
-      loop: true,
-      loopCount: 3,
-      startDelay: 5000,
-      backDelay: 2000
-    });
-  },
-  // ****** ****** ****** ******
-  //  START AOS AND PRELOADER
-  // ****** ****** ****** ******
-  preLoader: function() {
-    // Simple preLoader with AOS
-    var preLoad = document.getElementById("preloader");
-
-    function showPage() {
-      preLoad.style.display = "none";
-      // AOS Init
-      AOS.init({
-        offset: 200,
-        duration: 600,
-        easing: "ease-in",
-        delay: 1000,
-        disable: "mobile"
-      });
-    }
-
-    // setTimeout(showPage, 3000);
-    showPage();
-  }
-};
-
-$(window).on("load", function() {
-  appWindow.init();
-});
 
 //PARALLAX FUNCTION
 function parallax() {

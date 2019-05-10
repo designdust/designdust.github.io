@@ -234,6 +234,7 @@
 body {
   width: 100%;
   height: 100%;
+  font-family: $raleway;
 
   &.overflow {
     overflow: hidden;
@@ -332,6 +333,9 @@ a {
   font-size: 2rem;
   line-height: 3rem;
 }
+.lead {
+  font-weight: 400;
+}
 
 // ****** ****** ****** ******
 // NAVIGATION
@@ -368,7 +372,7 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   a.site-logo {
     display: block;
     padding: 0;
@@ -455,7 +459,7 @@ a {
 // Menu
 .menu {
   color: $white;
-  background-color: $gray;
+  background-color: $black_90;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -582,7 +586,7 @@ a {
   visibility: hidden;
 
   &.show {
-    opacity: 0.8;
+    opacity: 0.5;
     visibility: visible;
   }
 }
@@ -614,7 +618,7 @@ a {
     font-family: $font_2;
   }
 
-  .lead {
+  .hero-subtitle {
     font-size: 2.6rem;
     padding-left: 120px;
     position: relative;
@@ -630,11 +634,12 @@ a {
     }
   }
   a.btn-gold {
-    color: $gold;
-    border-color: $gold;
+    color: $white;
+    background: $gold;
     &:hover {
-      background: $gold;
-      color: $white;
+      border-color: $gold;
+      background: $white;
+      color: $gold;
     }
   }
 }
@@ -645,6 +650,41 @@ a {
 
 .about-area {
   border-radius: 0 35rem 0 0;
+
+  .skill-cat {
+    ol {
+      // display: flex;
+      // flex-direction: row;
+      // flex-wrap: wrap;
+      // justify-content: center;
+      li {
+        position: relative;
+        display: block;
+        padding: 0.75rem 1.25rem;
+        text-align: center;
+        i {
+          position: absolute;
+          color: $light_gray_10;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+  .services {
+    .services-cat {
+      text-align: center;
+
+      .glyph-icon {
+        &:before {
+          font-size: 8rem;
+          color: $black;
+          margin-left: 0;
+        }
+      }
+    }
+  }
 }
 
 // ****** ****** ****** ******
@@ -652,13 +692,14 @@ a {
 // ****** ****** ****** ******
 
 .portfolio-area {
-  border-radius: 0 0 20rem 0;
+  // border-radius: 0 0 10rem 0;
   .primary-btn {
     color: #ffffff;
     background-color: #b7ac7f;
     margin-left: auto;
     margin-right: auto;
   }
+
   .filters {
     text-align: center;
     margin-top: 50px;
@@ -692,6 +733,7 @@ a {
       }
     }
   }
+
   .filters-content {
     .show {
       opacity: 1;
@@ -711,6 +753,7 @@ a {
       text-align: left;
       cursor: pointer;
       margin-bottom: 30px;
+      color: $white;
 
       a.p-show {
         display: block;
@@ -732,7 +775,7 @@ a {
         }
 
         .p-expand {
-          color: $black;
+          color: $white;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -757,7 +800,7 @@ a {
         @include transform(translateY(0));
       }
       &:hover a .p-expand {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
 
       .img-blur-container {
@@ -802,14 +845,15 @@ a {
         @include transform(translateY(-30px));
 
         h4 {
-          font-size: 15px;
+          font-size: 1rem;
         }
         .cat {
-          font-size: 13px;
+          font-size: 0.8rem;
         }
       }
 
       .p-links {
+        color: $white;
         position: absolute;
         top: 50px;
         left: 50px;
@@ -830,7 +874,7 @@ a {
 // ****** ****** ****** ******
 
 .contact-area {
-  border-radius: 0 20rem 0 0;
+  border-radius: 0 0 30rem 0;
   padding-bottom: 10.2rem;
   position: relative;
   a {
@@ -917,7 +961,8 @@ a {
 
 .to-top {
   position: absolute;
-  bottom: 10.8rem;
+  float: right;
+  bottom: 4rem;
   right: 55px;
   scroll-behavior: smooth;
   // Mixin for Edge and IE
@@ -982,6 +1027,12 @@ a {
 // MAX WIDTH
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+  // Layout
+  .parallax {
+    height: 200%;
+  }
+
+  // menu
   .menu {
     padding: 120px 55px 55px 55px;
     ul.menu-ul {
@@ -1010,17 +1061,13 @@ a {
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-  .portfolio-area .filters ul li {
-    padding: 6px 6px;
-  }
+  // JUMBOTRON
   .hero {
-    margin: 0;
-    min-height: 100vh;
     h1 {
       font-size: 4rem;
       font-weight: 400;
     }
-    .lead {
+    .hero-subtitle {
       font-size: 1.6rem;
       padding-left: 60px;
       position: relative;
@@ -1035,6 +1082,18 @@ a {
         top: 1.4rem;
       }
     }
+  }
+
+  // ABOUT
+  .about-area {
+    .skill-cat {
+      text-align: center;
+    }
+  }
+
+  // PORTFOLIO
+  .portfolio-area .filters ul li {
+    padding: 6px 6px;
   }
 }
 
@@ -1067,4 +1126,26 @@ a {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  // JUMBOTRON
+  .hero {
+    h1 {
+      font-size: 10rem;
+    }
+
+    .hero-subtitle {
+      font-size: 4rem;
+      padding-left: 120px;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        width: 5rem;
+        height: 2px;
+        background-color: $gold;
+        position: absolute;
+        left: 6px;
+        top: 3.2rem;
+      }
+    }
+  }
 }
