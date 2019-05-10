@@ -68,11 +68,8 @@ gulp.task("vendor:build", function() {
     ])
     .pipe(gulp.dest("./dist/assets/js/vendor"));
   var fontStream = gulp
-    .src([
-      "./assets/fonts/font-awesome/**/*.*",
-      "./assets/fonts/flaticon-webdesign/**/*.*"
-    ])
-    .pipe(gulp.dest("./dist/assets/fonts/font-awesome"));
+    .src(["./assets/fonts/*/**/*.*"])
+    .pipe(gulp.dest("./dist/assets/fonts"));
   return merge(bootstrapStream, jsStream, fontStream);
 });
 
