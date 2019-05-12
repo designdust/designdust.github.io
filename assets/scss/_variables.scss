@@ -20,12 +20,3 @@ $raleway: "Raleway", sans-serif;
 $font_2: "Playfair Display", serif;
 $font_3: "Cormorant Unicase", serif;
 $font_4: "Lobster", cursive;
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}

@@ -7,8 +7,31 @@
 // An object literal
 var appWindow = {
   init: function() {
+    appWindow.movingLetters();
     appWindow.preLoader();
     appWindow.typingHeadline();
+  },
+  movingLetters: function() {
+    // Wrap every letter in a span
+    $(".hero-title").each(function() {
+      $(this).html(
+        $(this)
+          .text()
+          .replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>")
+      );
+    });
+
+    anime.timeline({ loop: false }).add({
+      targets: ".hero-title .letter",
+      translateX: [40, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: "easeOutExpo",
+      duration: 1000,
+      delay: function(el, i) {
+        return 500 + 100 * i;
+      }
+    });
   },
   // ****** ****** ****** ******
   // START Typing Headlines
@@ -20,8 +43,8 @@ var appWindow = {
       typeSpeed: 60,
       backSpeed: 80,
       loop: true,
-      loopCount: 3,
-      startDelay: 5000,
+      loopCount: 1,
+      startDelay: 2500,
       backDelay: 2000
     });
   },
@@ -187,7 +210,6 @@ function parallax() {
   var winScroll = $(window).scrollTop();
   $(".parallax").css("top", -(winScroll * 0.05) + "px");
 }
-
 //NOT THE MOST EFFICIENT PARALLAX, BUT SIMPLE
 
 $(window).scroll(function(e) {

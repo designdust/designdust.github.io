@@ -1,18 +1,3 @@
-// Mixins
-
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
-
 // ****** ****** ****** ******
 // MIXINS
 // ****** ****** ****** ******
@@ -23,6 +8,14 @@
   -ms-transform: $transform;
   -o-transform: $transform;
   transform: $transform;
+}
+
+@mixin transform-origin($transform-origin) {
+  -webkit-transform-origin: $transform-origin;
+  -moz-transform-origin: $transform-origin;
+  -ms-transform-origin: $transform-origin;
+  -o-transform-origin: $transform-origin;
+  transform-origin: $transform-origin;
 }
 
 @mixin transition($transition) {
@@ -50,5 +43,34 @@
   /* all edge versions */
   @supports (-ms-ime-align: auto) {
     @content;
+  }
+}
+
+// LAYOUT MIXINS
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Social Links
+@mixin socialLinks {
+  .social-links {
+    a {
+      color: $light_gray;
+      margin-right: 20px;
+      &:hover {
+        border: none;
+        color: $white;
+      }
+      &:focus {
+        border: none;
+        color: $white;
+      }
+    }
   }
 }

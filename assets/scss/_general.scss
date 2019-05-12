@@ -250,6 +250,7 @@ body {
 a {
   color: $white;
   @include transition(all 0.5s ease-in-out);
+  text-decoration: none;
 
   .link {
     position: relative;
@@ -694,8 +695,8 @@ a {
 .portfolio-area {
   // border-radius: 0 0 10rem 0;
   .primary-btn {
-    color: #ffffff;
-    background-color: #b7ac7f;
+    color: $white;
+    background-color: $gold;
     margin-left: auto;
     margin-right: auto;
   }
@@ -720,12 +721,12 @@ a {
           width: calc(0% - 60px);
           position: absolute;
           height: 2px;
-          background: #333;
-          transition: width 350ms ease-out;
+          background: $black;
+          @include transition(width 350ms ease-out);
         }
         &:hover:after {
           width: calc(100% - 60px);
-          transition: width 350ms ease-out;
+          @include transition(width 350ms ease-out);
         }
         &.active {
           color: $gold;
@@ -879,15 +880,13 @@ a {
   position: relative;
   a {
     color: $white;
-    border-bottom: 1px solid transparent;
-    display: inline-block;
+    // border-bottom: 1px solid transparent;
+    // display: inline-block;
     &:hover {
       color: $gold;
-      border-bottom: 1px solid $gold;
     }
     &:focus {
       color: $gold;
-      border-bottom: 1px solid $gold;
     }
   }
 }
@@ -911,38 +910,15 @@ a {
     }
     &:hover {
       color: $gold;
-      border-bottom: 1px solid $gold;
     }
     &:focus {
       color: $gold;
-      border-bottom: 1px solid $gold;
     }
   }
 }
 
 .contact-social {
-  list-style: none;
-  display: inline-block;
-  margin: 0 0 0 0.3rem;
-  font-size: 2rem;
-  li {
-    margin-right: 15px;
-    padding-left: 0;
-    display: inline-block;
-    a {
-      color: $light_gray;
-      border: none !important;
-      &:hover {
-        color: $white;
-      }
-      &:focus {
-        color: $white;
-      }
-    }
-    &:last-child {
-      margin: 0;
-    }
-  }
+  @include socialLinks;
 }
 .copyright {
   margin-top: 2.1rem;
@@ -988,17 +964,13 @@ a {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     color: $light_gray;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    -webkit-transform-origin: left bottom;
-    -ms-transform-origin: left bottom;
-    transform-origin: left bottom;
     position: absolute;
     left: calc(30px + 15px);
     top: -165px;
+
+    @include transition(all 0.5s ease-in-out);
+    @include transform(rotate(-90deg));
+    @include transform-origin(left bottom);
   }
   a {
     text-decoration: none;
@@ -1017,135 +989,6 @@ a {
     &:hover {
       background-color: $gold;
       color: $black;
-    }
-  }
-}
-// ****** ****** ****** ******
-//  MEDIA QUERIES BOOTSTRAP ^4
-// ****** ****** ****** ******
-
-// MAX WIDTH
-// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  // Layout
-  .parallax {
-    height: 200%;
-  }
-
-  // menu
-  .menu {
-    padding: 120px 55px 55px 55px;
-    ul.menu-ul {
-      li {
-        margin-bottom: 0;
-      }
-    }
-  }
-  .heading {
-    font-size: 2.5rem;
-  }
-  .sub-text {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-  }
-  .lead-article {
-    padding: 0 1rem;
-  }
-
-  .contact-main {
-    a.contact-email {
-      font-size: 1.8rem;
-    }
-  }
-}
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-  // JUMBOTRON
-  .hero {
-    h1 {
-      font-size: 4rem;
-      font-weight: 400;
-    }
-    .hero-subtitle {
-      font-size: 1.6rem;
-      padding-left: 60px;
-      position: relative;
-      &::before {
-        content: "";
-        display: block;
-        width: 2rem;
-        height: 1px;
-        background-color: $gold;
-        position: absolute;
-        left: 6px;
-        top: 1.4rem;
-      }
-    }
-  }
-
-  // ABOUT
-  .about-area {
-    .skill-cat {
-      text-align: center;
-    }
-  }
-
-  // PORTFOLIO
-  .portfolio-area .filters ul li {
-    padding: 6px 6px;
-  }
-}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
-}
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {
-}
-
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
-
-// MIN WIDTH
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .menu {
-    width: 500px;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  // JUMBOTRON
-  .hero {
-    h1 {
-      font-size: 10rem;
-    }
-
-    .hero-subtitle {
-      font-size: 4rem;
-      padding-left: 120px;
-      position: relative;
-      &::before {
-        content: "";
-        display: block;
-        width: 5rem;
-        height: 2px;
-        background-color: $gold;
-        position: absolute;
-        left: 6px;
-        top: 3.2rem;
-      }
     }
   }
 }

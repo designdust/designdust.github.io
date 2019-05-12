@@ -362,6 +362,7 @@ body.overflow {
 a {
   color: #ffffff;
   transition: all 0.5s ease-in-out;
+  text-decoration: none;
 }
 
 a .link {
@@ -865,7 +866,7 @@ a:hover:after {
   width: calc(0% - 60px);
   position: absolute;
   height: 2px;
-  background: #333;
+  background: #000000;
   transition: width 350ms ease-out;
 }
 
@@ -1012,18 +1013,14 @@ a:hover:after {
 
 .contact-area a {
   color: #ffffff;
-  border-bottom: 1px solid transparent;
-  display: inline-block;
 }
 
 .contact-area a:hover {
   color: #b7ac7f;
-  border-bottom: 1px solid #b7ac7f;
 }
 
 .contact-area a:focus {
   color: #b7ac7f;
-  border-bottom: 1px solid #b7ac7f;
 }
 
 .contact-main {
@@ -1052,42 +1049,25 @@ a:hover:after {
 
 .contact-main a:hover {
   color: #b7ac7f;
-  border-bottom: 1px solid #b7ac7f;
 }
 
 .contact-main a:focus {
   color: #b7ac7f;
-  border-bottom: 1px solid #b7ac7f;
 }
 
-.contact-social {
-  list-style: none;
-  display: inline-block;
-  margin: 0 0 0 0.3rem;
-  font-size: 2rem;
-}
-
-.contact-social li {
-  margin-right: 15px;
-  padding-left: 0;
-  display: inline-block;
-}
-
-.contact-social li a {
+.contact-social .social-links a {
   color: #6e6e6e;
-  border: none !important;
+  margin-right: 20px;
 }
 
-.contact-social li a:hover {
+.contact-social .social-links a:hover {
+  border: none;
   color: #ffffff;
 }
 
-.contact-social li a:focus {
+.contact-social .social-links a:focus {
+  border: none;
   color: #ffffff;
-}
-
-.contact-social li:last-child {
-  margin: 0;
 }
 
 .copyright {
@@ -1150,14 +1130,14 @@ a:hover:after {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: #6e6e6e;
+  position: absolute;
+  left: calc(30px + 15px);
+  top: -165px;
   transition: all 0.5s ease-in-out;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-transform-origin: left bottom;
   transform-origin: left bottom;
-  position: absolute;
-  left: calc(30px + 15px);
-  top: -165px;
 }
 
 .to-top a {
