@@ -66,7 +66,7 @@ gulp.task("vendor:build", function() {
   var jsStream = gulp
     .src([
       "./assets/js/vendor/bootstrap.bundle.min.js",
-      "./assets/js/vendor/jquery.slim.min.js",
+      "./assets/js/vendor/jquery.min.js",
       "./assets/js/vendor/popper.min.js",
       "./assets/js/vendor/featherlight.min.js"
     ])
