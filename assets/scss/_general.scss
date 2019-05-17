@@ -241,6 +241,19 @@ body {
   }
 }
 
+.lightbox {
+  display: none;
+  .lb-title {
+    h4 {
+      font-size: 1.2rem;
+      line-height: 1em;
+    }
+    .lb-cat {
+      font-size: 0.8rem;
+    }
+  }
+}
+
 // ****** ****** ****** ******
 // GLOBAL STYLE
 // ****** ****** ****** ******
@@ -251,6 +264,9 @@ a {
   color: $white;
   @include transition(all 0.5s ease-in-out);
   text-decoration: none;
+  &.black {
+    color: $black;
+  }
 
   .link {
     position: relative;
@@ -758,6 +774,8 @@ a {
 
       a.p-show {
         display: block;
+        @include transition(all 0.5s ease-in-out);
+
         &::before {
           content: "";
           position: absolute;
@@ -791,7 +809,8 @@ a {
       &:hover a .p-expand,
       &:hover .p-inner,
       &:hover .p-links,
-      &:hover .img-blur-container {
+      &:hover .img-blur-container,
+      &:hover .img-blur-container::after {
         opacity: 1;
         @include transition(all 0.5s ease-in-out);
       }
@@ -814,6 +833,31 @@ a {
         width: calc(100% - 60px);
         height: calc(100% - 60px);
         @include transition(all 0.5s ease-in-out);
+
+        &::after {
+          content: "";
+
+          background: linear-gradient(
+            -45deg,
+            rgba(238, 119, 82, 0.2),
+            rgba(183, 54, 209, 0.2),
+            rgba(213, 157, 35, 0.2),
+            rgba(213, 35, 204, 0.2)
+          );
+          background-size: 400% 400%;
+
+          @include gradientAnimation;
+          @include gradientAnimationFrames;
+
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          @include transition(all 0.5s ease-in-out);
+        }
+
         .img-blur {
           position: absolute;
 
@@ -837,7 +881,7 @@ a {
         // justify-content: flex-end;
         // resize: vertical;
 
-        // width: calc(100% - 60px);
+        width: calc(100% - 100px);
         // height: calc(100% - 60px);
         // background-color: rgba(255, 255, 255, 0.3);
         // background-clip: border-box;

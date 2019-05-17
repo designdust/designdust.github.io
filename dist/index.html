@@ -21,20 +21,25 @@
   <link rel="icon" href="favicon.ico" />
 
   <title>Designdust Portfolio</title>
+
   <!-- Icons for this template -->
   <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.min.css" type="text/css" />
   <link rel="stylesheet" href="assets/fonts/flaticon-webdesign/flaticon.css" />
+
   <!-- Google fonts -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Raleway:200,400,600|Playfair+Display|Cormorant+Unicase|Lobster:200,400" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/featherlight.min.css" />
+
   <link rel="stylesheet" href="assets/css/app.min.css">
 
 
   <!-- ****** VENDOR'S CDN ****** -->
   <!-- Animate on scroll -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
 
 </head>
@@ -157,9 +162,9 @@
       <div class="container" data-aos="fade-up">
         <h1 class="hero-title">Hello, <span class="d-inline-block"> I'm Flitz</span></h1>
         <div id="typed-strings">
+          <p>Multimedia <strong>Artist.</strong></p>
           <p>Web <strong>Designer.</strong></p>
           <p>Web <strong>Developer.</strong></p>
-          <p>Multimedia <strong>Artist.</strong></p>
         </div>
         <p class="hero-subtitle"><span id="typed"></span> </p>
         <a href="#portfolio" class="btn btn-gold btn-lg">View Portfolio</a>
@@ -182,11 +187,11 @@
         </div>
         <!-- end heading -->
 
+        <!-- start article -->
         <div class="row" data-aos="fade-up">
 
           <div class="col">
             <article class="lead-article">
-
               <p class="lead">Learning web design in high school kept me busy and much less angsty. What started as
                 curiosity blossomed
                 into full-on passion for all areas of design.
@@ -205,7 +210,9 @@
               </p>
             </article>
           </div>
+
         </div>
+        <!-- end article -->
 
         <div class="row">
 
@@ -340,9 +347,9 @@
         <!-- start heading -->
         <div class="row" data-aos="fade-up">
           <div class="col">
-            <h4 class="sub-heading">Featured Projects</h4>
+            <h4 class="sub-heading">Featured Projects (Working in progress, links might be broken)</h4>
             <h1 class="display-4 heading">
-              Samples of some of my work and studies.
+              Some of my work and studies.
             </h1>
           </div>
         </div>
@@ -350,13 +357,14 @@
       </div>
 
       <!-- START Portfolio grid -->
-      <div class="container-fluid">
+      <div class="container-fluid portfolio-container">
         <div class="filters" data-aos="fade-up">
           <ul>
             <li class="active" data-filter="*">All</li>
             <li data-filter=".wds">Web Design</li>
             <li data-filter=".wdv">Web Development</li>
             <li data-filter=".gds">Graphic Design</li>
+            <li data-filter=".ilt">Illustration</li>
           </ul>
         </div>
 
@@ -368,19 +376,19 @@
               <div class="item">
                 <div class="img-blur-container">
                   <!-- blur image needs another image overlay -->
-                  <img class="img-blur" src="assets/img/portfolio/1.jpg" alt="Work 1" />
+                  <img class="img-blur" src="assets/img/portfolio/p-1.jpg" alt="Circa Construction" />
                 </div>
-                <a class="p-show" href="#">
-                  <img src="assets/img/portfolio/1.jpg" alt="Work 1" />
+                <a class="p-show" href="assets/img/portfolio/p-1.jpg" data-featherlight="image">
+                  <img src="assets/img/portfolio/p-1.jpg" alt="Circa Construction" />
                   <i class="fa fa-expand p-expand"></i>
                 </a>
                 <div class="p-inner">
-                  <h4>3D Helmet Design</h4>
-                  <div class="cat">Corporate</div>
+                  <h4>Circa Construction Landing Page</h4>
+                  <div class="cat">Web Design</div>
                 </div>
                 <div class="p-links">
-                  <a href="# " data-toggle="tooltip" data-placement="right" title="View on Github"><i
-                      class="fab fa-github"></i>
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
                   </a>
                 </div>
               </div>
@@ -388,23 +396,136 @@
             <!-- END Portfolio Item -->
 
             <!-- START Portfolio Item -->
-            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wdv">
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
               <div class="item">
                 <div class="img-blur-container">
                   <!-- blur image needs another image overlay -->
-                  <img class="img-blur" src="assets/img/portfolio/2.jpg" alt="Work 1" />
+                  <img class="img-blur" src="assets/img/portfolio/p-2.jpg" alt="Baxxspace Blog Design" />
                 </div>
-                <a class="p-show" href="#">
-                  <img src="assets/img/portfolio/2.jpg" alt="Work 1" />
+                <a class="p-show" href="#" data-featherlight="#flp-2">
+                  <img src="assets/img/portfolio/p-2.jpg" alt="Baxxspace Blog Design" />
                   <i class="fa fa-expand p-expand"></i>
                 </a>
                 <div class="p-inner">
-                  <h4>3D Helmet Design</h4>
-                  <div class="cat">Corporate</div>
+                  <h4>Baxxspace Blog Design</h4>
+                  <div class="cat">Web Design </div>
                 </div>
                 <div class="p-links">
-                  <a href="# " data-toggle="tooltip" data-placement="right" title="View on Github"><i
-                      class="fab fa-github"></i>
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-2">
+              <img class="img-fluid" src="assets/img/portfolio/p-2.jpg" alt="Baxxspace Blog Design" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Baxxspace Blog Design
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design</p>
+                <p class="lb-desc ">Baxxspace is a blog template I designed for blogger, It was once became live but
+                  short
+                  lived.
+                </p>
+                <span class="badge badge-light">Blogger </span>
+                <span class="badge badge-light">html </span>
+                <span class="badge badge-light">css </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-3.jpg" alt="Sanji-kun" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-3">
+                  <img src="assets/img/portfolio/p-3.jpg" alt="Sanji-kun" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Sanji of Onepiece Anime</h4>
+                  <div class="cat">Digital Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-3">
+              <img class="img-fluid" src="assets/img/portfolio/p-3.jpg" alt="test">
+              <div class="lb-title light-bg mt-4">
+                <h4>Sanji of Onepiece Anime
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Digital Illustration</p>
+                <p class="lb-desc ">Sanji-kun realistic digital portrait in photoshop. Hand drawn from head to toe,
+                  not
+                  matte painting.
+                </p>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-4.png" alt="Gabbi Garcia" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-4.png" alt="Gabbi Garcia" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Gabbi Garcia</h4>
+                  <div class="cat">Digital Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-5.jpg" alt="Maine Mendoza" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-5.jpg" alt="Maine Mendoza" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Maine Mendoza</h4>
+                  <div class="cat">Digital Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
                   </a>
                 </div>
               </div>
@@ -416,19 +537,331 @@
               <div class="item">
                 <div class="img-blur-container">
                   <!-- blur image needs another image overlay -->
-                  <img class="img-blur" src="assets/img/portfolio/3.jpg" alt="Work 1" />
+                  <img class="img-blur" src="assets/img/portfolio/p-6.png" alt="Ai Gaming" />
                 </div>
                 <a class="p-show" href="#">
-                  <img src="assets/img/portfolio/3.jpg" alt="Work 1" />
+                  <img src="assets/img/portfolio/p-6.png" alt="Ai Gaming" />
                   <i class="fa fa-expand p-expand"></i>
                 </a>
                 <div class="p-inner">
-                  <h4>3D Helmet Design</h4>
-                  <div class="cat">Corporate</div>
+                  <h4>Ai Gaming Cafe Logo</h4>
+                  <div class="cat">Graphic Design</div>
                 </div>
                 <div class="p-links">
-                  <a href="# " data-toggle="tooltip" data-placement="right" title="View on Github"><i
-                      class="fab fa-github"></i>
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wdv wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-7.png" alt="STI quizzer" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-7.png" alt="STI quizzer" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>STI Online Web Development Quizzer</h4>
+                  <div class="cat">Web Design and Development</div>
+                </div>
+                <div class="p-links">
+                  <a href="http://flitz.pcriot.com/quiz/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wdv wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-8.png" alt="CSS Grid Template" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-8.png" alt="CSS Grid Template" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>CSS Grid Experiment/ Portfolio Template</h4>
+                  <div class="cat">Web Design and Development</div>
+                </div>
+                <div class="p-links">
+                  <a href="http://flitz.pcriot.com/cssgrid/" data-toggle="tooltip" target="_blank"
+                    data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-9.jpg" alt="The Republiq Newspaper" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-9.jpg" alt="The Republiq Newspaper" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>The Republiq Newspaper</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-10.jpg" alt="Travel Snacks Magazine Cover" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-10.jpg" alt="Travel Snacks Magazine Cover" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Travel Snacks Magazine Cover</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-11.jpg" alt="Global Warming" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-11.jpg" alt="Global Warming" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Global Warming (Shapes Study)</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-12.png" alt="Caricature Vector" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-12.png" alt="Caricature Vector" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Caricature Vector</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-13.png" alt="Miss Universe" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-13.png" alt="Miss Universe" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Miss Universe Vexel</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-14.jpg" alt="My Previous Portfolio Design" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-14.jpg" alt="My Previous Portfolio Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>My Previous Portfolio Design</h4>
+                  <div class="cat">Web Design <span class="year">2016</span></div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-15.jpg" alt="Qulay Blog Design" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-15.jpg" alt="Qulay Blog Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Qulay Blog Design</h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-16.jpg" alt="Insthink Blog Design" />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-16.jpg" alt="Insthink Blog Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Insthink Blog Design</h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-17.png" alt=" AI Gaming logo " />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-17.png" alt=" AI Gaming logo " />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4> AI Gaming logo </h4>
+                  <div class="cat">Graphic Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-18.jpg" alt=" Barewalls E-commerce Product Page " />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-18.jpg" alt="  Barewalls E-commerce Product Page  " />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4> Barewalls E-commerce Product Page </h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds wdv">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-19.png" alt=" Information Management System " />
+                </div>
+                <a class="p-show" href="#">
+                  <img src="assets/img/portfolio/p-19.png" alt="  Information Management System   " />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4> Information Management System for Barangay Ramon Magsaysay </h4>
+                  <div class="cat">Web Design and Development </div>
+                </div>
+                <div class="p-links">
+                  <a href="https://www.youtube.com/watch?v=VtpLj-Fa3u4" target="_blank" data-toggle="tooltip"
+                    data-placement="right" title="Watch on Youtube"><i class="fab fa-youtube"></i>
                   </a>
                 </div>
               </div>
@@ -526,9 +959,10 @@
 
   <!-- Bootstrap core JavaScript -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="assets/js/vendor/jquery.slim.min.js"></script>
+  <script src="assets/js/vendor/jquery.min.js"></script>
   <script src="assets/js/vendor/popper.min.js"></script>
   <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/featherlight.min.js"></script>
 
   <!-- ****** VENDOR'S CDN ****** -->
   <!-- Isotope layout JS CDN only -->
