@@ -7,10 +7,14 @@
 // An object literal
 var appWindow = {
   init: function() {
+    appWindow.isotope();
     appWindow.movingLetters();
     appWindow.preLoader();
     appWindow.typingHeadline();
   },
+  // ****** ****** ****** ******
+  // START Anime JS
+  // ****** ****** ****** ******
   movingLetters: function() {
     // Wrap every letter in a span
     $(".hero-title").each(function() {
@@ -45,8 +49,31 @@ var appWindow = {
       loop: true,
       loopCount: 1,
       startDelay: 2500,
-      backDelay: 2000
+      backDelay: 1500
     });
+  },
+  // ****** ****** ****** ******
+  // START Isotope Settings
+  // ****** ****** ****** ******
+  isotope: function() {
+    $(".filters ul li").click(function() {
+      $(".filters ul li").removeClass("active");
+      $(this).addClass("active");
+
+      var data = $(this).attr("data-filter");
+      $grid.isotope({
+        filter: data
+      });
+    });
+
+    if (document.getElementById("portfolio")) {
+      var $grid = $(".grid").isotope({
+        itemSelector: ".all",
+        masonry: {
+          columnWidth: ".all"
+        }
+      });
+    }
   },
   // ****** ****** ****** ******
   //  START AOS AND PRELOADER
@@ -84,7 +111,6 @@ $(window).on("load", function() {
 var appDocument = {
   init: function() {
     appDocument.burgerMenu();
-    appDocument.isotope();
     appDocument.bootstrapTooltip();
   },
   // ****** ****** ****** ******
@@ -159,29 +185,6 @@ var appDocument = {
       } else {
         hideMenu();
       }
-    }
-  },
-  // ****** ****** ****** ******
-  // START Isotope Settings
-  // ****** ****** ****** ******
-  isotope: function() {
-    $(".filters ul li").click(function() {
-      $(".filters ul li").removeClass("active");
-      $(this).addClass("active");
-
-      var data = $(this).attr("data-filter");
-      $grid.isotope({
-        filter: data
-      });
-    });
-
-    if (document.getElementById("portfolio")) {
-      var $grid = $(".grid").isotope({
-        itemSelector: ".all",
-        masonry: {
-          columnWidth: ".all"
-        }
-      });
     }
   },
   // ****** ****** ****** ******

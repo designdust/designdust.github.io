@@ -1035,7 +1035,7 @@ a:hover:after {
   opacity: 0;
   left: 50px;
   bottom: 50px;
-  width: calc(100% - 100px);
+  max-width: calc(100% - 100px);
   transition: all 0.5s ease-in-out;
   -webkit-transform: translateY(-30px);
   transform: translateY(-30px);

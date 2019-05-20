@@ -881,7 +881,7 @@ a {
         // justify-content: flex-end;
         // resize: vertical;
 
-        width: calc(100% - 100px);
+        max-width: calc(100% - 100px);
         // height: calc(100% - 60px);
         // background-color: rgba(255, 255, 255, 0.3);
         // background-clip: border-box;
