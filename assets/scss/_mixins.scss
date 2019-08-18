@@ -60,16 +60,30 @@
 // Social Links
 @mixin socialLinks {
   .social-links {
-    a {
-      color: $light_gray;
-      margin-right: 20px;
-      &:hover {
-        border: none;
-        color: $white;
-      }
-      &:focus {
-        border: none;
-        color: $white;
+    ul li {
+      list-style: none;
+      position: relative;
+      display: block;
+      padding: 0.75rem 0;
+
+      a {
+        color: $light_gray;
+        padding-left: 50px;
+        &:hover {
+          border: none;
+          color: $white;
+        }
+        &:focus {
+          border: none;
+          color: $white;
+        }
+        i {
+          position: absolute;
+          // color: rgba(110, 110, 110, 0.1);
+          left: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+        }
       }
     }
   }

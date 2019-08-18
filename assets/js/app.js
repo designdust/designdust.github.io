@@ -211,7 +211,14 @@ $("document").ready(function() {
 //PARALLAX FUNCTION
 function parallax() {
   var winScroll = $(window).scrollTop();
-  $(".parallax").css("top", -(winScroll * 0.05) + "px");
+  var maxWidth = window.matchMedia("(max-width: 990px)");
+
+  if (maxWidth.matches) {
+    // If media query matches
+    $(".parallax").css("top", -(winScroll * 0.015) + "px");
+  } else {
+    $(".parallax").css("top", -(winScroll * 0.025) + "px");
+  }
 }
 //NOT THE MOST EFFICIENT PARALLAX, BUT SIMPLE
 
