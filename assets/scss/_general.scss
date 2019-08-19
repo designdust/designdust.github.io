@@ -306,7 +306,12 @@ a {
   right: 0;
   z-index: -1;
 }
-
+.dark-text {
+  color: $light_gray;
+}
+.light-text {
+  color: $gray;
+}
 .dark-bg {
   background-color: $gray;
   color: $light_gray;
@@ -352,6 +357,9 @@ a {
 }
 .lead {
   font-weight: 400;
+}
+.nowrap {
+  white-space: nowrap;
 }
 
 // ****** ****** ****** ******

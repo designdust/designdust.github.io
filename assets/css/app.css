@@ -420,6 +420,14 @@ a:hover:after {
   z-index: -1;
 }
 
+.dark-text {
+  color: #6e6e6e;
+}
+
+.light-text {
+  color: #1f1f1f;
+}
+
 .dark-bg {
   background-color: #1f1f1f;
   color: #6e6e6e;
@@ -468,6 +476,10 @@ a:hover:after {
 
 .lead {
   font-weight: 400;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .header-logo {
