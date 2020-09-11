@@ -1,20 +1,6 @@
-// Mixins
-
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
-
-/*  MIXINS
-========================================== */
+// ****** ****** ****** ******
+// MIXINS
+// ****** ****** ****** ******
 
 @mixin transform($transform) {
   -webkit-transform: $transform;
@@ -22,6 +8,14 @@
   -ms-transform: $transform;
   -o-transform: $transform;
   transform: $transform;
+}
+
+@mixin transform-origin($transform-origin) {
+  -webkit-transform-origin: $transform-origin;
+  -moz-transform-origin: $transform-origin;
+  -ms-transform-origin: $transform-origin;
+  -o-transform-origin: $transform-origin;
+  transform-origin: $transform-origin;
 }
 
 @mixin transition($transition) {
@@ -36,4 +30,101 @@
   -moz-transition-delay: #{$transition-delay};
   -o-transition-delay: #{$transition-delay};
   transition-delay: #{$transition-delay};
+}
+
+// Applies for all Internet Explorer and Edge versions
+
+@mixin worstBrowsers() {
+  /* all IE versions <= 11 */
+  @media screen and (-ms-high-contrast: none) {
+    @content;
+  }
+
+  /* all edge versions */
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+// LAYOUT MIXINS
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+// Social Links
+@mixin socialLinks {
+  .social-links {
+
+      a {
+        color: $light_gray;
+        margin-left: 20px;
+        &:hover {
+          border: none;
+          color: $white;
+        }
+        &:focus {
+          border: none;
+          color: $white;
+        }
+        // i {
+        //   position: absolute;
+        //   // color: rgba(110, 110, 110, 0.1);
+        //   left: 0;
+        //   top: 50%;
+        //   transform: translate(0, -50%);
+        // }
+      
+    }
+  }
+}
+
+// Gradient Animations
+@mixin gradientAnimation {
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@mixin gradientAnimationFrames {
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

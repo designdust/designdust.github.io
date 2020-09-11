@@ -1,20 +1,24 @@
 // Variables
-$secondary-color: #eece1a;
+
 $black: #000000;
 $white: #ffffff;
-$gray: #2a2a2a;
-$gold: #b7ac7f;
+$gray: #1f1f1f;
+$light_gray: rgb(110, 110, 110);
+$light_gray_10: rgba(110, 110, 110, 0.1);
+
+$gold: rgb(183, 172, 127);
+$gold_30: rgba(183, 172, 127, 0.3);
+$white_10: rgba(255, 255, 255, 0.1);
+$black_90: rgba(0, 0, 0, 0.9);
+$black_75: rgba(0, 0, 0, 0.75);
+$black_60: rgba(0, 0, 0, 0.6);
+$black_30: rgba(0, 0, 0, 0.3);
+$black_20: rgba(0, 0, 0, 0.2);
+$black_10: rgba(0, 0, 0, 0.1);
 
 // Fonts
 
 $raleway: "Raleway", sans-serif;
-$spectral: "Spectral", serif;
-
-// Set Text Color
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
+$font_2: "Playfair Display", serif;
+$font_3: "Cormorant Unicase", serif;
+$font_4: "Lobster", cursive;

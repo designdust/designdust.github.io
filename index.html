@@ -1,106 +1,1557 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="Ferdinand Tugano" />
-    <link rel="icon" href="favicon.ico" />
 
-    <title>Bootstrap Stater</title>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139084988-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <!-- Icons for this template -->
-    <link
-      href="assets/fonts/font-awesome/css/all.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway|Spectral"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
-    <!-- build:css -->
-    <link href="assets/css/app.css" rel="stylesheet" />
-    <!-- endbuild -->
-  </head>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <body>
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+    gtag("config", "UA-139084988-1");
+  </script>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Designdust Portfolio" />
+  <meta name="author" content="Ferdinand Tugano" />
+  <link rel="icon" href="favicon.ico" />
+
+  <title>Designdust Portfolio</title>
+
+  <!-- Icons for this template -->
+  <link rel="stylesheet" href="assets/fonts/font-awesome/css/all.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/fonts/flaticon-webdesign/flaticon.css" />
+
+  <!-- Google fonts -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway:200,400,600|Playfair+Display|Cormorant+Unicase|Lobster:200,400" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/featherlight.min.css" />
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <!-- endbuild -->
+
+  <!-- ****** VENDOR'S CDN ****** -->
+  <!-- Animate on scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+
+</head>
+<!--
+  // Bootstrap scrollspy
+        data-spy="scroll" data-target=".menu" data-offset="50"
+ S
+ -->
+
+<body data-spy="scroll" data-target=".menu" data-offset="50">
+
+
+  <!-- START Preloader -->
+
+  <div id="preloader">
+    <div id="loader" class="loader">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+  <!-- END Preloader -->
+
+  <!-- START Parallax -->
+  <div class="parallax"></div>
+  <!-- END Parallax -->
+
+  <!-- START Header -->
+  <header>
+    <div class="header-logo" id="header-logo">
+      <a class="site-logo" data-aos="fade-down" href="index.html">
+        <!-- <img src="assets/img/logo.png" alt="Homepage" /> -->
+        Designdust
+      </a>
+    </div>
+
+    <div class="menu-btn" data-aos="fade-down">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu col-md-6">
+
+      <div class="menu-logo" id="menu-logo">
+        <a class="site-logo" data-aos="fade-right" href="index.html">
+          <!-- <img src="assets/img/logo.png" alt="Homepage" /> -->
+          Designdust
+        </a>
       </div>
 
-      <nav class="menu">
-        <ul class="menu-ul">
-          <li class="nav-item current">
-            <a href="index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">
-              How To Reach Me
-            </a>
-          </li>
-        </ul>
+      <ul class="menu-ul">
+        <li class="nav-item current">
+          <a href="#hero" class="nav-link">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">
+            About
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#portfolio" class="nav-link">
+            Portfolio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">
+            Contact
+          </a>
+        </li>
+      </ul>
 
-        <div class="about mt-5">
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa.
-          </p>
-          <div class="social-links mt-5 pb-5">
-            <a href="#"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fab fa-codepen fa-2x"></i></a>
-            <a href="#"><i class="fab fa-deviantart fa-2x"></i></a>
+      <address class="menu-about">
+        <p>
+          <strong>Flitz Tugano</strong>
+        </p>
+        <p>
+          Based out of Quezon City, PH. <br>
+
+          <a href="mailto:hello@designdust.studio">
+            hello@designdust.studio
+          </a><br>
+          <a href="tel:+63027539081">+63 (02) 753 9081</a>
+          <!-- If you are a business seeking a web presence or an employer looking to hire, feel free to contact me. -->
+        </p>
+        <div class="mt-5 pb-5">
+          <a href="https://github.com/designdust" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+          <a href="https://twitter.com/designdust" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://codepen.io/designdust/" target="_blank"><i class="fab fa-codepen fa-2x"></i></a>
+          <a href="https://www.deviantart.com/baxxspace" target="_blank"><i class="fab fa-deviantart fa-2x"></i></a>
+        </div>
+      </address>
+
+      <div class="menu-footer">
+        <!-- <p>
+          Copyright &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved
+        </p> -->
+        <p>
+          <span class="fa fa-business-time"></span>
+          I am available for freelance projects and full-time employment.
+        </p>
+      </div>
+
+    </nav>
+
+    <div class="overlay"></div>
+
+  </header>
+  <!-- END Header -->
+
+  <!-- START Main -->
+  <main role="main" class="main">
+
+    <!-- START jumbotron area -->
+    <section class="hero br-bot-right" id="hero">
+      <div class="container" data-aos="fade-up">
+        <h1 class="hero-title">Hello, <span class="d-inline-block"> I'm Flitz</span></h1>
+        <div id="typed-strings">
+          <p>Multimedia <strong>Artist.</strong></p>
+          <p>Web <strong>Designer.</strong></p>
+          <p>Web <strong>Developer.</strong></p>
+        </div>
+        <p class="hero-subtitle"><span id="typed"></span> </p>
+        <a href="#portfolio" class="btn btn-gold btn-lg">View Portfolio</a>
+      </div>
+    </section>
+    <!-- END jumbotron area -->
+
+    <!-- START about area -->
+    <section class="about-area section-gap light-bg br-top-right" id="about">
+      <div class="container">
+        <!-- start heading -->
+        <div class="row section-head" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-heading">About Me</h4>
+            <h1 class="display-4 heading">
+              For the <span class="d-block d-md-inline">love of design.</span>
+            </h1>
+
           </div>
         </div>
-      </nav>
+        <!-- end heading -->
 
-      <div class="overlay"></div>
-    </header>
+        <!-- start article -->
+        <div class="row" data-aos="fade-up">
 
-    <main role="main" class="container">
-      <div class="jumbotron text-center">
-        <img src="assets/img/logo.png" />
-        <h1>Bootstrap 4 Starter Template Test</h1>
-        <p class="lead">This example is a quick bootstrap starter template.</p>
-        <a
-          class="btn btn-lg btn-primary"
-          href="https://getbootstrap.com/docs/4.0/getting-started/introduction/"
-          role="button"
-          target="_blank"
-          >View Bootstrap 4 Docs&raquo;</a
-        >
+          <div class="col">
+            <article class="lead-article">
+              <p class="lead">Learning web design in high school kept me busy and much less angsty. What started as
+                curiosity blossomed
+                into full-on passion for all areas of design.
+                <br>
+                <br> My strongest skillset is designing for the web because I've been practicing for over 3 years. This
+                includes a healthy sense of design & fervent knowledge of development.
+                <br>
+                <br> I've dabbled in print work but also believe the proverb "jack of all trades, master of none".
+                Specialization is more my thing.
+                <br>
+                <br> At the moment I don't have a voluminous portfolio of live work — but I do have a few live samples
+                and screenshots of some of my design and development projects.
+                <br>
+                <br>
+              </p>
+            </article>
+          </div>
+
+        </div>
+        <!-- end article -->
+
+        <div class="row">
+
+          <!-- START Services -->
+
+          <div class="services col-md-12">
+
+            <!-- start heading -->
+            <div class="row" data-aos="fade-up">
+              <div class="col  mt-5">
+                <h4 class="sub-heading">What I can do for you</h4>
+                <!-- <h1 class="display-4 heading">
+                      Samples of some of my work and studies.
+                    </h1> -->
+              </div>
+            </div>
+            <!-- end heading -->
+
+            <div class="row">
+              <div class="col mt-3 services-cat" data-aos="fade-up">
+                <i class="glyph-icon flaticon-layout"></i>
+                <div class="lead">Web Design</div>
+              </div>
+              <div class="col mt-3 services-cat" data-aos="fade-up">
+                <i class="glyph-icon flaticon-html"></i>
+                <div class="lead">Web development</div>
+              </div>
+              <div class="col mt-3 services-cat" data-aos="fade-up">
+                <i class="glyph-icon flaticon-vector"></i>
+                <div class="lead">Branding</div>
+              </div>
+              <div class="col mt-3 services-cat" data-aos="fade-up">
+                <i class="glyph-icon flaticon-design-tool"></i>
+                <div class="lead">Graphic Design</div>
+              </div>
+              <div class="col mt-3 services-cat" data-aos="fade-up">
+                <i class="glyph-icon flaticon-attractive"></i>
+                <div class="lead">Photo Editing</div>
+              </div>
+              <div class="col mt-3 services-cat" data-aos="fade-up">
+                <i class="glyph-icon flaticon-photo-camera"></i>
+                <div class="lead">Photography</div>
+              </div>
+            </div>
+
+          </div>
+          <!-- END Services -->
+
+          <!-- START Skills -->
+          <div class="skills col-md-12">
+
+            <!-- start heading -->
+            <div class="row" data-aos="fade-up">
+              <div class="col  mt-5">
+                <h4 class="sub-heading">What do I use?</h4>
+                <!-- <h1 class="display-4 heading">
+                      Samples of some of my work and studies.
+                    </h1> -->
+              </div>
+            </div>
+            <!-- end heading -->
+
+            <div class="row skill-cat" data-aos="fade-up">
+              <div class="col-sm-12 col-md-4 mt-3">
+                <h2> Creative Design</h2>
+                <ol class="col">
+                  <li> Figma</li>
+                  <li> Adobe Ps</li>
+                  <li> Adobe Ai</li>
+                  <li> Adobe Id</li>
+                  <li> Adobe Xd</li>
+                  <li> Adobe Pr</li>
+                  <li> Adobe Lr</li>
+                  <li> Adobe Ru</li>
+                </ol>
+              </div>
+              <!-- </div>
+  
+              <div class="row skill-cat" data-aos="fade-up"> -->
+              <div class="col-sm-12 col-md-8 mt-3">
+                <h2> Web Development</h2>
+                <div class="row">
+                  <ol class="col-4">
+                    <li> HTML5</li>
+                    <li> CSS3</li>
+                    <li> SCSS</li>
+                    <li> Bootstrap</li>
+                    <li> JavaScript</li>
+                    <li> Jquery</li>
+                    <li> Vue JS</li>
+                    <li> React JS</li>
+                  </ol>
+                  <ol class="col-4">
+                    <li> PHP</li>
+                    <li> Composer</li>
+                    <li> Codeigniter</li>
+                    <li> Laravel</li>
+                    <li> WordPress</li>
+                    <li> Elementor</li>
+                    <li> Woocommerce</li>
+                    <li> Google Analytics</li>
+                  </ol>
+                  <ol class="col-4">
+                    <li> NodeJS</li>
+                    <li> NPM</li>
+                    <li> Git</li>
+                    <li> Grunt</li>
+                    <li> Gulp</li>
+                    <li> Yarn</li>
+                    <li> Webpack</li>
+                    <li> MySQL</li>
+                  </ol>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- END Skills -->
+
+        </div>
+
+
+
       </div>
-    </main>
+    </section>
+    <!-- END About area -->
 
-    <!-- Bootstrap core JavaScript
-================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/vendor/jquery.slim.min.js"></script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <!-- build:js -->
-    <script src="assets/js/app.js"></script>
-    <!-- endbuild -->
-  </body>
+    <!-- START portfolio area -->
+    <section class="portfolio-area section-gap light-bg" id="portfolio">
+      <div class="container">
+        <!-- start heading -->
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-heading">Featured Projects (Working in progress, links might be broken)</h4>
+            <h1 class="display-4 heading">
+              Some of my work and studies.
+            </h1>
+          </div>
+        </div>
+        <!-- end heading -->
+      </div>
+
+      <!-- START Portfolio grid -->
+      <div class="container-fluid portfolio-container">
+        <div class="filters" data-aos="fade-up">
+          <ul>
+            <li class="active" data-filter="*">All</li>
+            <li data-filter=".wds">Web Design</li>
+            <li data-filter=".wdv">Web Development</li>
+            <li data-filter=".gds">Graphic Design</li>
+            <li data-filter=".ilt">Illustration</li>
+          </ul>
+        </div>
+
+        <div class="filters-content mt-5">
+          <div class="row grid" data-aos="fade-up">
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-1.jpg" alt="Circa Construction" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-1">
+                  <img src="assets/img/portfolio/p-1.jpg" alt="Circa Construction" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Circa Construction Landing Page</h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-1">
+              <img class="img-fluid" src="assets/img/portfolio/p-1.jpg" alt="Circa Construction" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Circa Construction
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design</p>
+                <p class="lb-desc ">Circa Construction Landing page design. </p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-2.jpg" alt="Baxxspace Blog Design" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-2">
+                  <img src="assets/img/portfolio/p-2.jpg" alt="Baxxspace Blog Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Baxxspace Blog Design</h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-2">
+              <img class="img-fluid" src="assets/img/portfolio/p-2.jpg" alt="Baxxspace Blog Design" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Baxxspace Blog
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design</p>
+                <p class="lb-desc ">Baxxspace is a blog template I designed and developed for blogger, It was once
+                  became live but
+                  short
+                  lived.
+                </p>
+                <span class="badge badge-light">Blogger </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-3.jpg" alt="Sanji-kun" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-3">
+                  <img src="assets/img/portfolio/p-3.jpg" alt="Sanji-kun" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Sanji of Onepiece Anime</h4>
+                  <div class="cat">Digital Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-3">
+              <img class="img-fluid" src="assets/img/portfolio/p-3.jpg" alt="test">
+              <div class="lb-title light-bg mt-4">
+                <h4>Sanji of Onepiece Anime
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Digital Illustration</p>
+                <p class="lb-desc ">Sanji-kun realistic digital portrait in photoshop. Hand drawn from head to toe,
+                  not
+                  matte painting.
+                </p>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-4.jpg" alt="Gabbi Garcia Digital Illustration" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-4">
+                  <img src="assets/img/portfolio/p-4.jpg" alt="Gabbi Garcia Digital Illustration" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Gabbi Garcia</h4>
+                  <div class="cat">Digital Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-4">
+              <img class="img-fluid" src="assets/img/portfolio/p-4.jpg" alt="Gabbi Garcia Digital Illustration" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Gabbi Garcia
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Illustration</p>
+                <p class="lb-desc ">Gabbi Garcia, A quick digital illustration in photoshop but turns out so good for
+                  me. That it became my most favorite illustration.</p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-5.jpg" alt="Maine Mendoza Realistic Portrait" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-5">
+                  <img src="assets/img/portfolio/p-5.jpg" alt="Maine Mendoza Realistic Portrait" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Maine Mendoza Realistic Portrait</h4>
+                  <div class="cat">Digital Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-5">
+              <img class="img-fluid" src="assets/img/portfolio/p-5.jpg" alt="Gabbi Garcia Digital Illustration" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Maine Mendoza Realistic Portrait
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Illustration</p>
+                <p class="lb-desc ">Maine Mendoza Realistic Portrait in Photoshop, This is pure drawing no
+                  photomanipulation or whatsoever.</p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-6.jpg" alt="Ai Gaming Cafe Logo" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-6">
+                  <img src="assets/img/portfolio/p-6.jpg" alt="Ai Gaming Cafe Logo" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Ai Gaming Cafe Logo</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-6">
+              <img class="img-fluid" src="assets/img/portfolio/p-6.jpg" alt="Ai Gaming Cafe Logo" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Ai Gaming Cafe Logo
+                  <a class="float-right black " href="# " target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc ">Ai Gaming Cafe Logo, a local internet and gaming cafe.</p>
+                <span class="badge badge-light">illustrator </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wdv wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-7.jpg" alt="STI Web Development Quiz" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-7">
+                  <img src="assets/img/portfolio/p-7.jpg" alt="STI Web Development Quiz" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>STI Web Development Quiz</h4>
+                  <div class="cat">Web Design and Development</div>
+                </div>
+                <div class="p-links">
+                  <a href="http://stidev.ga/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-7">
+              <img class="img-fluid" src="assets/img/portfolio/p-7-1.jpg" alt="STI Web Development Quiz" />
+              <div class="lb-title light-bg mt-4">
+                <h4>STI Web Development Quiz
+                  <a class="float-right black " href="http://stidev.ga/" target="_blank"
+                    data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design and Development</p>
+                <p class="lb-desc ">A website I designed and developed to test the co-students knowledge in web
+                  programming. Developed for a tasked performance for the web programming course using Core PHP, MySQL, Bootstrap 3, CSS, HTML,
+                  Javascript and Jquery. </p>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">PHP </span>
+                <span class="badge badge-light">MySQL </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wdv wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-8.jpg" alt="CSS Grid Template" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-8">
+                  <img src="assets/img/portfolio/p-8.jpg" alt="CSS Grid Template" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>CSS Grid Experiment/ Portfolio Template</h4>
+                  <div class="cat">Web Design and Development</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://designdust.me/designdust-basic-grid/" data-toggle="tooltip" target="_blank"
+                    data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-8">
+              <img class="img-fluid" src="assets/img/portfolio/p-8-1.png" alt="CSS Grid Template" />
+              <div class="lb-title light-bg mt-4">
+                <h4>CSS Grid Experiment/ Portfolio Template
+                  <a class="float-right black " href="https://designdust.me/designdust-basic-grid/" target="_blank"
+                    data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design and Development</p>
+                <p class="lb-desc ">CSS Grid is my experemental project to test the capabilities of the css grid.
+                </p>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-9.jpg" alt="Surrealism Photo Manipuation" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-9">
+                  <img src="assets/img/portfolio/p-9.jpg" alt="Surrealism Photo Manipuation" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Surrealism Photo Manipuation</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-9">
+              <img class="img-fluid" src="assets/img/portfolio/p-9-1.jpg" alt="Surrealism Photo Manipuation" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Surrealism Photo Manipuation
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc ">Surrealism Photo Manipuation, a digital graphics project.
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-10.jpg" alt="Travel Snacks Magazine Cover" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-10">
+                  <img src="assets/img/portfolio/p-10.jpg" alt="Travel Snacks Magazine Cover" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Travel Snacks Magazine Cover</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-10">
+              <img class="img-fluid" src="assets/img/portfolio/p-10.jpg" alt="Travel Snacks Magazine Cover" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Travel Snacks Magazine Cover
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc ">A magazine cover for travel snacks, A school project magazine.
+                </p>
+                <span class="badge badge-light">Indesign </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ils">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-11.jpg" alt="Wacky Maine Mendoza" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-11">
+                  <img src="assets/img/portfolio/p-11.jpg" alt="Wacky Maine Mendoza" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Wacky Maine Mendoza</h4>
+                  <div class="cat">Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-11">
+              <img class="img-fluid" src="assets/img/portfolio/p-11.jpg" alt="Wacky Maine Mendoza" />
+              <h4 class="pt-2">The Process</h4>
+              <img class="img-fluid" src="assets/img/portfolio/p-11-1.jpg" alt="Wacky Maine Mendoza Process" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Wacky Maine Mendoza
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Illustration</p>
+                <p class="lb-desc ">Maine Mendoza Digital Illustration. Charcoal style in photoshop.
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-12.png" alt="Caricature Vector" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-12">
+                  <img src="assets/img/portfolio/p-12.png" alt="Caricature Vector" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Caricature Vector</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-12">
+              <img class="img-fluid" src="assets/img/portfolio/p-12.png" alt="Caricature Vector" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Caricature Vector
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc ">A tasked performance for Digital Graphics design and Image manipulation course.
+                </p>
+                <span class="badge badge-light">Illustrator </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all ilt">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-13.jpg" alt="Miss Universe" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-13">
+                  <img src="assets/img/portfolio/p-13.jpg" alt="Miss Universe" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Miss Universe Vexel</h4>
+                  <div class="cat">Illustration</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-13">
+              <img class="img-fluid" src="assets/img/portfolio/p-13.jpg" alt="Miss Universe Vexel" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Miss Universe Vexel
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Illustration </p>
+                <p class="lb-desc ">Just a digital drawing made in photoshop.
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-14.jpg" alt="My Previous Portfolio Design" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-14">
+                  <img src="assets/img/portfolio/p-14.jpg" alt="My Previous Portfolio Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>My Previous Portfolio Design</h4>
+                  <div class="cat">Web Design <span class="year">2016</span></div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-14">
+              <img class="img-fluid" src="assets/img/portfolio/p-14.jpg" alt="My Previous Portfolio Design" />
+              <div class="lb-title light-bg mt-4">
+                <h4>My Previous Portfolio Design
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design</p>
+                <p class="lb-desc ">A very basic personal portfolio design project. My Previous Portfolio Designed in
+                  photoshop then converted to html and css.
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+                <span class="badge badge-light">Psd to Html </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-15.jpg" alt="Qulay Blog Design" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-15">
+                  <img src="assets/img/portfolio/p-15.jpg" alt="Qulay Blog Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Qulay Blog Design</h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-15">
+              <img class="img-fluid" src="assets/img/portfolio/p-15.jpg" alt="My Previous Portfolio Design" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Qulay Blog Design
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design</p>
+                <p class="lb-desc ">A blog template designed for Blogger. PSD to html to blogger.
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">Blogger </span>
+                <span class="badge badge-light">JavaScript </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-16.jpg" alt="Insthink Blog Design" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-16">
+                  <img src="assets/img/portfolio/p-16.jpg" alt="Insthink Blog Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Insthink Blog Design</h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-16">
+              <img class="img-fluid" src="assets/img/portfolio/p-16.jpg" alt="My Previous Portfolio Design" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Insthink Blog Design
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design</p>
+                <p class="lb-desc ">A blog template designed for Blogger and Wordpress blogs.
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Blogger </span>
+                <span class="badge badge-light">Wordpress </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-17.jpg" alt=" AI Gaming logo " />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-17">
+                  <img src="assets/img/portfolio/p-17.jpg" alt=" AI Gaming logo " />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4> AI Gaming logo </h4>
+                  <div class="cat">Graphic Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-17">
+              <img class="img-fluid" src="assets/img/portfolio/p-17.jpg" alt=" AI Gaming logo" />
+              <div class="lb-title light-bg mt-4">
+                <h4> AI Gaming logo
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat"> Graphic Design</p>
+                <p class="lb-desc ">AI logo designed for local internet cafe.
+                </p>
+                <span class="badge badge-light">Illustrator </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-18.jpg" alt=" Barewalls E-commerce Product Page " />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-18">
+                  <img src="assets/img/portfolio/p-18.jpg" alt="  Barewalls E-commerce Product Page  " />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4> Barewalls E-commerce Product Page </h4>
+                  <div class="cat">Web Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-18">
+              <img class="img-fluid" src="assets/img/portfolio/p-18.jpg" alt=" Barewalls E-commerce Product Page" />
+              <div class="lb-title light-bg mt-4">
+                <h4> Barewalls E-commerce Product Page
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat"> Web Design</p>
+                <p class="lb-desc ">Designed in photoshop
+                </p>
+                <span class="badge badge-light">Photoshop </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds wdv">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-19.jpg"
+                    alt=" Information Management System for Barangay Ramon Magsaysay" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-19">
+                  <img src="assets/img/portfolio/p-19.jpg"
+                    alt="  Information Management System for Barangay Ramon Magsaysay" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4> Information Management System for Barangay Ramon Magsaysay </h4>
+                  <div class="cat">Web Design and Development </div>
+                </div>
+                <div class="p-links">
+                  <a href="https://www.youtube.com/watch?v=VtpLj-Fa3u4" target="_blank" data-toggle="tooltip"
+                    data-placement="right" title="Watch on Youtube"><i class="fab fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-19">
+              <img class="img-fluid" src="assets/img/portfolio/p-19.jpg"
+                alt=" Information Management System for Barangay Ramon Magsaysay" />
+              <div class="lb-title light-bg mt-4">
+                <h4> Information Management System for Barangay Ramon Magsaysay
+                  <a class="float-right black " href="https://www.youtube.com/watch?v=VtpLj-Fa3u4" target="_blank"
+                    data-placement="right" title="View on deviantart"><i class="fab fa-youtube"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat"> Web Design and Development</p>
+                <p class="lb-desc ">A System Software I developed for Barangay Ramon Magsaysay using php and mysql
+                  for the Back-end, dozens of Jquery and javascript libraries, bootstrap 4 for the Front-end with
+                  material design template. Illustrator for
+                  Graphic design needs.
+                </p>
+                <span class="badge badge-light">PHP </span>
+                <span class="badge badge-light">MySQL </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">Illustrator </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-20.jpg"
+                    alt=" The Republiq Newspaper Template Design" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-20">
+                  <img src="assets/img/portfolio/p-20.jpg" alt="  The Republiq Newspaper Template Design" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>The Republiq Newspaper Template Design</h4>
+                  <div class="cat"> Graphic Design </div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-20">
+              <img class="img-fluid" src="assets/img/portfolio/p-20-1.jpg"
+                alt=" The Republiq Newspaper Template Design" />
+              <div class="lb-title light-bg mt-4">
+                <h4> The Republiq Newspaper Template Design
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat"> Graphic Design</p>
+                <p class="lb-desc "> The Republiq Newspaper Template Design, A tasked performance for desktop publishing course.
+                </p>
+                <span class="badge badge-light">Indesign </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all gds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-21.jpg" alt="Global Warming" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-21">
+                  <img src="assets/img/portfolio/p-21.jpg" alt="Global Warming" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>Global Warming Wallpaper</h4>
+                  <div class="cat">Graphic Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="# " data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-21">
+              <img class="img-fluid" src="assets/img/portfolio/p-21.jpg" alt="Global Warming Wallpaper" />
+              <div class="lb-title light-bg mt-4">
+                <h4>Global Warming Wallpaper
+                  <a class="float-right black " href="#" target="_blank" data-placement="right"
+                    title="View on deviantart"><i class="fab fa-deviantart"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc ">Global Warming Wallpaper, generic and organic shapes composition in adobe
+                  illustrator.
+                </p>
+                <span class="badge badge-light">Illustrator </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-22.jpg" alt="BST Connect Presentation Website" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-22">
+                  <img src="assets/img/portfolio/p-22.jpg" alt="BST Connect Presentation Website" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>BST Connect Presentation Website</h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://designdust.me/BST/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-22">
+              <img class="img-fluid" src="assets/img/portfolio/p-22-1.jpg" alt="BST Connect Presentation Website" />
+              <div class="lb-title light-bg mt-4">
+                <h4>BST Connect Presentation Website
+                  <a class="float-right black " href="https://designdust.me/BST/" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc "> A presentation website for the system we developed for our Capstone Project which entitled BST Connect System
+                </p>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+                <span class="badge badge-light">SASS </span>
+                <span class="badge badge-light">Git </span>
+                <span class="badge badge-light">npm </span>
+                <span class="badge badge-light">Gulp </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds wdv">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-23.jpg" alt="SRGC Admin - School Accounting System" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-23">
+                  <img src="assets/img/portfolio/p-23.jpg" alt="SRGC Admin - School Accounting System" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>SRGC Admin - School Accounting System </h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://accounting.saintrobertsgroup.com/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-23">
+              <img class="img-fluid" src="assets/img/portfolio/p-23.jpg" alt="SRGC Admin - School Accounting System" />
+              <img class="img-fluid" src="assets/img/portfolio/p-23-1.jpg" alt="SRGC Admin - School Accounting System" />
+              <img class="img-fluid" src="assets/img/portfolio/p-23-2.jpg" alt="SRGC Admin - School Accounting System" />
+              <img class="img-fluid" src="assets/img/portfolio/p-23-3.jpg" alt="SRGC Admin - School Accounting System" />
+              <div class="lb-title light-bg mt-4">
+                <h4>SRGC Admin - School Accounting System
+                  <a class="float-right black " href="https://accounting.saintrobertsgroup.com/" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc "> SRGC Admin, A School Accounting System I developed for St. Roberts Group of Companies using CodeIgniter MVC Framework.
+                </p>
+                <span class="badge badge-light">PHP </span>
+                <span class="badge badge-light">Codeigniter </span>
+                <span class="badge badge-light">Composer </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">MySQL </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+                <span class="badge badge-light">SASS </span>
+                <span class="badge badge-light">Git </span>
+                <span class="badge badge-light">npm </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds wdv">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/p-24.jpg" alt="BST Connect - Customer Relationship Management System" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-24">
+                  <img src="assets/img/portfolio/p-24.jpg" alt="BST Connect - Customer Relationship Management System" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>BST Connect - Customer Relationship Management System </h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://blaise-scientific.com/customers/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-24">
+              <img class="img-fluid" src="assets/img/portfolio/p-24.jpg" alt="BST Connect - Customer Relationship Management System" />
+              <div class="lb-title light-bg mt-4">
+                <h4>BST Connect - Customer Relationship Management System
+                  <a class="float-right black " href="https://blaise-scientific.com/customers/" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design and Development</p>
+                <p class="lb-desc ">
+                  BST Connect is a Customer Relationship Management System we did for the fulfilment of Information Technology program. 
+                </p>
+                <p class="lb-desc ">                  
+                  This is a capstone project required in Information Technology program. It pertains to the
+                  application of the Customer Relationship Management System with the Blaise-Scientific
+                  Trading Company through a case study. Customer Relationship Management (CRM)
+                  System is a software for managing one’s company’s relationship and interactions with the
+                  current and potential customers. After conducting a series of interviews and observations
+                  with the host company, We found some of the internal processes flawed and
+                  problematic thus giving them redundant results and prolonging their processes. We aimed to solve it by developing a sustainable, scalable, and easy-to-use
+                  Customer Relationship Management System where the goals of the company can be
+                  measured so that they know when they have achieved success. Through the proposed
+                  system the existing and potential customers will be able to view the products and their
+                  details and can communicate with sales personnel through live chat, they can also get an
+                  automated quotation based on the products that they choose and lastly, they will be able to
+                  pay with the use of a Payment Gateway. The host company’s management will be able to
+                  look at the company’s record and will also be able to see what a buyer has been buying,
+                  they can then deduce what they are likely to buy again, increasing their chances of sales
+                  success and thereby increasing company profits. It will also help them to monitor the
+                  conversion of leads into sales opportunities using the Project Bank. We made made the UI responsive so that it is accessible through any
+                  type of device and be able to complete a transaction. We also used and
+                  implemented several technologies that would make the proposed system up-to-date.
+                </p>
+                <p class="lb-desc ">                  
+                  Me as a web designer by profession before I even took the Capstone Project, was tasked to develop the Design, UI/UX, and the 
+                  Front-end part of the system and did most of the documentation. For me, doing this capstone project and programming the system has been both difficult and fun to do, 
+                  it has also been very interesting experience, especially the understanding of how the business work in real world.
+                </p>
+                <span class="badge badge-light">PHP </span>
+                <span class="badge badge-light">Composer </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">MySQL </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+                <span class="badge badge-light">SASS </span>
+                <span class="badge badge-light">Git </span>
+                <span class="badge badge-light">npm </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- End Single Portfolio -->
+          </div>
+        </div>
+      </div>
+      <!-- END portfolio grid -->
+    </section>
+    <!-- END portfolio Area -->
+
+    <!-- START Contact Area -->
+    <section class="contact-area section-gap dark-bg" id="contact">
+      <div class="container">
+        <div class="row" data-aos="fade-up">
+          <div class="col">
+            <h4 class="sub-heading">Contact Me</h4>
+            <h1 class="display-4 text-light heading">
+              Get in touch and let's make something great together. Let's turn
+              your idea on an even greater product.
+            </h1>
+          </div>
+        </div>
+        <!-- end section-header -->
+
+        <div class="row">
+          <div class="col contact-main pt-5" data-aos="fade-up">
+            <a href="mailto:hello@designdust.studio" class="contact-email">
+              hello@designdust.studio
+            </a><br>
+            <a href="tel:+63027539081" class="contact-number sub-text">+632 7753 9081</a>
+
+          </div>
+          <!-- end contact-main -->
+        </div>
+        <!-- end row -->
+
+        <div class="row">
+          <div class="col-md-6 pt-5" data-aos="fade-up">
+            <h4 class="sub-heading">Where To Find Me</h4>
+
+            <div class="contact-address sub-text">
+              Grass Residences,<br />
+              Misamis St, Santo Cristo,<br />
+              Quezon City, Philippines
+            </div>
+          </div>
+          <!-- end contact-secondary -->
+
+          <div class="col-md-6 pt-5 contact-social" data-aos="fade-up">
+            <h4 class="sub-heading">Get In Touch</h4>
+
+            <div class="social-links mt-3">
+              <a href="https://github.com/designdust" target="_blank" data-toggle="tooltip" title="@designdust"><i
+                  class="fab fa-github fa-2x"></i>
+              </a>
+              <a href="https://twitter.com/designdust" target="_blank" data-toggle="tooltip" title="@designdust"><i
+                  class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="https://codepen.io/designdust/" target="_blank" data-toggle="tooltip" title="@designdust"><i
+                  class="fab fa-codepen fa-2x"></i>
+              </a>
+              <a href="https://www.deviantart.com/baxxspace" target="_blank" data-toggle="tooltip" title="@baxxspace"><i
+                  class="fab fa-deviantart fa-2x"></i>
+              </a>
+            </div>
+            <!-- end contact-social -->
+          </div>
+          <!-- end contact-secondary -->
+        </div>
+        <!-- end row -->
+        <!-- start copyright  -->
+        <div class="row" data-aos="fade-up">
+          <div class="col-md-12 copyright">
+            <span>
+              &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              Handcrafted with
+              <i class="fa fa-heart" aria-hidden="true"></i> by
+              <a href="https://designdust.github.io" target="_blank">flitz</a>
+            </span>
+          </div>
+        </div>
+        <!-- end copyright -->
+        <!-- start back to top -->
+
+        <div class="to-top" data-aos="fade-up">
+          <a title="Back to Top" href="#hero" class="fa fa-arrow-up"> </a>
+        </div>
+        <!-- end back to top -->
+
+
+      </div>
+    </section>
+    <!-- END Contact Area -->
+  </main>
+  <!-- END Main -->
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/vendor/jquery.min.js"></script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+  <script src="assets/js/vendor/bootstrap.min.js"></script>
+  <script src="assets/js/vendor/featherlight.min.js"></script>
+
+  <!-- ****** VENDOR'S CDN ****** -->
+  <!-- Isotope layout JS CDN only -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+
+  <!-- build:js -->
+  <script src="assets/js/app.js"></script>
+  <!-- endbuild -->
+</body>
+
 </html>

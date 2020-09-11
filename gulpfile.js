@@ -1,15 +1,15 @@
 "use strict";
 
-var gulp = require("gulp"),
-  sass = require("gulp-sass"),
-  del = require("del"),
-  uglify = require("gulp-uglify"),
-  cleanCSS = require("gulp-clean-css"),
-  rename = require("gulp-rename"),
-  merge = require("merge-stream"),
-  htmlreplace = require("gulp-html-replace"),
-  autoprefixer = require("gulp-autoprefixer"),
-  browserSync = require("browser-sync").create();
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const del = require("del");
+const uglify = require("gulp-uglify");
+const cleanCSS = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const merge = require("merge-stream");
+const htmlreplace = require("gulp-html-replace");
+const autoprefixer = require("gulp-autoprefixer");
+const browserSync = require("browser-sync").create();
 
 // Clean task
 gulp.task("clean", function() {
@@ -20,14 +20,14 @@ gulp.task("clean", function() {
   ]);
 });
 
-// Copy third party CSS libraries from node_modules into /css
+// Copy third party CSS libraries from node_modules into assets/css
 gulp.task("vendor:css", function() {
   return gulp
     .src(["./node_modules/bootstrap/dist/css/bootstrap.min.css"])
     .pipe(gulp.dest("./assets/css/vendor"));
 });
 
-// Copy third party libraries from node_modules into /vendor
+// Copy third party libraries from node_modules into assets/vendor
 gulp.task("vendor:js", function() {
   return gulp
     .src([
@@ -39,7 +39,7 @@ gulp.task("vendor:js", function() {
     .pipe(gulp.dest("./assets/js/vendor"));
 });
 
-// Copy font-awesome from node_modules into /fonts
+// Copy font-awesome from node_modules into assets/fonts
 gulp.task("vendor:fonts", function() {
   return gulp
     .src([
@@ -58,18 +58,22 @@ gulp.task("vendor", gulp.parallel("vendor:css", "vendor:fonts", "vendor:js"));
 // Copy vendor's to /dist
 gulp.task("vendor:build", function() {
   var bootstrapStream = gulp
-    .src(["./assets/css/vendor/bootstrap.min.css"])
+    .src([
+      "./assets/css/vendor/bootstrap.min.css",
+      "./assets/css/vendor/featherlight.min.css"
+    ])
     .pipe(gulp.dest("./dist/assets/css/vendor"));
   var jsStream = gulp
     .src([
       "./assets/js/vendor/bootstrap.bundle.min.js",
-      "./assets/js/vendor/jquery.slim.min.js",
-      "./assets/js/vendor/popper.min.js"
+      "./assets/js/vendor/jquery.min.js",
+      "./assets/js/vendor/popper.min.js",
+      "./assets/js/vendor/featherlight.min.js"
     ])
     .pipe(gulp.dest("./dist/assets/js/vendor"));
   var fontStream = gulp
-    .src(["./assets/fonts/font-awesome/**/*.*"])
-    .pipe(gulp.dest("./dist/assets/fonts/font-awesome"));
+    .src(["./assets/fonts/*/**/*.*"])
+    .pipe(gulp.dest("./dist/assets/fonts"));
   return merge(bootstrapStream, jsStream, fontStream);
 });
 
