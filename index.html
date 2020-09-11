@@ -6,6 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139084988-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
       dataLayer.push(arguments);
     }
@@ -34,9 +35,8 @@
   <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/css/vendor/featherlight.min.css" />
 
-  <!-- build:css -->
-  <link rel="stylesheet" href="assets/css/app.css" />
-  <!-- endbuild -->
+  <link rel="stylesheet" href="assets/css/app.min.css">
+
 
   <!-- ****** VENDOR'S CDN ****** -->
   <!-- Animate on scroll -->
@@ -120,8 +120,8 @@
         <p>
           Based out of Quezon City, PH. <br>
 
-          <a href="mailto:flitz.tugano@gmail.com?Subject=Hello%20Flitz!">
-            flitz.tugano@gmail.com
+          <a href="mailto:hello@designdust.studio">
+            hello@designdust.studio
           </a><br>
           <a href="tel:+63027539081">+63 (02) 753 9081</a>
           <!-- If you are a business seeking a web presence or an employer looking to hire, feel free to contact me. -->
@@ -144,7 +144,7 @@
         </p> -->
         <p>
           <span class="fa fa-business-time"></span>
-          I am available for freelance projects <del class="dark-text">and full-time employment.</del>
+          I am available for freelance projects and full-time employment.
         </p>
       </div>
 
@@ -159,9 +159,9 @@
   <main role="main" class="main">
 
     <!-- START jumbotron area -->
-    <section class="jumbotron hero" id="hero">
+    <section class="hero br-bot-right" id="hero">
       <div class="container" data-aos="fade-up">
-        <h1><span class="hero-title">Hello,</span><span class="nowrap hero-title"> I'm Flitz</span></h1>
+        <h1 class="hero-title">Hello, <span class="d-inline-block"> I'm Flitz</span></h1>
         <div id="typed-strings">
           <p>Multimedia <strong>Artist.</strong></p>
           <p>Web <strong>Designer.</strong></p>
@@ -174,14 +174,14 @@
     <!-- END jumbotron area -->
 
     <!-- START about area -->
-    <section class="about-area section-gap light-bg" id="about">
+    <section class="about-area section-gap light-bg br-top-right" id="about">
       <div class="container">
         <!-- start heading -->
         <div class="row section-head" data-aos="fade-up">
           <div class="col">
             <h4 class="sub-heading">About Me</h4>
             <h1 class="display-4 heading">
-              For the love of design.
+              For the <span class="d-block d-md-inline">love of design.</span>
             </h1>
 
           </div>
@@ -267,7 +267,7 @@
             <!-- start heading -->
             <div class="row" data-aos="fade-up">
               <div class="col  mt-5">
-                <h4 class="sub-heading">Skills</h4>
+                <h4 class="sub-heading">What do I use?</h4>
                 <!-- <h1 class="display-4 heading">
                       Samples of some of my work and studies.
                     </h1> -->
@@ -276,59 +276,58 @@
             <!-- end heading -->
 
             <div class="row skill-cat" data-aos="fade-up">
-              <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                <h2><i class="fa fa-laptop-code"></i> Front-end</h2>
-                <ol class="lead ">
-                  <li> <i class="fab fa-html5 fa-2x"></i> HTML5</li>
-                  <li> <i class="fab fa-css3 fa-2x"></i> CSS3</li>
-                  <li> <i class="fab fa-js fa-2x"></i> JavaScript</li>
-                  <li> <i class="fab fa-vuejs fa-2x"></i> VueJS</li>
-                  <li> <i class="fab fa-js-square fa-2x"></i> Jquery</li>
-                  <li> <i class="fab fa-sass fa-2x"></i> SCSS</li>
-                  <li> <i class="fab fa-bootstrap fa-2x"></i> Bootstrap</li>
+              <div class="col-sm-12 col-md-4 mt-3">
+                <h2> Creative Design</h2>
+                <ol class="col">
+                  <li> Figma</li>
+                  <li> Adobe Ps</li>
+                  <li> Adobe Ai</li>
+                  <li> Adobe Id</li>
+                  <li> Adobe Xd</li>
+                  <li> Adobe Pr</li>
+                  <li> Adobe Lr</li>
+                  <li> Adobe Ru</li>
                 </ol>
               </div>
               <!-- </div>
   
               <div class="row skill-cat" data-aos="fade-up"> -->
-              <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                <h2><i class="fa fa-server"></i> Back-end</h2>
-                <ol class="lead  ">
-                  <li> <i class="fab fa-php fa-2x"></i> PHP</li>
-                  <li> <i class="fa fa-database fa-2x"></i> MySQL</li>
-                  <li> <i class="fab fa-node-js fa-2x"></i> NodeJS/NPM</li>
-                  <li> <i class="fab fa-git fa-2x"></i> Git</li>
-                </ol>
+              <div class="col-sm-12 col-md-8 mt-3">
+                <h2> Web Development</h2>
+                <div class="row">
+                  <ol class="col-4">
+                    <li> HTML5</li>
+                    <li> CSS3</li>
+                    <li> SCSS</li>
+                    <li> Bootstrap</li>
+                    <li> JavaScript</li>
+                    <li> Jquery</li>
+                    <li> Vue JS</li>
+                    <li> React JS</li>
+                  </ol>
+                  <ol class="col-4">
+                    <li> PHP</li>
+                    <li> Composer</li>
+                    <li> Codeigniter</li>
+                    <li> Laravel</li>
+                    <li> WordPress</li>
+                    <li> Elementor</li>
+                    <li> Woocommerce</li>
+                    <li> Google Analytics</li>
+                  </ol>
+                  <ol class="col-4">
+                    <li> NodeJS</li>
+                    <li> NPM</li>
+                    <li> Git</li>
+                    <li> Grunt</li>
+                    <li> Gulp</li>
+                    <li> Yarn</li>
+                    <li> Webpack</li>
+                    <li> MySQL</li>
+                  </ol>
+                </div>
               </div>
-              <!-- </div>
-  
-              <div class="row skill-cat" data-aos="fade-up"> -->
-              <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                <h2><i class="fab fa-adobe"></i> Adobe CC</h2>
-                <ol class="lead ">
-                  <li> Ps</li>
-                  <li> Ai</li>
-                  <li> Id</li>
-                  <li> Xd</li>
-                  <li> Pr</li>
-                  <li> Lr</li>
-                  <li> Dw</li>
-                  <li> Mu</li>
-                </ol>
-              </div>
-              <!-- </div>
-  
-              <div class="row skill-cat" data-aos="fade-up"> -->
-              <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                <h2><i class="fa fa-tools"></i> Other Tools and Languages</h2>
-                <ol class="lead  ">
-                  <li> <i class="fab fa-wordpress fa-2x"></i> Wordpress</li>
-                  <li> CodeIgniter</li>
-                  <li> <i class="fab fa-laravel fa-2x"></i> Laravel</li>
-                  <li> C#</li>
-                  <li> Sketchup</li>
-                </ol>
-              </div>
+
             </div>
 
           </div>
@@ -634,7 +633,7 @@
                   <div class="cat">Web Design and Development</div>
                 </div>
                 <div class="p-links">
-                  <a href="http://flitz.pcriot.com/quiz/" data-toggle="tooltip" target="_blank" data-placement="right"
+                  <a href="http://stidev.ga/" data-toggle="tooltip" target="_blank" data-placement="right"
                     title="View Live"><i class="fas fa-external-link-alt"></i>
                   </a>
                 </div>
@@ -642,16 +641,16 @@
             </div>
             <!-- Start Lightbox -->
             <div class="lightbox" id="flp-7">
-              <img class="img-fluid" src="assets/img/portfolio/p-7.jpg" alt="STI Web Development Quiz" />
+              <img class="img-fluid" src="assets/img/portfolio/p-7-1.jpg" alt="STI Web Development Quiz" />
               <div class="lb-title light-bg mt-4">
                 <h4>STI Web Development Quiz
-                  <a class="float-right black " href="http://flitz.pcriot.com/quiz/ " target="_blank"
+                  <a class="float-right black " href="http://stidev.ga/" target="_blank"
                     data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
                   </a>
                 </h4>
                 <p class="lb-cat">Web Design and Development</p>
                 <p class="lb-desc ">A website I designed and developed to test the co-students knowledge in web
-                  programming. Developed for the web programming subject using Core PHP, MySQL, Bootstrap 3, CSS, HTML,
+                  programming. Developed for a tasked performance for the web programming course using Core PHP, MySQL, Bootstrap 3, CSS, HTML,
                   Javascript and Jquery. </p>
                 <span class="badge badge-light">Html </span>
                 <span class="badge badge-light">Css </span>
@@ -681,7 +680,7 @@
                   <div class="cat">Web Design and Development</div>
                 </div>
                 <div class="p-links">
-                  <a href="http://flitz.pcriot.com/cssgrid/" data-toggle="tooltip" target="_blank"
+                  <a href="https://designdust.me/designdust-basic-grid/" data-toggle="tooltip" target="_blank"
                     data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
                   </a>
                 </div>
@@ -689,15 +688,15 @@
             </div>
             <!-- Start Lightbox -->
             <div class="lightbox" id="flp-8">
-              <img class="img-fluid" src="assets/img/portfolio/p-8.jpg" alt="CSS Grid Template" />
+              <img class="img-fluid" src="assets/img/portfolio/p-8-1.png" alt="CSS Grid Template" />
               <div class="lb-title light-bg mt-4">
                 <h4>CSS Grid Experiment/ Portfolio Template
-                  <a class="float-right black " href="http://flitz.pcriot.com/cssgrid/" target="_blank"
+                  <a class="float-right black " href="https://designdust.me/designdust-basic-grid/" target="_blank"
                     data-placement="right" title="View Live"><i class="fas fa-external-link-alt"></i>
                   </a>
                 </h4>
                 <p class="lb-cat">Web Design and Development</p>
-                <p class="lb-desc ">CSS Grid is my experemental project to test the capabilities of css grid.
+                <p class="lb-desc ">CSS Grid is my experemental project to test the capabilities of the css grid.
                 </p>
                 <span class="badge badge-light">Css </span>
                 <span class="badge badge-light">Html </span>
@@ -733,7 +732,7 @@
             </div>
             <!-- Start Lightbox -->
             <div class="lightbox" id="flp-9">
-              <img class="img-fluid" src="assets/img/portfolio/p-9.jpg" alt="Surrealism Photo Manipuation" />
+              <img class="img-fluid" src="assets/img/portfolio/p-9-1.jpg" alt="Surrealism Photo Manipuation" />
               <div class="lb-title light-bg mt-4">
                 <h4>Surrealism Photo Manipuation
                   <a class="float-right black " href="#" target="_blank" data-placement="right"
@@ -814,6 +813,7 @@
             <!-- Start Lightbox -->
             <div class="lightbox" id="flp-11">
               <img class="img-fluid" src="assets/img/portfolio/p-11.jpg" alt="Wacky Maine Mendoza" />
+              <h4 class="pt-2">The Process</h4>
               <img class="img-fluid" src="assets/img/portfolio/p-11-1.jpg" alt="Wacky Maine Mendoza Process" />
               <div class="lb-title light-bg mt-4">
                 <h4>Wacky Maine Mendoza
@@ -862,7 +862,7 @@
                   </a>
                 </h4>
                 <p class="lb-cat">Graphic Design</p>
-                <p class="lb-desc ">A task for Digital Graphics design and Image manipulation Subject.
+                <p class="lb-desc ">A tasked performance for Digital Graphics design and Image manipulation course.
                 </p>
                 <span class="badge badge-light">Illustrator </span>
               </div>
@@ -1198,7 +1198,7 @@
             </div>
             <!-- Start Lightbox -->
             <div class="lightbox" id="flp-20">
-              <img class="img-fluid" src="assets/img/portfolio/p-20.jpg"
+              <img class="img-fluid" src="assets/img/portfolio/p-20-1.jpg"
                 alt=" The Republiq Newspaper Template Design" />
               <div class="lb-title light-bg mt-4">
                 <h4> The Republiq Newspaper Template Design
@@ -1207,7 +1207,7 @@
                   </a>
                 </h4>
                 <p class="lb-cat"> Graphic Design</p>
-                <p class="lb-desc "> The Republiq Newspaper Template Design, A task for desktop publishing subject.
+                <p class="lb-desc "> The Republiq Newspaper Template Design, A tasked performance for desktop publishing course.
                 </p>
                 <span class="badge badge-light">Indesign </span>
               </div>
@@ -1256,6 +1256,185 @@
             <!-- End Lightbox -->
             <!-- END Portfolio Item -->
 
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/P-22.jpg" alt="BST Connect Presentation Website" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-22">
+                  <img src="assets/img/portfolio/P-22.jpg" alt="BST Connect Presentation Website" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>BST Connect Presentation Website</h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://designdust.me/BST/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-22">
+              <img class="img-fluid" src="assets/img/portfolio/P-22-1.jpg" alt="BST Connect Presentation Website" />
+              <div class="lb-title light-bg mt-4">
+                <h4>BST Connect Presentation Website
+                  <a class="float-right black " href="https://designdust.me/BST/" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc "> A presentation website for the system we developed for our Capstone Project which entitled BST Connect System
+                </p>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+                <span class="badge badge-light">SASS </span>
+                <span class="badge badge-light">Git </span>
+                <span class="badge badge-light">npm </span>
+                <span class="badge badge-light">Gulp </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds wdv">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/P-23.jpg" alt="SRGC Admin - School Accounting System" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-23">
+                  <img src="assets/img/portfolio/P-23.jpg" alt="SRGC Admin - School Accounting System" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>SRGC Admin - School Accounting System </h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://accounting.saintrobertsgroup.com/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-23">
+              <img class="img-fluid" src="assets/img/portfolio/P-23.jpg" alt="SRGC Admin - School Accounting System" />
+              <img class="img-fluid" src="assets/img/portfolio/P-23-1.jpg" alt="SRGC Admin - School Accounting System" />
+              <img class="img-fluid" src="assets/img/portfolio/P-23-2.jpg" alt="SRGC Admin - School Accounting System" />
+              <img class="img-fluid" src="assets/img/portfolio/P-23-3.jpg" alt="SRGC Admin - School Accounting System" />
+              <div class="lb-title light-bg mt-4">
+                <h4>SRGC Admin - School Accounting System
+                  <a class="float-right black " href="https://accounting.saintrobertsgroup.com/" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Graphic Design</p>
+                <p class="lb-desc "> SRGC Admin, A School Accounting System I developed for St. Roberts Group of Companies using CodeIgniter MVC Framework.
+                </p>
+                <span class="badge badge-light">PHP </span>
+                <span class="badge badge-light">Codeigniter </span>
+                <span class="badge badge-light">Composer </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">MySQL </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+                <span class="badge badge-light">SASS </span>
+                <span class="badge badge-light">Git </span>
+                <span class="badge badge-light">npm </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
+            <!-- START Portfolio Item -->
+            <div class="single-portfolio col-md-12 col-lg-6 col-xl-4 all wds wdv">
+              <div class="item">
+                <div class="img-blur-container">
+                  <!-- blur image needs another image overlay -->
+                  <img class="img-blur" src="assets/img/portfolio/P-24.jpg" alt="BST Connect - Customer Relationship Management System" />
+                </div>
+                <a class="p-show" href="#" data-featherlight="#flp-24">
+                  <img src="assets/img/portfolio/P-24.jpg" alt="BST Connect - Customer Relationship Management System" />
+                  <i class="fa fa-expand p-expand"></i>
+                </a>
+                <div class="p-inner">
+                  <h4>BST Connect - Customer Relationship Management System </h4>
+                  <div class="cat">Web Design</div>
+                </div>
+                <div class="p-links">
+                  <a href="https://blaise-scientific.com/customers/" data-toggle="tooltip" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Start Lightbox -->
+            <div class="lightbox" id="flp-24">
+              <img class="img-fluid" src="assets/img/portfolio/P-24.jpg" alt="BST Connect - Customer Relationship Management System" />
+              <div class="lb-title light-bg mt-4">
+                <h4>BST Connect - Customer Relationship Management System
+                  <a class="float-right black " href="https://blaise-scientific.com/customers/" target="_blank" data-placement="right"
+                    title="View Live"><i class="fas fa-external-link-alt"></i>
+                  </a>
+                </h4>
+                <p class="lb-cat">Web Design and Development</p>
+                <p class="lb-desc ">
+                  BST Connect is a Customer Relationship Management System we did for the fulfilment of Information Technology program. 
+                </p>
+                <p class="lb-desc ">                  
+                  This is a capstone project required in Information Technology program. It pertains to the
+                  application of the Customer Relationship Management System with the Blaise-Scientific
+                  Trading Company through a case study. Customer Relationship Management (CRM)
+                  System is a software for managing one’s company’s relationship and interactions with the
+                  current and potential customers. After conducting a series of interviews and observations
+                  with the host company, We found some of the internal processes flawed and
+                  problematic thus giving them redundant results and prolonging their processes. We aimed to solve it by developing a sustainable, scalable, and easy-to-use
+                  Customer Relationship Management System where the goals of the company can be
+                  measured so that they know when they have achieved success. Through the proposed
+                  system the existing and potential customers will be able to view the products and their
+                  details and can communicate with sales personnel through live chat, they can also get an
+                  automated quotation based on the products that they choose and lastly, they will be able to
+                  pay with the use of a Payment Gateway. The host company’s management will be able to
+                  look at the company’s record and will also be able to see what a buyer has been buying,
+                  they can then deduce what they are likely to buy again, increasing their chances of sales
+                  success and thereby increasing company profits. It will also help them to monitor the
+                  conversion of leads into sales opportunities using the Project Bank. We made made the UI responsive so that it is accessible through any
+                  type of device and be able to complete a transaction. We also used and
+                  implemented several technologies that would make the proposed system up-to-date.
+                </p>
+                <p class="lb-desc ">                  
+                  Me as a web designer by profession before I even took the Capstone Project, was tasked to develop the Design, UI/UX, and the 
+                  Front-end part of the system and did most of the documentation. For me, doing this capstone project and programming the system has been both difficult and fun to do, 
+                  it has also been very interesting experience, especially the understanding of how the business work in real world.
+                </p>
+                <span class="badge badge-light">PHP </span>
+                <span class="badge badge-light">Composer </span>
+                <span class="badge badge-light">Html </span>
+                <span class="badge badge-light">Css </span>
+                <span class="badge badge-light">MySQL </span>
+                <span class="badge badge-light">JavaScript </span>
+                <span class="badge badge-light">Jquery </span>
+                <span class="badge badge-light">Bootstrap </span>
+                <span class="badge badge-light">SASS </span>
+                <span class="badge badge-light">Git </span>
+                <span class="badge badge-light">npm </span>
+              </div>
+            </div>
+            <!-- End Lightbox -->
+            <!-- END Portfolio Item -->
+
             <!-- End Single Portfolio -->
           </div>
         </div>
@@ -1280,10 +1459,10 @@
 
         <div class="row">
           <div class="col contact-main pt-5" data-aos="fade-up">
-            <a href="mailto:flitz.tugano@gmail.com?Subject=Hello%20Flitz!" class="contact-email">
-              flitz.tugano@gmail.com
+            <a href="mailto:hello@designdust.studio" class="contact-email">
+              hello@designdust.studio
             </a><br>
-            <a href="tel:+63027539081" class="contact-number sub-text">+63 (02) 753 9081</a>
+            <a href="tel:+63027539081" class="contact-number sub-text">+632 7753 9081</a>
 
           </div>
           <!-- end contact-main -->
@@ -1306,24 +1485,18 @@
             <h4 class="sub-heading">Get In Touch</h4>
 
             <div class="social-links mt-3">
-              <ul class="lead">
-                <li>
-                  <a href="https://github.com/designdust" target="_blank"><i class="fab fa-github fa-2x"></i>
-                    @designdust</a>
-                </li>
-                <li>
-                  <a href="https://twitter.com/designdust" target="_blank"><i class="fab fa-twitter fa-2x"></i>
-                    @designdust</a>
-                </li>
-                <li>
-                  <a href="https://codepen.io/designdust/" target="_blank"><i class="fab fa-codepen fa-2x"></i>
-                    @designdust</a>
-                </li>
-                <li>
-                  <a href="https://www.deviantart.com/baxxspace" target="_blank"><i class="fab fa-deviantart fa-2x"></i>
-                    @baxxspace</a>
-                </li>
-              </ul>
+              <a href="https://github.com/designdust" target="_blank" data-toggle="tooltip" title="@designdust"><i
+                  class="fab fa-github fa-2x"></i>
+              </a>
+              <a href="https://twitter.com/designdust" target="_blank" data-toggle="tooltip" title="@designdust"><i
+                  class="fab fa-twitter fa-2x"></i>
+              </a>
+              <a href="https://codepen.io/designdust/" target="_blank" data-toggle="tooltip" title="@designdust"><i
+                  class="fab fa-codepen fa-2x"></i>
+              </a>
+              <a href="https://www.deviantart.com/baxxspace" target="_blank" data-toggle="tooltip" title="@baxxspace"><i
+                  class="fab fa-deviantart fa-2x"></i>
+              </a>
             </div>
             <!-- end contact-social -->
           </div>
@@ -1375,9 +1548,8 @@
 
 
 
-  <!-- build:js -->
-  <script src="assets/js/app.js"></script>
-  <!-- endbuild -->
+  <script src="assets/js/app.min.js"></script>
+
 </body>
 
 </html>
