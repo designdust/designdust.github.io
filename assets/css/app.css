@@ -1,11 +1,29 @@
+.btn-round-lg {
+  border-radius: 22.5px;
+}
+
+.btn-round {
+  border-radius: 17px;
+}
+
+.btn-round-sm {
+  border-radius: 15px;
+}
+
+.btn-round-xs {
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -318,6 +336,90 @@
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+.circle {
+  position: fixed;
+  background-color: #1f1f1f;
+  width: 2px;
+  height: 2px;
+  left: -7px;
+  top: -7px;
+  border-radius: 100%;
+  z-index: 1;
+  z-index: 10000;
+  transform: scale(1);
+}
+
+.circle-follow {
+  position: fixed;
+  background: rgba(110, 110, 110, 0.1);
+  mix-blend-mode: difference;
+  width: 30px;
+  height: 30px;
+  left: -21px;
+  top: -21px;
+  border-radius: 100%;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+}
+
+/*Text Reveal*/
+.text-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.text-el {
+  opacity: 0;
+}
+
+.text-reveal-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 102;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.text-reveal-bg {
+  background-color: #b7ac7f;
+}
+
+.ring {
+  border: 30px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  mix-blend-mode: difference;
+  position: absolute;
+  overflow: hidden;
+}
+
+.ring--left {
+  border-width: 4px;
+  border-color: rgba(110, 110, 110, 0.1);
+  width: 300px;
+  height: 300px;
+  left: -150px;
+  bottom: -150px;
+}
+
+.ring--right {
+  right: 10%;
+  bottom: 20%;
+  border-color: rgba(110, 110, 110, 0.1);
+  border-width: 2px;
+  width: 1000px;
+  height: 1000px;
 }
 
 *,
@@ -740,6 +842,7 @@ a:hover:after {
 }
 
 .hero h1 {
+  line-height: 1.2;
   letter-spacing: -2px;
   font-size: 6rem;
   font-family: "Playfair Display", serif;
@@ -768,9 +871,8 @@ a:hover:after {
 }
 
 .hero a.btn-gold:hover {
-  border-color: #b7ac7f;
-  background: #ffffff;
-  color: #b7ac7f;
+  border-color: #6e6e6e;
+  background: #6e6e6e;
 }
 
 .about-area .skill-cat ol li {
@@ -874,11 +976,11 @@ a:hover:after {
   content: "";
   position: absolute;
   opacity: 0;
-  left: 30px;
-  top: 30px;
+  left: 20px;
+  top: 20px;
   padding: 20px;
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   background-color: rgba(255, 255, 255, 0.1);
   background-clip: border-box;
   border: rgba(255, 255, 255, 0.1) 1px solid;
@@ -918,11 +1020,11 @@ a:hover:after {
 .portfolio-area .filters-content .item .img-blur-container {
   position: absolute;
   opacity: 0;
-  left: 30px;
-  top: 30px;
+  left: 20px;
+  top: 20px;
   overflow: hidden;
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   transition: all 0.5s ease-in-out;
 }
 
@@ -967,18 +1069,18 @@ a:hover:after {
 
 .portfolio-area .filters-content .item .img-blur-container .img-blur {
   position: absolute;
-  left: -30px;
-  top: -30px;
-  width: calc(100% + 60px);
-  height: calc(100% + 60px);
+  left: -20px;
+  top: -20px;
+  width: calc(100% + 40px);
+  height: calc(100% + 40px);
   filter: blur(15px);
 }
 
 .portfolio-area .filters-content .item .p-inner {
   position: absolute;
   opacity: 0;
-  left: 50px;
-  bottom: 50px;
+  left: 40px;
+  bottom: 40px;
   max-width: calc(100% - 100px);
   transition: all 0.5s ease-in-out;
   transform: translateY(-30px);
@@ -995,8 +1097,8 @@ a:hover:after {
 .portfolio-area .filters-content .item .p-links {
   color: #ffffff;
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 40px;
+  left: 40px;
   opacity: 0;
   transition: all 0.5s ease-in-out;
   transform: translateY(30px);

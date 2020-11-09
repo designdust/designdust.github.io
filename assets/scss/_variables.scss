@@ -22,3 +22,18 @@ $raleway: "Raleway", sans-serif;
 $font_2: "Playfair Display", serif;
 $font_3: "Cormorant Unicase", serif;
 $font_4: "Lobster", cursive;
+
+.btn-round-lg {
+  border-radius: 22.5px;
+}
+.btn-round {
+  border-radius: 17px;
+}
+.btn-round-sm {
+  border-radius: 15px;
+}
+.btn-round-xs {
+  border-radius: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

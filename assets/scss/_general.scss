@@ -5,12 +5,12 @@
 // Custom Scrollbar for chrome
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -225,6 +225,112 @@
   top: 0;
   left: 0;
   z-index: 9999;
+}
+
+// ****** ****** ****** ******
+// GSAP
+// ****** ****** ****** ******
+// Cursor
+.circle {
+  position: fixed;
+  background-color: $gray;
+  width: 2px;
+  height: 2px;
+  left: -7px;
+  top: -7px;
+  border-radius: 100%;
+  z-index: 1;
+  // user-select: none;
+  // pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+  // &.active {
+  //     opacity: 1;
+  //     transform: scale(0);
+  // }
+}
+
+.circle-follow {
+  position: fixed;
+  // border: 1px solid $gray;
+  background: $light_gray_10;
+  mix-blend-mode: difference;
+  width: 30px;
+  height: 30px;
+  left: -21px;
+  top: -21px;
+  border-radius: 100%;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  //overflow: hidden;
+  transform: scale(1);
+  // &.active {
+  //     transform: scale(3);
+  // }
+}
+
+/*Text Reveal*/
+.text-reveal {
+  position: relative;
+  display: inline-block;
+}
+
+.text-el {
+  opacity: 0;
+}
+
+.text-reveal-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 102;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.text-reveal-bg {
+  background-color: $gold;
+}
+
+// .text-hider-fg {
+//   background-color: #ccc;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     z-index: 101;
+// }
+
+.ring {
+  border: 30px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  mix-blend-mode: difference;
+  position: absolute;
+  overflow: hidden;
+}
+
+.ring--left {
+  border-width: 4px;
+  border-color: $light_gray_10;
+  width: 300px;
+  height: 300px;
+  left: -150px;
+  bottom: -150px;
+}
+
+.ring--right {
+  right: 10%;
+  bottom: 20%;
+  border-color: $light_gray_10;
+  border-width: 2px;
+  width: 1000px;
+  height: 1000px;
 }
 
 // ****** ****** ****** ******
@@ -638,6 +744,7 @@ a {
   // box-shadow: 0px 2px 5px #dbdbdb;
 
   h1 {
+    line-height: 1.2;
     letter-spacing: -2px;
     font-size: 6rem;
     font-family: $font_2;
@@ -662,9 +769,9 @@ a {
     color: $white;
     background: $gold;
     &:hover {
-      border-color: $gold;
-      background: $white;
-      color: $gold;
+      border-color: $light_gray;
+      background: $light_gray;
+      // color: $gold;
     }
   }
 }
@@ -787,12 +894,12 @@ a {
           content: "";
           position: absolute;
           opacity: 0;
-          left: 30px;
-          top: 30px;
+          left: 20px;
+          top: 20px;
           padding: 20px;
 
-          width: calc(100% - 60px);
-          height: calc(100% - 60px);
+          width: calc(100% - 40px);
+          height: calc(100% - 40px);
 
           background-color: $white_10;
           background-clip: border-box;
@@ -833,12 +940,12 @@ a {
       .img-blur-container {
         position: absolute;
         opacity: 0;
-        left: 30px;
-        top: 30px;
+        left: 20px;
+        top: 20px;
         overflow: hidden;
 
-        width: calc(100% - 60px);
-        height: calc(100% - 60px);
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
         @include transition(all 0.5s ease-in-out);
 
         &::after {
@@ -868,10 +975,10 @@ a {
         .img-blur {
           position: absolute;
 
-          left: -30px;
-          top: -30px;
-          width: calc(100% + 60px);
-          height: calc(100% + 60px);
+          left: -20px;
+          top: -20px;
+          width: calc(100% + 40px);
+          height: calc(100% + 40px);
           filter: blur(15px);
         }
       }
@@ -879,8 +986,8 @@ a {
       .p-inner {
         position: absolute;
         opacity: 0;
-        left: 50px;
-        bottom: 50px;
+        left: 40px;
+        bottom: 40px;
         // padding: 20px;
         // // to center content
         // display: flex;
@@ -907,8 +1014,8 @@ a {
       .p-links {
         color: $white;
         position: absolute;
-        top: 50px;
-        left: 50px;
+        top: 40px;
+        left: 40px;
         opacity: 0;
         @include transition(all 0.5s ease-in-out);
         @include transform(translateY(30px));

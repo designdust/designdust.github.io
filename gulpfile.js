@@ -10,6 +10,7 @@ const merge = require("merge-stream");
 const htmlreplace = require("gulp-html-replace");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
+const babel = require('gulp-babel');
 
 // Clean task
 gulp.task("clean", function() {
@@ -102,6 +103,16 @@ gulp.task(
   })
 );
 
+// Compile JS files
+gulp.task("scripts", function() {
+  return gulp
+    .src("./assets/js/app.js")
+    .pipe(babel({
+      presets: ["@babel/env"]
+    }))
+    .pipe(gulp.dest("./assets/js/compiled"));
+});
+
 // Minify CSS
 gulp.task(
   "css:minify",
@@ -120,9 +131,11 @@ gulp.task(
 );
 
 // Minify Js
-gulp.task("js:minify", function() {
+gulp.task(
+  "js:minify", 
+  gulp.series("scripts", function jsMinify() {
   return gulp
-    .src(["./assets/js/app.js"])
+    .src(["./assets/js/compiled/app.js"])
     .pipe(uglify())
     .pipe(
       rename({
@@ -131,7 +144,8 @@ gulp.task("js:minify", function() {
     )
     .pipe(gulp.dest("./dist/assets/js"))
     .pipe(browserSync.stream());
-});
+  })
+);
 
 // Replace HTML block for Js and Css file upon build and copy to /dist
 gulp.task("replaceHtmlBlock", function() {
@@ -180,7 +194,7 @@ gulp.task(
     "vendor:build",
     function copyAssets() {
       return gulp
-        .src(["*.html", "favicon.ico", "assets/img/**"], { base: "./" })
+        .src(["*.html", "favicon.png", "assets/img/**"], { base: "./" })
         .pipe(gulp.dest("dist"));
     }
   )

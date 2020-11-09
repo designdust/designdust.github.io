@@ -1,0 +1,50 @@
+<script>
+    gsap.utils.toArray(".text-highlight").forEach(el => {
+          
+        var textBg = document.querySelector(".text__first-bg");
+    var textHl = document.querySelector(".text-highlight");
+
+    function intro() {
+      var tl = gsap.timeline();
+      tl
+        .to(textBg, 1, {
+          ease: "expo.out",
+          scaleX:1,
+          scrollTrigger: {
+            trigger: ".text-highlight",
+            markers: true,
+          }
+        })
+      return tl;
+    }
+
+    function middle() {
+      var tl = gsap.timeline();
+      tl
+        .to(textHl, .5, {
+          opacity:1,
+          scrollTrigger: {
+            trigger: ".text-highlight",
+            markers: true,
+          }
+      })
+      return tl;
+    }
+
+    function conclusion() {
+      var tl = gsap.timeline();
+      tl
+      .to(textBg, .3, {
+        scaleX:0,
+      });
+      return tl;
+    }
+
+    // stitch them together in a master timeline...
+    var master = gsap.timeline();
+    master.add(intro())
+          .add(middle())     //with a gap of 2 seconds
+          .add(conclusion()) //overlap by 1 second
+
+  });
+</script>
